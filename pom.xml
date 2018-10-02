@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>de.uni-stuttgart.informatik.fius</groupId>
+	<artifactId>JVK-2018</artifactId>
+	<version>0.1.0</version>
+	<name>Java Vorkurs 2018</name>
+	<description>Der Java Code des Java Vorkurses 2018 von FIUS</description>
+	<url>https://github.com/FIUS/JVK-2018</url>
+	<properties>
+		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<icge.version>0.2.0</icge.version>
+	</properties>
+	<repositories>
+		<repository>
+			<id>c-hack-internal</id>
+			<name>C-Hack Repositroy</name>
+			<url>https://maven.c-hack.de/repository/internal/</url>
+		</repository>
+		<repository>
+                        <id>c-hack-snapshot</id>
+                        <name>C-Hack Repositroy Snapshot</name>
+                        <url>https://maven.c-hack.de/repository/snapshot/</url>
+                </repository>
+	</repositories>
+	<dependencies>
+		<dependency>
+			<groupId>de.uni-stuttgart.informatik.fius</groupId>
+			<artifactId>ICGE</artifactId>
+			<version>${icge.version}</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.7.0</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
