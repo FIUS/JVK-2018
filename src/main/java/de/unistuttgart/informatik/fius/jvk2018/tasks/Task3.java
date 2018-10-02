@@ -37,6 +37,11 @@ abstract public class Task3 extends TaskTemplate {
         this.mario = new Mario(this.simulation);
         this.mario.spawn(0, 0);
     }
+
+    
+    public static int taskNumber() {
+        return 30;
+    }
     
     @Override
     public void test() {
