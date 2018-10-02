@@ -16,27 +16,12 @@ import de.unistuttgart.informatik.fius.icge.simulation.Mario;
  * 
  * @author Dilara Aygün
  */
-public class Task1_3 extends TaskTemplate {
-    protected final Mario mario = new Mario(this.simulation);
+abstract public class Task1_3 extends TaskTemplate {
+    protected final Mario mario;
     
     public Task1_3() {
         super(Presets.cage(10, 5).result(), "Task1_3");
-    }
-    
-    /**
-     * @see de.unistuttgart.informatik.fius.jvk2018.tasks.TaskTemplate#solve()
-     */
-    @Override
-    public void solve() {
-        try {
-            this.mario.spawn(1, 1);
-            for (int i = 0; i < 100; i++) {
-                this.mario.move();
-            }
-        } catch (Exception e) {
-            //Todo print line for exception
-        }
-        
+        this.mario = new Mario(this.simulation);
     }
     
     /**
@@ -45,6 +30,7 @@ public class Task1_3 extends TaskTemplate {
     @Override
     public void test() {
         this.solve();
+        this.simulation.pause();
         
     }
     
