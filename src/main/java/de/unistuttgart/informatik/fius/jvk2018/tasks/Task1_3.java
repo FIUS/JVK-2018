@@ -12,9 +12,9 @@ import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
 
 /**
- * TODO: Description
+ * Base class for Task 3 of sheet 1
  * 
- * @author
+ * @author Dilara Aygün
  */
 public class Task1_3 extends TaskTemplate {
     protected final Mario mario = new Mario(this.simulation);
