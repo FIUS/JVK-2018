@@ -11,7 +11,7 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<icge.version>0.2.0</icge.version>
+		<icge.version>0.3.0-Snapshot</icge.version>
 	</properties>
 	<repositories>
 		<repository>
@@ -20,10 +20,10 @@
 			<url>https://maven.c-hack.de/repository/internal/</url>
 		</repository>
 		<repository>
-                        <id>c-hack-snapshot</id>
-                        <name>C-Hack Repositroy Snapshot</name>
-                        <url>https://maven.c-hack.de/repository/snapshot/</url>
-                </repository>
+			<id>c-hack-snapshot</id>
+			<name>C-Hack Repositroy Snapshot</name>
+			<url>https://maven.c-hack.de/repository/snapshot/</url>
+		</repository>
 	</repositories>
 	<dependencies>
 		<dependency>
