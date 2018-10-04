@@ -7,22 +7,18 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
-import de.unistuttgart.informatik.fius.icge.territory.WorldObject.Sprite;
-import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Excercise6;
+import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise7;
 
 /**
- * base solution for exercise 6 of worksheet 2
+ * base solution for exercise 7 from worksheet 2
  * @author Sebastian Paule
  */
-public class AB2_Solution6 extends AB2_Excercise6 {
+public class AB2_Solution7 extends AB2_Exercise7 {
     
     @Override
     public void solve() {
-      
-        mario1.spawn(0,1);
-        mario2.spawn(1,1);
-        
+        mario1.spawn(0, 0);
+        mario2.spawn(5, 1);
         //TODO work here
     }
-    
 }
