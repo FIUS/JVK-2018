@@ -20,28 +20,40 @@ import de.unistuttgart.informatik.fius.icge.territory.WorldObject.Direction;
 import de.unistuttgart.informatik.fius.icge.territory.WorldObject.Sprite;
 
 /**
- * Base class for task 4 of sheet 1
- * 
+ * base class for Task 7 of sheet 1
  * @author Dilara
  */
-abstract public class Task1_4 extends TaskTemplate {
+abstract public class Task1_7 extends TaskTemplate {
     protected final Mario mario;
-    protected final Coin coi;
     protected final Coin coin;
     
-    
-    public Task1_4() {
+    public Task1_7() {
         super(((Supplier<Territory>) () -> {
             Editor ed = Presets.cage(10, 5);
+            ed.add(new WorldObject(Sprite.WALL, 1, 0));
+            ed.add(new WorldObject(Sprite.WALL, 3, 0));
+            ed.add(new WorldObject(Sprite.WALL, 5, 0));
+            ed.add(new WorldObject(Sprite.WALL, 3, 1));
+            ed.add(new WorldObject(Sprite.WALL, 7, 1));
+            ed.add(new WorldObject(Sprite.WALL, 8, 1));
+            ed.add(new WorldObject(Sprite.WALL, 0, 2));
+            ed.add(new WorldObject(Sprite.WALL, 1, 2));
+            ed.add(new WorldObject(Sprite.WALL, 5, 2));
+            ed.add(new WorldObject(Sprite.WALL, 6, 2));
+            ed.add(new WorldObject(Sprite.WALL, 7, 2));
+            ed.add(new WorldObject(Sprite.WALL, 1, 3));
+            ed.add(new WorldObject(Sprite.WALL, 3, 3));
+            ed.add(new WorldObject(Sprite.WALL, 5, 3));
+            ed.add(new WorldObject(Sprite.WALL, 7, 3));
+            ed.add(new WorldObject(Sprite.WALL, 8, 3));
+            ed.add(new WorldObject(Sprite.WALL, 9, 3));
+            ed.add(new WorldObject(Sprite.WALL, 3, 4));
             return ed.result();
-        }).get(), "Task1_4");
+        }).get(), "Task1_7");
         this.mario = new Mario(this.simulation);
-        this.mario.spawn(5, 0, Direction.SOUTH);
-        this.coi = new Coin(this.simulation);
-        this.coi.spawn(3, 1);
+        this.mario.spawn(0, 0, Direction.SOUTH);
         this.coin = new Coin(this.simulation);
-        this.coin.spawn(1, 4);
-        
+        this.coin.spawn(8, 2);
     }
     
     @Override

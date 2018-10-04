@@ -20,9 +20,8 @@ public class Solution1_4 extends Task1_4 {
         this.mario.move();
         this.mario.move();
         this.mario.turnLeft();
-       // this.mario.move();
-        //this.mario.move();
-        this.coin.spawn(6, 3);
+        this.mario.move();
+        this.mario.move();
        
     }
     
