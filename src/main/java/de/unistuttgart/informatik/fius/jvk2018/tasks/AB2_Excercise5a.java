@@ -13,20 +13,18 @@ import de.unistuttgart.informatik.fius.icge.simulation.Mario;
 import de.unistuttgart.informatik.fius.icge.territory.Territory;
 
 /**
- * TODO: The Task for the 4 excercise on worksheet 2
+ * task for excercise 5 a of worksheet 2
  * @author Sebastian Paule
  */
-public class AB2_Excercise4 extends TaskTemplate {
+public class AB2_Excercise5a extends TaskTemplate {
     protected final Mario mario;
-    protected Boolean test = true;
-    
     /**
      * @param initialTty
      * @param name
      */
-    public AB2_Excercise4() {
-        super(Presets.cage(10, 5).result(), "AB 2 Exercise 4 (a-d)");
-        mario = new Mario(this.simulation);
+    public AB2_Excercise5a() {
+        super(Presets.cage(6, 6).result(), "AB2 Exercise 5 (a)");
+        this.mario = new Mario(this.simulation);
     }
 
     /**
@@ -45,12 +43,21 @@ public class AB2_Excercise4 extends TaskTemplate {
     public void test() {
         this.solve();
         this.simulation.pause();
-        
-        if(test) {
-            //everything works just fine
-        } else {
-            //something went wrong
+        Boolean test = true;
+        for(int i=0; i!= 5; ++i){
+            for(int o=0; o!= 5; ++o){
+                if(simulation.collectablesWith(i, o).size() == 1){
+                    
+                }else{
+                  test = false;
+                  //something bad happend
+                }
+            }
         }
+        if(test){
+            //everything just works fine
+        }
+        
     }
     
 }

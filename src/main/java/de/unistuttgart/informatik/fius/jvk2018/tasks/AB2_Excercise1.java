@@ -31,7 +31,7 @@ public class AB2_Excercise1 extends TaskTemplate {
      * @param name
      */
     public AB2_Excercise1() {
-        super(Presets.cage(5, 5).result(), "AB 2 Excercise 1");
+        super(Presets.cage(5, 5).result(), "AB 2 Exercise 1");
         this.mario = new Mario(this.simulation);
         this.coin1 = new Coin(this.simulation);
         this.coin2 = new Coin(this.simulation);

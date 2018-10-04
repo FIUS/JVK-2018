@@ -13,20 +13,18 @@ import de.unistuttgart.informatik.fius.icge.simulation.Mario;
 import de.unistuttgart.informatik.fius.icge.territory.Territory;
 
 /**
- * TODO: The Task for the 4 excercise on worksheet 2
+ * TODO: task for the excercise 5 (b) of worksheet 2
  * @author Sebastian Paule
  */
-public class AB2_Excercise4 extends TaskTemplate {
+public class AB2_Excercise5b extends TaskTemplate {
     protected final Mario mario;
-    protected Boolean test = true;
-    
     /**
      * @param initialTty
      * @param name
      */
-    public AB2_Excercise4() {
-        super(Presets.cage(10, 5).result(), "AB 2 Exercise 4 (a-d)");
-        mario = new Mario(this.simulation);
+    public AB2_Excercise5b() {
+        super(Presets.cage(6, 6).result(), "AB 2 Exercise 5 (b)");
+        this.mario = new Mario(this.simulation);
     }
 
     /**
@@ -43,14 +41,9 @@ public class AB2_Excercise4 extends TaskTemplate {
      */
     @Override
     public void test() {
-        this.solve();
-        this.simulation.pause();
-        
-        if(test) {
-            //everything works just fine
-        } else {
-            //something went wrong
-        }
+       this.solve();
+       this.simulation.pause();
+        //no test because everyone draws a smiley in his own way
     }
     
 }

@@ -10,23 +10,20 @@ package de.unistuttgart.informatik.fius.jvk2018.tasks;
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
-import de.unistuttgart.informatik.fius.icge.territory.Territory;
 
 /**
- * TODO: The Task for the 4 excercise on worksheet 2
+ *  taks for excercise 2 of worksheet 2
  * @author Sebastian Paule
  */
-public class AB2_Excercise4 extends TaskTemplate {
+public class AB2_Excercise2 extends TaskTemplate {
     protected final Mario mario;
-    protected Boolean test = true;
-    
     /**
      * @param initialTty
      * @param name
      */
-    public AB2_Excercise4() {
-        super(Presets.cage(10, 5).result(), "AB 2 Exercise 4 (a-d)");
-        mario = new Mario(this.simulation);
+    public AB2_Excercise2() {
+        super(Presets.cage(5, 5).result(), "AB 2 Exercise 2");
+        this.mario = new Mario(this.simulation);
     }
 
     /**
@@ -34,8 +31,6 @@ public class AB2_Excercise4 extends TaskTemplate {
      */
     @Override
     public void solve() {
-        // TODO Auto-generated method stub
-        
     }
     
     /**
@@ -45,11 +40,10 @@ public class AB2_Excercise4 extends TaskTemplate {
     public void test() {
         this.solve();
         this.simulation.pause();
-        
-        if(test) {
-            //everything works just fine
-        } else {
-            //something went wrong
+        if(mario.lastPosition().column == 1){
+            if(mario.lastPosition().row==0){
+                //everything is just fine
+            }
         }
     }
     
