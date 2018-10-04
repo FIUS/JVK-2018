@@ -31,7 +31,7 @@ abstract public class Task1_3 extends TaskTemplate {
     public void test() {
         this.solve();
         this.simulation.pause();
-        
+        // TODO elaborate test method
     }
     
 }
