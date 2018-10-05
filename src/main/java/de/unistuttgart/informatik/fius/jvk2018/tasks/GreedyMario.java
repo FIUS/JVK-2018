@@ -46,7 +46,7 @@ public class GreedyMario extends Mario {
      * @return The amount of the last collected coins
      */
     public int getLastCollected() {
-        return lastCollected;
+        return this.lastCollected;
     }
     
 }
