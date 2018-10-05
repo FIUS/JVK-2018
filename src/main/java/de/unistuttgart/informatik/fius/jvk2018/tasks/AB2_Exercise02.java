@@ -12,25 +12,29 @@ import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
 
 /**
- *  taks for excercise 2 of worksheet 2
+ *  task for exercise 2 of worksheet 2
  * @author Sebastian Paule
  */
 public abstract class AB2_Exercise02 extends TaskTemplate {
+    /**
+     * 
+     */
     protected final Mario mario;
     /**
-     * @param initialTty
-     * @param name
+     *
      */
     public AB2_Exercise02() {
         super(Presets.cage(5, 5).result(), "AB 2 Exercise 02");
         this.mario = new Mario(this.simulation);
     }
-
+    
     /**
+     * this method only exists here so I don't need it in the Solution class
      * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#solve()
      */
     @Override
     public void solve() {
+        
     }
     
     /**
@@ -39,12 +43,28 @@ public abstract class AB2_Exercise02 extends TaskTemplate {
     @Override
     public void test() {
         this.solve();
+        this.mario.spawn(0, 0);
+        this.mario.move();
+        turnRight();
+        this.mario.move();
+        turnAround();
+        this.mario.move();
         this.simulation.pause();
-        if(mario.lastPosition().column == 1){
-            if(mario.lastPosition().row==0){
+        if(this.mario.lastPosition().column == 1){
+            if(this.mario.lastPosition().row==0){
                 //everything is just fine
             }
         }
     }
+
+    /**
+     * 
+     */
+    protected abstract void turnAround();
+
+    /**
+     * 
+     */
+    protected abstract void turnRight();
     
 }

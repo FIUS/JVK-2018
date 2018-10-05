@@ -10,13 +10,13 @@ package de.unistuttgart.informatik.fius.jvk2018.solutions;
 import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise10c;
 
 /**
- * TODO: Description
- * @author
+ * Base solution for exercise 10 (c) of the second worksheet
+ * @author Sebastian Paule
  */
 public class AB2_Solution10c extends AB2_Exercise10c {
+    
     @Override
     public void solve() {
-        // TODO work here
-        
+        // TODO work here   
     }
 }

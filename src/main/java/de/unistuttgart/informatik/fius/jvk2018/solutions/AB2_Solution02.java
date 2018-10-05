@@ -14,23 +14,12 @@ import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise02;
  * @author Sebastian Paule
  */
 public class AB2_Solution02 extends AB2_Exercise02{
-    
-    
-    @Override
-    public void solve() {
-        // Do not change this
-        mario.spawn(0, 0);
-        mario.move();
-        turnRight();
-        mario.move();
-        turnAround();
-        mario.move();
-    }
 
     /**
      * 
      */
-    private void turnAround() {
+    @Override
+    protected void turnAround() {
         // TODO work here
         
     }
@@ -38,7 +27,8 @@ public class AB2_Solution02 extends AB2_Exercise02{
     /**
      * 
      */
-    private void turnRight() {
+    @Override
+    protected void turnRight() {
         // TODO work here
         
     }

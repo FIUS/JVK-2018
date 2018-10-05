@@ -17,7 +17,7 @@ public class AB2_Solution12 extends AB2_Exercise12 {
     
     @Override
     public void solve() {
-        // TODO WORK HERE
+        // TODO work here
         
     }
     

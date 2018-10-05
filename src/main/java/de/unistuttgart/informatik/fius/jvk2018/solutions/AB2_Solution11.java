@@ -20,7 +20,7 @@ public class AB2_Solution11 extends AB2_Exercise11 {
      */
     @Override
     protected void lookWest() {
-        // TODO Auto-generated method stub
+        // TODO work here
         
     }
     
@@ -29,7 +29,7 @@ public class AB2_Solution11 extends AB2_Exercise11 {
      */
     @Override
     protected void lookSouth() {
-        // TODO Auto-generated method stub
+        // TODO work here
         
     }
     
@@ -38,7 +38,7 @@ public class AB2_Solution11 extends AB2_Exercise11 {
      */
     @Override
     protected void lookEast() {
-        // TODO Auto-generated method stub
+        // TODO work here
         
     }
     
@@ -47,7 +47,7 @@ public class AB2_Solution11 extends AB2_Exercise11 {
      */
     @Override
     protected void lookNorth() {
-        // TODO Auto-generated method stub
+        // TODO work here
         
     }
     
