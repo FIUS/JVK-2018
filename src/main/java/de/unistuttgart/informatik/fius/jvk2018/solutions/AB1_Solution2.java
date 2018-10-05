@@ -7,7 +7,7 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
-import de.unistuttgart.informatik.fius.jvk2018.tasks.Task1_2;
+import de.unistuttgart.informatik.fius.jvk2018.tasks.AB1_Task2;
 
 /**
  * 
@@ -16,7 +16,7 @@ import de.unistuttgart.informatik.fius.jvk2018.tasks.Task1_2;
  * @author Dilara Aygün
  * 
  */
-public class Solution1_2 extends Task1_2 {
+public class AB1_Solution2 extends AB1_Task2 {
     
     @Override
     public void solve() {

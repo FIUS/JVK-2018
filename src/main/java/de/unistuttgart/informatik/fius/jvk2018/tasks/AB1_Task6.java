@@ -15,33 +15,23 @@ import de.unistuttgart.informatik.fius.icge.simulation.Coin;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
 import de.unistuttgart.informatik.fius.icge.territory.Editor;
 import de.unistuttgart.informatik.fius.icge.territory.Territory;
-import de.unistuttgart.informatik.fius.icge.territory.WorldObject;
 import de.unistuttgart.informatik.fius.icge.territory.WorldObject.Direction;
-import de.unistuttgart.informatik.fius.icge.territory.WorldObject.Sprite;
 
 /**
- * Base class for task 4 of sheet 1
+ * Base class for Task 6 of sheet 1
  * 
  * @author Dilara
  */
-abstract public class Task1_4 extends TaskTemplate {
+abstract public class AB1_Task6 extends TaskTemplate {
     protected final Mario mario;
-    protected final Coin coi;
-    protected final Coin coin;
     
-    
-    public Task1_4() {
+    public AB1_Task6() {
         super(((Supplier<Territory>) () -> {
             Editor ed = Presets.cage(10, 5);
             return ed.result();
-        }).get(), "Task1_4");
+        }).get(), "Task1_6");
         this.mario = new Mario(this.simulation);
-        this.mario.spawn(5, 0, Direction.SOUTH);
-        this.coi = new Coin(this.simulation);
-        this.coi.spawn(3, 1);
-        this.coin = new Coin(this.simulation);
-        this.coin.spawn(1, 4);
-        
+        this.mario.spawn(1, 0, Direction.SOUTH);
     }
     
     @Override

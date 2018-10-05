@@ -7,13 +7,13 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
-import de.unistuttgart.informatik.fius.jvk2018.tasks.Task1_7;
+import de.unistuttgart.informatik.fius.jvk2018.tasks.AB1_Task7;
 
 /**
  * Solution class for task 7 of sheet 1
  * @author Dilara
  */
-public class Solution1_7 extends Task1_7 {
+public class AB1_Solution7 extends AB1_Task7 {
     
     public void solve() {
         

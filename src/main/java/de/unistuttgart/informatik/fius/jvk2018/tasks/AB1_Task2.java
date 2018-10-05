@@ -22,10 +22,10 @@ import de.unistuttgart.informatik.fius.icge.territory.WorldObject.Sprite;
  * 
  * @author Dilara Aygün
  */
-abstract public class Task1_2 extends TaskTemplate {
+abstract public class AB1_Task2 extends TaskTemplate {
     protected final Mario mario;
     
-    public Task1_2() {
+    public AB1_Task2() {
         super(((Supplier<Territory>) () -> {
             Editor ed = Presets.cage(10, 5);
             ed.add(new WorldObject(Sprite.WALL, 4, 2));

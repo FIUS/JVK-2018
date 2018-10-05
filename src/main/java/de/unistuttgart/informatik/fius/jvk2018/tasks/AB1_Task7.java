@@ -23,11 +23,11 @@ import de.unistuttgart.informatik.fius.icge.territory.WorldObject.Sprite;
  * base class for Task 7 of sheet 1
  * @author Dilara
  */
-abstract public class Task1_7 extends TaskTemplate {
+abstract public class AB1_Task7 extends TaskTemplate {
     protected final Mario mario;
     protected final Coin coin;
     
-    public Task1_7() {
+    public AB1_Task7() {
         super(((Supplier<Territory>) () -> {
             Editor ed = Presets.cage(10, 5);
             ed.add(new WorldObject(Sprite.WALL, 1, 0));

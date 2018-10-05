@@ -16,10 +16,10 @@ import de.unistuttgart.informatik.fius.icge.simulation.Mario;
  * 
  * @author Dilara Aygün
  */
-abstract public class Task1_3 extends TaskTemplate {
+abstract public class AB1_Task3 extends TaskTemplate {
     protected final Mario mario;
     
-    public Task1_3() {
+    public AB1_Task3() {
         super(Presets.cage(10, 5).result(), "Task1_3");
         this.mario = new Mario(this.simulation);
     }
