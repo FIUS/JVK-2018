@@ -10,18 +10,83 @@ package de.unistuttgart.informatik.fius.jvk2018.solutions;
 import de.unistuttgart.informatik.fius.jvk2018.tasks.AB3_Exercise07;
 
 /**
- * TODO: Description
- * @author
+ * The solution for the Exercise AB3_Exercise07
+ * 
+ * @author schieljn
  */
 public class AB3_Solution7 extends AB3_Exercise07 {
+    
+    private int posBottomRow = 0;
+    private int smallestStack = 0;
+    private int lastSmallestPos = 0;
     
     /**
      * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#solve()
      */
     @Override
     public void solve() {
-        // TODO Auto-generated method stub
+        this.mario.turnLeft();
+        this.mario.move();
         
+        this.mario.turnLeft();
+        this.mario.turnLeft();
+        this.mario.turnLeft();
+        for (int coins = 0; coins < 10; coins++) {
+            for (int i = 0; i < 10; i++) {
+                this.mario.collectAll();
+                if (this.mario.getLastCollected() <= this.smallestStack) {
+                    this.smallestStack = this.mario.getLastCollected();
+                    this.lastSmallestPos = i;
+                }
+                this.mario.placeAll();
+                this.mario.move();
+            }
+            
+
+            this.mario.turnLeft();
+            this.mario.turnLeft();
+            
+            for (int i = 9; i > this.lastSmallestPos; i--) {
+                this.mario.move();
+            }
+            
+            this.mario.collectAll();
+            
+            this.mario.turnLeft();
+            this.mario.move();
+            
+            this.mario.turnLeft();
+            this.mario.turnLeft();
+            this.mario.turnLeft();
+            
+            for (int i = this.mario.worldObject().column; i > 0; i--) {
+                this.mario.move();
+            }
+            
+            this.mario.turnLeft();
+            this.mario.move();
+            this.mario.turnLeft();
+            
+            for (int i = 0; i < this.posBottomRow; i++) {
+                this.mario.move();
+            }
+            this.mario.placeAll();
+            this.mario.turnLeft();
+            this.mario.move();
+            this.mario.turnLeft();
+            
+            for (int i = this.mario.worldObject().column; i > 0; i--) {
+                this.mario.move();
+            }
+            this.mario.turnLeft();
+            this.mario.turnLeft();
+            this.mario.turnLeft();
+            this.mario.move();
+            this.mario.turnLeft();
+            this.mario.turnLeft();
+            this.mario.turnLeft();
+            this.lastSmallestPos++;
+        }
     }
     
 }

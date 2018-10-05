@@ -23,7 +23,8 @@ public class GreedyMario extends Mario {
     
     /**
      * Initializes a greedy mario
-     * @param sim
+     * 
+     * @param sim The simulation of the mario object
      */
     public GreedyMario(Simulation sim) {
         super(sim);
@@ -43,10 +44,26 @@ public class GreedyMario extends Mario {
     /**
      * Method to get the amount of coins that mario collected the last time the collectAll method
      * was used.
+     * 
      * @return The amount of the last collected coins
      */
     public int getLastCollected() {
         return this.lastCollected;
     }
     
+    /**
+     * 
+     */
+    public void placeAll() {
+        while (this.tryDrop());
+    }
+    
+    private boolean tryDrop() {
+        if (this.canDrop(Sprite.COIN)) {
+            this.drop(Sprite.COIN);
+            return true;
+        }
+        return false;
+        
+    }
 }

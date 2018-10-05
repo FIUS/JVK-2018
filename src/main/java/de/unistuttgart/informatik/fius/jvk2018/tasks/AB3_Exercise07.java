@@ -12,7 +12,6 @@ import java.util.Random;
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
 import de.unistuttgart.informatik.fius.icge.simulation.Coin;
-import de.unistuttgart.informatik.fius.icge.simulation.Mario;
 
 /**
  * Exercise AB3_7
@@ -21,7 +20,10 @@ import de.unistuttgart.informatik.fius.icge.simulation.Mario;
  */
 public abstract class AB3_Exercise07 extends TaskTemplate {
     
-    public final Mario mario;
+    /**
+     * Mario to move
+     */
+    public final GreedyMario mario;
     
     /**
      * Initializes the exercise
@@ -36,17 +38,17 @@ public abstract class AB3_Exercise07 extends TaskTemplate {
                 new Coin(this.simulation).spawn(i, 0);
             }
         }
-        this.mario=new Mario(this.simulation);
+        this.mario = new GreedyMario(this.simulation);
         this.mario.spawn(0, 1);
+        
     }
-    
     
     /**
      * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#test()
      */
     @Override
     public void test() {
-        // TODO Auto-generated method stub
+        this.solve();
         
     }
     
