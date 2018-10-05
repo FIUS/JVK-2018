@@ -24,7 +24,10 @@ hs_err_pid*
 
 #Other -neumantm
 /target/
+/bin/
 .directory
+.classpath
+.project
 
 #Other -vscode
 .vscode
