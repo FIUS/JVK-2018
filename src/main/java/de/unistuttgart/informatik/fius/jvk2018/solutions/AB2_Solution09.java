@@ -7,13 +7,13 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
-import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise9;
+import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise09;
 
 /**
  * TODO: Description
  * @author
  */
-public class AB2_Solution9 extends AB2_Exercise9{
+public class AB2_Solution09 extends AB2_Exercise09{
     
     @Override
     public void solve() {

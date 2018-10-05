@@ -7,13 +7,13 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
-import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Excercise4;
+import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise04;
 
 /**
  * TODO: The base solution for excercise 4 of worksheet 2
  * @author Sebastian Paule
  */
-public class AB2_Solution4 extends AB2_Excercise4 {
+public class AB2_Solution04 extends AB2_Exercise04 {
     
     @Override
     public void solve() {

@@ -7,17 +7,18 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
-import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Excercise5c;
+import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise07;
 
 /**
- * TODO: Base solution for the excercise 5c from worksheet 2
- * @author
+ * base solution for exercise 7 from worksheet 2
+ * @author Sebastian Paule
  */
-public class AB2_Solution5c extends AB2_Excercise5c {
+public class AB2_Solution07 extends AB2_Exercise07 {
     
     @Override
     public void solve() {
-        // TODO work here
+        mario1.spawn(0, 0);
+        mario2.spawn(5, 1);
+        //TODO work here
     }
-    
 }

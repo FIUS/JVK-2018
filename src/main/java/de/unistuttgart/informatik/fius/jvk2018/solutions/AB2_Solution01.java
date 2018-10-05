@@ -8,13 +8,13 @@
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
 import de.unistuttgart.informatik.fius.icge.territory.Territory;
-import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Excercise1;
+import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise01;
 
 /**
  * Base class for the solution of Exc. 1 of worksheet 2
  * @author Sebastian Paule
  */
-public class AB2_Solution1 extends AB2_Excercise1{
+public class AB2_Solution01 extends AB2_Exercise01{
 
     
     

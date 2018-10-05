@@ -15,10 +15,10 @@ import de.unistuttgart.informatik.fius.icge.simulation.Wall;
 import de.unistuttgart.informatik.fius.icge.territory.Territory;
 
 /**
- * TODO: Description
- * @author
+ * Task for the exercise 10 c of worksheet 2
+ * @author Sebastian Paule
  */
-public class AB2_Exercise10c extends TaskTemplate {
+public abstract class AB2_Exercise10c extends TaskTemplate {
     protected final Mario mario;
     protected final Coin[] coins = new Coin[20];
     /**

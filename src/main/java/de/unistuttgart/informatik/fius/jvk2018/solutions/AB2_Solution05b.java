@@ -7,17 +7,18 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
-import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Excercise5a;
+import de.unistuttgart.informatik.fius.icge.simulation.Coin;
+import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise05b;
 
 /**
- * Base solution for excercise 5 a of worksheet 2
- * @author Sebastian Paule
+ * TODO: Description
+ * @author
  */
-public class AB2_Solution5a extends AB2_Excercise5a {
+public class AB2_Solution05b extends AB2_Exercise05b {
+    
     @Override
     public void solve() {
         // TODO work here
         
     }
-    
 }

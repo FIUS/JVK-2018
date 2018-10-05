@@ -12,17 +12,17 @@ import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
 
 /**
- *  taks for excercise 2 of worksheet 2
+ *  task for excercise 3 of worksheet 2
  * @author Sebastian Paule
  */
-public class AB2_Excercise2 extends TaskTemplate {
+public abstract class AB2_Exercise03 extends TaskTemplate{
     protected final Mario mario;
     /**
      * @param initialTty
      * @param name
      */
-    public AB2_Excercise2() {
-        super(Presets.cage(5, 5).result(), "AB 2 Exercise 2");
+    public AB2_Exercise03() {
+        super(Presets.cage(5, 5).result(), "AB 2 Exercise 03");
         this.mario = new Mario(this.simulation);
     }
 
@@ -31,8 +31,10 @@ public class AB2_Excercise2 extends TaskTemplate {
      */
     @Override
     public void solve() {
+        // TODO Auto-generated method stub
+        
     }
-    
+
     /**
      * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#test()
      */
@@ -40,8 +42,8 @@ public class AB2_Excercise2 extends TaskTemplate {
     public void test() {
         this.solve();
         this.simulation.pause();
-        if(mario.lastPosition().column == 1){
-            if(mario.lastPosition().row==0){
+        if(mario.lastPosition().column == 2){
+            if(mario.lastPosition().row==1){
                 //everything is just fine
             }
         }

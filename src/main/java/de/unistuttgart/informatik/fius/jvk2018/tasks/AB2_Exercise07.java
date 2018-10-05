@@ -10,20 +10,23 @@ package de.unistuttgart.informatik.fius.jvk2018.tasks;
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
+import de.unistuttgart.informatik.fius.icge.territory.Territory;
 
 /**
- *  task for excercise 3 of worksheet 2
+ * task of exercise 7 from worksheet 2
  * @author Sebastian Paule
  */
-public class AB2_Excercise3 extends TaskTemplate{
-    protected final Mario mario;
+public abstract class AB2_Exercise07 extends TaskTemplate {
+    protected final Mario mario1;
+    protected final Mario mario2;
     /**
      * @param initialTty
      * @param name
      */
-    public AB2_Excercise3() {
-        super(Presets.cage(5, 5).result(), "AB 2 Exercise 3");
-        this.mario = new Mario(this.simulation);
+    public AB2_Exercise07() {
+        super(Presets.cage(6, 3).result(), "AB 2 Exercise 07");
+        this.mario1 = new Mario(this.simulation);
+        this.mario2 = new Mario(this.simulation);
     }
 
     /**
@@ -34,7 +37,7 @@ public class AB2_Excercise3 extends TaskTemplate{
         // TODO Auto-generated method stub
         
     }
-
+    
     /**
      * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#test()
      */
@@ -42,11 +45,20 @@ public class AB2_Excercise3 extends TaskTemplate{
     public void test() {
         this.solve();
         this.simulation.pause();
-        if(mario.lastPosition().column == 2){
-            if(mario.lastPosition().row==1){
-                //everything is just fine
+        
+        if(this.mario1.lastPosition().column == 1){
+            if(this.mario1.lastPosition().row == 0){
+                if(this.mario2.lastPosition().column == 2){
+                    if(this.mario2.lastPosition().row == 0){
+                        //everything is just fine
+                    }
+                    //error
+                }
+                //error
             }
+            //error
         }
+        //error
     }
     
 }

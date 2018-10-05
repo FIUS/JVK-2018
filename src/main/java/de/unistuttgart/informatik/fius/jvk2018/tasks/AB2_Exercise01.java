@@ -7,24 +7,36 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.tasks;
 
+import java.util.ArrayList;
+
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
+import de.unistuttgart.informatik.fius.icge.simulation.Coin;
+import de.unistuttgart.informatik.fius.icge.simulation.Entity;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
+import de.unistuttgart.informatik.fius.icge.simulation.Wall;
 import de.unistuttgart.informatik.fius.icge.territory.Territory;
 
 /**
- * task for excercise 5 a of worksheet 2
+ * TODO: Task for ex. 1 of worksheet 2
  * @author Sebastian Paule
  */
-public class AB2_Excercise5a extends TaskTemplate {
+public abstract class AB2_Exercise01 extends TaskTemplate {
     protected final Mario mario;
+    protected final Coin coin1;
+    protected final Coin coin2;
+    protected final Wall wall;
     /**
      * @param initialTty
      * @param name
      */
-    public AB2_Excercise5a() {
-        super(Presets.cage(6, 6).result(), "AB2 Exercise 5 (a)");
+    public AB2_Exercise01() {
+        super(Presets.cage(5, 5).result(), "AB 2 Exercise 01");
         this.mario = new Mario(this.simulation);
+        this.coin1 = new Coin(this.simulation);
+        this.coin2 = new Coin(this.simulation);
+        this.wall = new Wall(this.simulation);
+       
     }
 
     /**
@@ -43,21 +55,14 @@ public class AB2_Excercise5a extends TaskTemplate {
     public void test() {
         this.solve();
         this.simulation.pause();
-        Boolean test = true;
-        for(int i=0; i!= 5; ++i){
-            for(int o=0; o!= 5; ++o){
-                if(simulation.collectablesWith(i, o).size() == 1){
-                    
-                }else{
-                  test = false;
-                  //something bad happend
-                }
-            }
-        }
-        if(test){
-            //everything just works fine
-        }
         
+        ArrayList<Entity> temp = this.simulation.entitiesWith(2, 1);
+        
+        if(temp.size() == 3) {
+            //everything works just fine
+        } else {
+            //you did something wrong
+        }
     }
     
 }

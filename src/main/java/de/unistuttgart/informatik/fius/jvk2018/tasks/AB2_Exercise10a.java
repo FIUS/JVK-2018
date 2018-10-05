@@ -17,7 +17,7 @@ import de.unistuttgart.informatik.fius.icge.territory.Territory;
  * TODO: task for exercise 10 a of the second worksheet
  * @author Sebastian Paule
  */
-public class AB2_Exercise10a extends TaskTemplate {
+public abstract class AB2_Exercise10a extends TaskTemplate {
     protected final Wall[] walls = new Wall[9];
     protected final Mario mario;
     /**
