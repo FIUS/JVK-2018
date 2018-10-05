@@ -14,10 +14,10 @@ import org.junit.jupiter.api.Assertions;
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
 import de.unistuttgart.informatik.fius.icge.simulation.Coin;
+import de.unistuttgart.informatik.fius.icge.simulation.EntityType;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
 import de.unistuttgart.informatik.fius.icge.territory.Editor;
 import de.unistuttgart.informatik.fius.icge.territory.Territory;
-import de.unistuttgart.informatik.fius.icge.territory.WorldObject.Sprite;
 
 /**
  * This provides the base class for Solution3.
@@ -50,7 +50,7 @@ abstract public class Task3 extends TaskTemplate {
         Assertions.assertFalse(this.mario.canCollect());
         this.solve();
         Assertions.assertTrue(this.simulation.territory()
-                .containsWith(wob -> (wob.sprite == Sprite.COIN) && (wob.column == 4) && (wob.row == 2)));
+                .containsWith(wob -> (wob.type == EntityType.COIN) && (wob.column == 4) && (wob.row == 2)));
         this.simulation.pause();
     }
 }

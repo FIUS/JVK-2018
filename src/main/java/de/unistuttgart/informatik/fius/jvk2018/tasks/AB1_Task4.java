@@ -15,9 +15,7 @@ import de.unistuttgart.informatik.fius.icge.simulation.Coin;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
 import de.unistuttgart.informatik.fius.icge.territory.Editor;
 import de.unistuttgart.informatik.fius.icge.territory.Territory;
-import de.unistuttgart.informatik.fius.icge.territory.WorldObject;
 import de.unistuttgart.informatik.fius.icge.territory.WorldObject.Direction;
-import de.unistuttgart.informatik.fius.icge.territory.WorldObject.Sprite;
 
 /**
  * Base class for task 4 of sheet 1

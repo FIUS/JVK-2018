@@ -7,7 +7,7 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
-import de.unistuttgart.informatik.fius.icge.territory.WorldObject.Sprite;
+import de.unistuttgart.informatik.fius.icge.simulation.EntityType;
 import de.unistuttgart.informatik.fius.jvk2018.tasks.Task3;
 
 public class Solution3 extends Task3 {
@@ -25,7 +25,7 @@ public class Solution3 extends Task3 {
         this.mario.turnLeft();
         this.mario.move();
         this.mario.move();
-        this.mario.drop(Sprite.COIN);
+        this.mario.drop(EntityType.COIN);
         this.mario.turnLeft();
         this.mario.turnLeft();
         this.mario.move();
@@ -33,7 +33,7 @@ public class Solution3 extends Task3 {
         this.mario.collect();
         this.mario.turnLeft();
         this.mario.move();
-        this.mario.drop(Sprite.COIN);
+        this.mario.drop(EntityType.COIN);
         this.mario.turnLeft();
         this.mario.turnLeft();
         this.mario.move();
@@ -41,6 +41,6 @@ public class Solution3 extends Task3 {
         this.mario.turnLeft();
         this.mario.turnLeft();
         this.mario.move();
-        this.mario.drop(Sprite.COIN);
+        this.mario.drop(EntityType.COIN);
     }
 }

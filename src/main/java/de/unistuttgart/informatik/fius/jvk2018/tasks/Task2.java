@@ -13,11 +13,11 @@ import org.junit.jupiter.api.Assertions;
 
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
+import de.unistuttgart.informatik.fius.icge.simulation.EntityType;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
 import de.unistuttgart.informatik.fius.icge.territory.Editor;
 import de.unistuttgart.informatik.fius.icge.territory.Territory;
 import de.unistuttgart.informatik.fius.icge.territory.WorldObject;
-import de.unistuttgart.informatik.fius.icge.territory.WorldObject.Sprite;
 
 /**
  * This provides the base class for Solution2.
@@ -29,7 +29,7 @@ abstract public class Task2 extends TaskTemplate {
     public Task2() {
         super(((Supplier<Territory>) () -> {
             Editor ed = Presets.cage(10, 5);
-            ed.add(new WorldObject(Sprite.WALL, 4, 2));
+            ed.add(new WorldObject(EntityType.WALL, 4, 2));
             return ed.result();
         }).get(), "Task2");
         this.mario = new Mario(this.simulation);

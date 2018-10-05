@@ -7,9 +7,9 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.tasks;
 
+import de.unistuttgart.informatik.fius.icge.simulation.EntityType;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
 import de.unistuttgart.informatik.fius.icge.simulation.Simulation;
-import de.unistuttgart.informatik.fius.icge.territory.WorldObject.Sprite;
 
 /**
  * Mario who picks all coins at once and saves the amount of picked coins in
@@ -35,7 +35,7 @@ public class GreedyMario extends Mario {
      */
     public void collectAll() {
         int counter = 0;
-        while (this.tryCollect(Sprite.COIN)) {
+        while (this.tryCollect(EntityType.COIN)) {
             counter++;
         }
         this.lastCollected = counter;
@@ -59,8 +59,8 @@ public class GreedyMario extends Mario {
     }
     
     private boolean tryDrop() {
-        if (this.canDrop(Sprite.COIN)) {
-            this.drop(Sprite.COIN);
+        if (this.canDrop(EntityType.COIN)) {
+            this.drop(EntityType.COIN);
             return true;
         }
         return false;
