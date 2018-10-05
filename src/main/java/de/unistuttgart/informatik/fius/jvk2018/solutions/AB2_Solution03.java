@@ -14,20 +14,12 @@ import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise03;
  * @author Sebastian Paule
  */
 public class AB2_Solution03 extends AB2_Exercise03{
-    
+
+    /**
+     * 
+     */
     @Override
-    public void solve() {
-        //dont do anything here
-        mario.spawn(1, 1);
-        stepRightUp();
-        stepBack();
-        stepLeftDown();
-    }
-
-    /**
-     * 
-     */
-    private void stepLeftDown() {
+    protected void stepLeftDown() {
         // TODO work here
         
     }
@@ -35,7 +27,8 @@ public class AB2_Solution03 extends AB2_Exercise03{
     /**
      * 
      */
-    private void stepBack() {
+    @Override
+    protected void stepBack() {
         // TODO work here
         
     }
@@ -43,7 +36,8 @@ public class AB2_Solution03 extends AB2_Exercise03{
     /**
      * 
      */
-    private void stepRightUp() {
+    @Override
+    protected void stepRightUp() {
         // TODO work here
         
     }

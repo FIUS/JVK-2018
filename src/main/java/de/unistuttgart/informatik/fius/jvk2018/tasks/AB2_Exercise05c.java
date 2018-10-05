@@ -9,17 +9,15 @@ package de.unistuttgart.informatik.fius.jvk2018.tasks;
 
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
-import de.unistuttgart.informatik.fius.icge.territory.Territory;
 
 /**
  * task for exercise 6 of worksheet 2
- * @author
+ * @author Sebastian Paule
  */
 public abstract class AB2_Exercise05c extends TaskTemplate {
     
     /**
-     * @param initialTty
-     * @param name
+     *
      */
     public AB2_Exercise05c() {
         super(Presets.cage(6, 6).result(), "AB 2 Exercise 05 (c)");
@@ -41,6 +39,7 @@ public abstract class AB2_Exercise05c extends TaskTemplate {
     public void test() {
         this.solve();
         this.simulation.pause();
+      //no test because everyone draws a smiley in his own way
     }
     
 }

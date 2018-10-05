@@ -7,7 +7,6 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
-import de.unistuttgart.informatik.fius.icge.territory.Territory;
 import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise01;
 
 /**
@@ -15,15 +14,15 @@ import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise01;
  * @author Sebastian Paule
  */
 public class AB2_Solution01 extends AB2_Exercise01{
-
-    
     
     @Override
     public void solve() {
+        //TODO do here (a)
         this.coin1.spawn(0, 0);
         this.coin2.spawn(0, 0);
         this.mario.spawn(0, 0);
         this.wall.spawn(0,0);
+        //TODO do here (b)
     }
     
 }

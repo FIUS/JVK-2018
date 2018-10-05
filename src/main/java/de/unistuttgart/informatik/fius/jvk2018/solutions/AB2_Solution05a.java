@@ -14,6 +14,7 @@ import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise05a;
  * @author Sebastian Paule
  */
 public class AB2_Solution05a extends AB2_Exercise05a {
+    
     @Override
     public void solve() {
         // TODO work here

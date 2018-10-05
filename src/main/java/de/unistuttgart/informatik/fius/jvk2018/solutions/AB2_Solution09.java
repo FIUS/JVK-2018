@@ -10,83 +10,78 @@ package de.unistuttgart.informatik.fius.jvk2018.solutions;
 import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise09;
 
 /**
- * TODO: Description
- * @author
+ * Base solution for the exercise 9 of the second worksheet
+ * @author Sebastian Paule
  */
 public class AB2_Solution09 extends AB2_Exercise09{
-    
-    @Override
-    public void solve() {
-        //TODO use this method for testing
-    }
 
     /**
-     * @returns true if on the scanned field is a collectable
+     * @return true if on the scanned field is a collectable
      */
-    private Boolean scanFront() {
+    protected Boolean scanFront() {
         return null;
       //TODO work here
         
     }
     
     /**
-     * @returns true if on the scanned field is a collectable
+     * @return true if on the scanned field is a collectable
      */
-    private Boolean scanBack() {
+    protected Boolean scanBack() {
         return null;
       //TODO work here
         
     }
     
     /**
-     * @returns true if on the scanned field is a collectable
+     * @return true if on the scanned field is a collectable
      */
-    private Boolean scanRight() {
+    protected Boolean scanRight() {
         return null;
       //TODO work here
         
     }
     
     /**
-     * @returns true if on the scanned field is a collectable
+     * @return true if on the scanned field is a collectable
      */
-    private Boolean scanLeft() {
+    protected Boolean scanLeft() {
         return null;
       //TODO work here
         
     }
     
     /**
-     * @returns true if on the scanned field is a collectable
+     * @return true if on the scanned field is a collectable
      */
-    private Boolean scanUpperRight() {
+    protected Boolean scanUpperRight() {
         return null;
       //TODO work here
         
     }
     
     /**
-     * @returns true if on the scanned field is a collectable
+     * @return true if on the scanned field is a collectable
      */
-    private Boolean scanUpperLeft() {
+    protected Boolean scanUpperLeft() {
         return null;
       //TODO work here
         
     }
     
     /**
-     * @returns true if on the scanned field is a collectable
+     * @return true if on the scanned field is a collectable
      */
-    private Boolean scanLowerRight() {
+    protected Boolean scanLowerRight() {
         return null;
         //TODO work here
         
     }
     
     /**
-     * @returns true if on the scanned field is a collectable
+     * @return true if on the scanned field is a collectable
      */
-    private Boolean scanLowerLeft() {
+    protected Boolean scanLowerLeft() {
         return null;
       //TODO work here
         

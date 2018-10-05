@@ -7,21 +7,27 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.tasks;
 
+import org.junit.jupiter.api.Assertions;
+
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
-import de.unistuttgart.informatik.fius.icge.territory.Territory;
 
 /**
  * base solution for exercise 6 of worksheet 2
  * @author Sebastian Paule
  */
 public abstract class AB2_Exercise06 extends TaskTemplate {
+    /**
+     * 
+     */
     protected final Mario mario1;
+    /**
+     * 
+     */
     protected final Mario mario2;
     /**
-     * @param initialTty
-     * @param name
+     *
      */
     public AB2_Exercise06() {
         super(Presets.cage(12, 2).result(), "AB 2 Exercise 06");
@@ -46,19 +52,15 @@ public abstract class AB2_Exercise06 extends TaskTemplate {
     public void test() {
        this.solve();
        this.simulation.pause();
+
+       Assertions.assertEquals(this.mario1.lastPosition().column,0);
+       Assertions.assertEquals(this.mario1.lastPosition().row,0);
+       Assertions.assertEquals(this.mario2.lastPosition().column,1);
+       Assertions.assertEquals(this.mario2.lastPosition().row,1);
        
-       if(this.mario1.lastPosition().column == 11){
-           if(this.mario1.lastPosition().row == 0){
-               if(this.mario2.lastPosition().column == 11){
-                   if(this.mario2.lastPosition().row == 1){
-                       //everything is just fine
-                   }
-               }
-           }
-       }
        
-       mario1.spawn(11, 0);
-       mario2.spawn(11, 1);
+       this.mario1.spawn(11, 0);
+       this.mario2.spawn(11, 1);
        
        
        

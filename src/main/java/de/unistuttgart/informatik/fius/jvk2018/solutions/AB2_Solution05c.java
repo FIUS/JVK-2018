@@ -10,8 +10,8 @@ package de.unistuttgart.informatik.fius.jvk2018.solutions;
 import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise05c;
 
 /**
- * TODO: Base solution for the excercise 5c from worksheet 2
- * @author
+ * TODO: Base solution for the excercise 5 (c) from worksheet 2
+ * @author Sebastian Paule 
  */
 public class AB2_Solution05c extends AB2_Exercise05c {
     

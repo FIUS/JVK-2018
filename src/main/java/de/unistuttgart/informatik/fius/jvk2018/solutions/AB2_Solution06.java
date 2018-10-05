@@ -7,7 +7,6 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
-import de.unistuttgart.informatik.fius.icge.territory.WorldObject.Sprite;
 import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise06;
 
 /**
@@ -19,8 +18,8 @@ public class AB2_Solution06 extends AB2_Exercise06 {
     @Override
     public void solve() {
       
-        mario1.spawn(0,1);
-        mario2.spawn(1,1);
+        this.mario1.spawn(0,1);
+        this.mario2.spawn(1,1);
         
         //TODO work here
     }

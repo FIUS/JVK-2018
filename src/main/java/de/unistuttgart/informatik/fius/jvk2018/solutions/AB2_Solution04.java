@@ -16,56 +16,19 @@ import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise04;
 public class AB2_Solution04 extends AB2_Exercise04 {
     
     @Override
-    public void solve() {
-        // Do not change anything here
-        // Do stuff in the next method
-        //task a)
-        mario.spawn(2, 0);;
-        vonObenNachUnten();
-        if(!(mario.lastPosition().column == 2)) {
-            if(!(mario.lastPosition().row == 4)) {
-                this.test = false;
-            }
-        }
-        //task b)
-        mario.despawn();
-        mario.spawn(2,4);
-        vonUntenNachOben();
-        if(!(mario.lastPosition().column == 2)) {
-            if(!(mario.lastPosition().row == 0)) {
-                this.test = false;
-            }
-        }
-        //task c)
-        mario.despawn();
-        mario.spawn(0,2);
-        vonLinksNachRechts();
-        if(!(mario.lastPosition().column == 4)) {
-            if(!(mario.lastPosition().row == 2)) {
-                this.test = false;
-            }
-        }
-        //task d)
-        mario.despawn();
-        mario.spawn(4,2);
-        vonRechtsNachLinks();
-        if(!(mario.lastPosition().column == 0)) {
-            if(!(mario.lastPosition().row == 2)) {
-                this.test = false;
-            }
-        }
-    }
-    
-    private void vonObenNachUnten() {
+    protected void vonObenNachUnten() {
         //TODO write code here
     }
-    private void vonUntenNachOben() {
+    @Override
+    protected void vonUntenNachOben() {
         //TODO write code here
     }
-    private void vonLinksNachRechts() {
+    @Override
+    protected void vonLinksNachRechts() {
         //TODO write code here
     }
-    private void vonRechtsNachLinks() {
+    @Override
+    protected void vonRechtsNachLinks() {
         //TODO write code here
     }
     

@@ -7,20 +7,23 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.tasks;
 
+import org.junit.jupiter.api.Assertions;
+
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
-import de.unistuttgart.informatik.fius.icge.territory.Territory;
 
 /**
  * TODO: task for the exercise 5 (b) of worksheet 2
  * @author Sebastian Paule
  */
 public abstract class AB2_Exercise05b extends TaskTemplate {
+    /**
+     * 
+     */
     protected final Mario mario;
     /**
-     * @param initialTty
-     * @param name
+     *
      */
     public AB2_Exercise05b() {
         super(Presets.cage(6, 6).result(), "AB 2 Exercise 05 (b)");
@@ -43,7 +46,14 @@ public abstract class AB2_Exercise05b extends TaskTemplate {
     public void test() {
        this.solve();
        this.simulation.pause();
-        //no test because everyone draws a smiley in his own way
+       Assertions.assertEquals(this.simulation.entitiesWith(0, 0),1);
+       Assertions.assertEquals(this.simulation.entitiesWith(0, 1),1);
+       Assertions.assertEquals(this.simulation.entitiesWith(0, 3),1);
+       Assertions.assertEquals(this.simulation.entitiesWith(1, 0),1);
+       Assertions.assertEquals(this.simulation.entitiesWith(1, 5),1);
+       Assertions.assertEquals(this.simulation.entitiesWith(3, 4),1);
+       Assertions.assertEquals(this.simulation.entitiesWith(5, 3),1);
+       
     }
     
 }

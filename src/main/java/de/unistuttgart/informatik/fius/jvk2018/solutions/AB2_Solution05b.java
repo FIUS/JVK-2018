@@ -7,12 +7,11 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
-import de.unistuttgart.informatik.fius.icge.simulation.Coin;
 import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise05b;
 
 /**
- * TODO: Description
- * @author
+ * Base solution for exercise 5 (b) of worksheet 2
+ * @author Sebastian Paule 
  */
 public class AB2_Solution05b extends AB2_Exercise05b {
     
