@@ -12,6 +12,7 @@ import java.util.Random;
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
 import de.unistuttgart.informatik.fius.icge.simulation.Coin;
+import de.unistuttgart.informatik.fius.icge.simulation.Mario;
 
 /**
  * Exercise AB3_7
@@ -20,11 +21,13 @@ import de.unistuttgart.informatik.fius.icge.simulation.Coin;
  */
 public abstract class AB3_Exercise07 extends TaskTemplate {
     
+    public final Mario mario;
+    
     /**
      * Initializes the exercise
      */
     public AB3_Exercise07() {
-        super(Presets.cage(3, 10).result(), "Selection sort");
+        super(Presets.cage(10, 3).result(), "Selection sort");
         Random rdm = new Random();
         for (int i = 0; i < 10; i++) {
             int coins = rdm.nextInt(10);
@@ -33,6 +36,8 @@ public abstract class AB3_Exercise07 extends TaskTemplate {
                 new Coin(this.simulation).spawn(i, 0);
             }
         }
+        this.mario=new Mario(this.simulation);
+        this.mario.spawn(0, 1);
     }
     
     
