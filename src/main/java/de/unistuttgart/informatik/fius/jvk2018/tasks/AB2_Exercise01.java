@@ -9,26 +9,38 @@ package de.unistuttgart.informatik.fius.jvk2018.tasks;
 
 import java.util.ArrayList;
 
+import org.junit.jupiter.api.Assertions;
+
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
 import de.unistuttgart.informatik.fius.icge.simulation.Coin;
 import de.unistuttgart.informatik.fius.icge.simulation.Entity;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
 import de.unistuttgart.informatik.fius.icge.simulation.Wall;
-import de.unistuttgart.informatik.fius.icge.territory.Territory;
 
 /**
- * TODO: Task for ex. 1 of worksheet 2
+ * Task for ex. 1 of worksheet 2
  * @author Sebastian Paule
  */
 public abstract class AB2_Exercise01 extends TaskTemplate {
+    /**
+     * 
+     */
     protected final Mario mario;
+    /**
+     * 
+     */
     protected final Coin coin1;
+    /**
+     * 
+     */
     protected final Coin coin2;
+    /**
+     * 
+     */
     protected final Wall wall;
     /**
-     * @param initialTty
-     * @param name
+     *
      */
     public AB2_Exercise01() {
         super(Presets.cage(5, 5).result(), "AB 2 Exercise 01");
@@ -57,12 +69,7 @@ public abstract class AB2_Exercise01 extends TaskTemplate {
         this.simulation.pause();
         
         ArrayList<Entity> temp = this.simulation.entitiesWith(2, 1);
-        
-        if(temp.size() == 3) {
-            //everything works just fine
-        } else {
-            //you did something wrong
-        }
+        Assertions.assertEquals(3,temp.size());
     }
     
 }

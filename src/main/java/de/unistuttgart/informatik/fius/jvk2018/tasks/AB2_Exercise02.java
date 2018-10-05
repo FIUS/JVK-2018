@@ -7,9 +7,12 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.tasks;
 
+import org.junit.jupiter.api.Assertions;
+
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
+import de.unistuttgart.informatik.fius.icge.territory.WorldObject.Direction;
 
 /**
  *  task for exercise 2 of worksheet 2
@@ -43,18 +46,12 @@ public abstract class AB2_Exercise02 extends TaskTemplate {
     @Override
     public void test() {
         this.solve();
-        this.mario.spawn(0, 0);
-        this.mario.move();
-        turnRight();
-        this.mario.move();
-        turnAround();
-        this.mario.move();
+        this.mario.spawn(0, 0);//he looks at east
+        this.turnAround();
+        Assertions.assertEquals(this.mario.worldObject().direction, Direction.WEST);//he should look at west
+        this.turnRight();
+        Assertions.assertEquals(this.mario.worldObject().direction, Direction.NORTH);//finally he should look at north
         this.simulation.pause();
-        if(this.mario.lastPosition().column == 1){
-            if(this.mario.lastPosition().row==0){
-                //everything is just fine
-            }
-        }
     }
 
     /**

@@ -7,6 +7,8 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.tasks;
 
+import org.junit.jupiter.api.Assertions;
+
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
@@ -37,8 +39,6 @@ public abstract class AB2_Exercise04 extends TaskTemplate {
      */
     @Override
     public void solve() {
-        // TODO Auto-generated method stub
-        
     }
     
     /**
@@ -87,11 +87,7 @@ public abstract class AB2_Exercise04 extends TaskTemplate {
         ////////////////////////////////
         this.simulation.pause();
         
-        if(this.test) {
-            //everything works just fine
-        } else {
-            //something went wrong
-        }
+        Assertions.assertEquals(this.test,true);
     }
 
     /**
