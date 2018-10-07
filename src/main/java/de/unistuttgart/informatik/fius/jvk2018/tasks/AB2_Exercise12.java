@@ -14,6 +14,7 @@ import de.unistuttgart.informatik.fius.icge.simulation.Mario;
 
 /**
  * Task for the 12th exercise of the second worksheet
+ * 
  * @author Sebastian Paule
  */
 public abstract class AB2_Exercise12 extends TaskTemplate {
@@ -24,19 +25,23 @@ public abstract class AB2_Exercise12 extends TaskTemplate {
     /**
      * 
      */
-    protected final Coin[] coin = new Coin[random(5,15)];
+    protected final Coin[] coin = new Coin[random(5, 15)];
+    
     /**
      */
     public AB2_Exercise12() {
         super(Presets.cage(10, 10).result(), "AB 2 Exercise 12");
         this.mario = new Mario(this.simulation);
-        for(Coin c : this.coin) {
-            c = new Coin(this.simulation);
-            c.spawn(random(0, 10), random(0,10));
+        
+        for (int i = 0; i < coin.length; i++) {
+            
+            coin[i] = new Coin(this.simulation);
+            coin[i].spawn(random(0, 9), random(0, 9));
+            
         }
         this.mario.spawn(0, 0);
     }
-
+    
     /**
      * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#solve()
      */
@@ -47,14 +52,16 @@ public abstract class AB2_Exercise12 extends TaskTemplate {
     }
     
     /**
-     * @param max max value
-     * @param min min value
+     * @param max
+     *            max value
+     * @param min
+     *            min value
      * @return a random value betwween min and max
      */
-    protected int random(int max, int min){
-        int range = (max - min) + 1;     
-        return (int)(Math.random() * range) + min;
-}
+    protected int random(int max, int min) {
+        int range = (max - min) + 1;
+        return (int) (Math.random() * range) + min;
+    }
     
     /**
      * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#test()
