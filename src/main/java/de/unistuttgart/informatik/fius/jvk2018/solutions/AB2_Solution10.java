@@ -7,17 +7,18 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
-import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise10a;
+import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise10;
 
 /**
  * Base solution for the exercise 10 (a) of worksheet 2
  * 
  * @author Sebastian Paule
  */
-public class AB2_Solution10a extends AB2_Exercise10a {
+public class AB2_Solution10 extends AB2_Exercise10 {
     
     @Override
-    public void solve() {
+    public int marioIsCalculating(int number1, int number2) {
         // TODO work here
+        return 0;
     }
 }

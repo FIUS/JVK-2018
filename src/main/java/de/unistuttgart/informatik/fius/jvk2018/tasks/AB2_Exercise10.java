@@ -18,7 +18,7 @@ import de.unistuttgart.informatik.fius.icge.simulation.Wall;
  * Task for exercise 10 a of the second worksheet
  * @author Sebastian Paule
  */
-public abstract class AB2_Exercise10a extends TaskTemplate {
+public abstract class AB2_Exercise10 extends TaskTemplate {
     /**
      * 
      */
@@ -26,7 +26,7 @@ public abstract class AB2_Exercise10a extends TaskTemplate {
     /**
      *
      */
-    public AB2_Exercise10a() {
+    public AB2_Exercise10() {
         super(Presets.cage(10, 10).result(), "AB 2 Exercise 10 (a)");
         this.mario = new Mario(this.simulation);
         generateWalls();
@@ -49,15 +49,24 @@ public abstract class AB2_Exercise10a extends TaskTemplate {
             return (int)(Math.random() * range) + 0;
     }
     
+    public void solve(){
+        
+    }
+    
     /**
      * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#test()
      */
     @Override
     public void test() {
-        this.solve();
-        this.simulation.pause();
-        Assertions.assertEquals(this.mario.lastPosition().column,0);
-        Assertions.assertEquals(this.mario.lastPosition().row,9);
+        Assertions.assertEquals(marioIsCalculating(10,2),5);
+        Assertions.assertEquals(marioIsCalculating(11,2),5);
     }
+
+    /**
+     * @param number1 first number to be used
+     * @param number2 second number
+     * @return n1/n2
+     */
+    public abstract int marioIsCalculating(int number1, int number2);
     
 }
