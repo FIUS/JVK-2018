@@ -35,8 +35,8 @@ public abstract class AB2_Exercise12 extends TaskTemplate {
         
         for (int i = 0; i < coin.length; i++) {
             
-            coin[i] = new Coin(this.simulation);
-            coin[i].spawn(random(0, 9), random(0, 9));
+            this.coin[i] = new Coin(this.simulation);
+            this.coin[i].spawn(random(0, 9), random(0, 9));
             
         }
         this.mario.spawn(0, 0);
