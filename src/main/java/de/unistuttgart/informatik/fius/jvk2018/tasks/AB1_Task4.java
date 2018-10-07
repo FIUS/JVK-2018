@@ -49,7 +49,7 @@ abstract public class AB1_Task4 extends TaskTemplate {
         this.solve();
         Assertions.assertFalse(this.mario.canMove());
         this.simulation.pause();
-        Assertions.assertEquals(7, this.mario.firstPosition().column, "Wrong position");
+        Assertions.assertEquals(7, this.mario.lastPosition().column, "Wrong position");
         Assertions.assertEquals(4, this.mario.lastPosition().row, "Wrong position");
     }
 }
