@@ -22,6 +22,7 @@ abstract public class AB1_Task3 extends TaskTemplate {
     public AB1_Task3() {
         super(Presets.cage(10, 5).result(), "Task1_3");
         this.mario = new Mario(this.simulation);
+        this.mario.spawn(5, 1);
     }
     
     /**

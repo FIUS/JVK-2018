@@ -17,7 +17,6 @@ import de.unistuttgart.informatik.fius.jvk2018.tasks.AB1_Task3;
 public class AB1_Solution3 extends AB1_Task3 {
     
     public void solve() {
-        this.mario.spawn(5, 1);
         this.mario.move();
         this.mario.move();
         this.mario.move();
