@@ -18,7 +18,7 @@ public class AB1_Solution2 extends AB1_Task2 {
     
  
     public void solve() {
-        this.mario.spawn(0, 0);
+        
         
     }
 }

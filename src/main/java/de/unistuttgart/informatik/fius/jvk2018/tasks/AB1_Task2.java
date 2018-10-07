@@ -34,6 +34,7 @@ abstract public class AB1_Task2 extends TaskTemplate {
             return ed.result();
         }).get(), "Task1_2");
         this.mario = new Mario(this.simulation);
+        this.mario.spawn(0, 0);
     }
     
     /**
