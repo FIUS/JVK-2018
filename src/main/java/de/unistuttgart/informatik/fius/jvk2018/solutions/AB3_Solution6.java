@@ -8,14 +8,14 @@
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
 import de.unistuttgart.informatik.fius.icge.simulation.EntityType;
-import de.unistuttgart.informatik.fius.jvk2018.tasks.AB3_Exercise08;
+import de.unistuttgart.informatik.fius.jvk2018.tasks.AB3_Exercise06;
 
 /**
  * The solution for the Exercise AB3_Exercise07
  * 
  * @author schieljn
  */
-public class AB3_Solution8 extends AB3_Exercise08 {
+public class AB3_Solution6 extends AB3_Exercise06 {
     
     /**
      * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#solve()

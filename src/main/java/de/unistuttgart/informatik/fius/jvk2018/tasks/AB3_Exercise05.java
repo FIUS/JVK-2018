@@ -23,7 +23,7 @@ import de.unistuttgart.informatik.fius.icge.simulation.EntityType;
  * 
  * @author schieljn
  */
-public abstract class AB3_Exercise07 extends TaskTemplate {
+public abstract class AB3_Exercise05 extends TaskTemplate {
     
     /**
      * Mario to move
@@ -33,7 +33,7 @@ public abstract class AB3_Exercise07 extends TaskTemplate {
     /**
      * Initializes the exercise
      */
-    public AB3_Exercise07() {
+    public AB3_Exercise05() {
         super(Presets.cage(10, 3).result(), "Selection sort");
         Random rdm = new Random();
         for (int i = 0; i < 10; i++) {

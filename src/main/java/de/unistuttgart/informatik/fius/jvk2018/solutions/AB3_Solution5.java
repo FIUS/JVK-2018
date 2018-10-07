@@ -7,14 +7,14 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
-import de.unistuttgart.informatik.fius.jvk2018.tasks.AB3_Exercise07;
+import de.unistuttgart.informatik.fius.jvk2018.tasks.AB3_Exercise05;
 
 /**
  * The solution for the Exercise AB3_Exercise07
  * 
  * @author schieljn
  */
-public class AB3_Solution7 extends AB3_Exercise07 {
+public class AB3_Solution5 extends AB3_Exercise05 {
     
     private int posBottomRow = 0;
     private int smallestStack = 0;
