@@ -7,7 +7,7 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.tasks;
 
-import de.unistuttgart.informatik.fius.icge.simulation.EntityType;
+import de.unistuttgart.informatik.fius.icge.simulation.Coin;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
 import de.unistuttgart.informatik.fius.icge.simulation.Simulation;
 
@@ -24,7 +24,8 @@ public class GreedyMario extends Mario {
     /**
      * Initializes a greedy mario
      * 
-     * @param sim The simulation of the mario object
+     * @param sim
+     *            The simulation of the mario object
      */
     public GreedyMario(Simulation sim) {
         super(sim);
@@ -35,7 +36,7 @@ public class GreedyMario extends Mario {
      */
     public void collectAll() {
         int counter = 0;
-        while (this.tryCollect(EntityType.COIN)) {
+        while (this.tryCollect(Coin.class)) {
             counter++;
         }
         this.lastCollected = counter;
@@ -55,7 +56,8 @@ public class GreedyMario extends Mario {
      * Places all Coins mario collected
      */
     public void placeAll() {
-        while (this.tryDrop());
+        while (this.tryDrop())
+            ;
     }
     
     /**
@@ -63,8 +65,8 @@ public class GreedyMario extends Mario {
      * @return True if a coin was dropped if not false 
      */
     private boolean tryDrop() {
-        if (this.canDrop(EntityType.COIN)) {
-            this.drop(EntityType.COIN);
+        if (this.canDrop(Coin.class)) {
+            this.drop(Coin.class);
             return true;
         }
         return false;

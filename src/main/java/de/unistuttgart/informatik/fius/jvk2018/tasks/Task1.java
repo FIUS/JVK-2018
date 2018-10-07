@@ -25,9 +25,6 @@ abstract public class Task1 extends TaskTemplate {
         super(Presets.cage(10, 5).result(), "Task1");
     }
 
-    public static int taskNumber() {
-        return 10;
-    }
     
     @Override
     public void test() {

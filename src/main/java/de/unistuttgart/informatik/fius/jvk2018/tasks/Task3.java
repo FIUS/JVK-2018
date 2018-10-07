@@ -14,7 +14,7 @@ import org.junit.jupiter.api.Assertions;
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
 import de.unistuttgart.informatik.fius.icge.simulation.Coin;
-import de.unistuttgart.informatik.fius.icge.simulation.EntityType;
+import de.unistuttgart.informatik.fius.icge.simulation.Coin.CoinState;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
 import de.unistuttgart.informatik.fius.icge.territory.Editor;
 import de.unistuttgart.informatik.fius.icge.territory.Territory;
@@ -37,11 +37,6 @@ abstract public class Task3 extends TaskTemplate {
         this.mario = new Mario(this.simulation);
         this.mario.spawn(0, 0);
     }
-
-    
-    public static int taskNumber() {
-        return 30;
-    }
     
     @Override
     public void test() {
@@ -50,7 +45,7 @@ abstract public class Task3 extends TaskTemplate {
         Assertions.assertFalse(this.mario.canCollect());
         this.solve();
         Assertions.assertTrue(this.simulation.territory()
-                .containsWith(wob -> (wob.type == EntityType.COIN) && (wob.column == 4) && (wob.row == 2)));
+                .containsWith(wob -> (wob.state instanceof CoinState) && (wob.column == 4) && (wob.row == 2)));
         this.simulation.pause();
     }
 }

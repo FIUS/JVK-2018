@@ -7,7 +7,7 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
-import de.unistuttgart.informatik.fius.icge.simulation.EntityType;
+import de.unistuttgart.informatik.fius.icge.simulation.Coin;
 import de.unistuttgart.informatik.fius.jvk2018.tasks.AB3_Exercise06;
 
 /**
@@ -28,7 +28,7 @@ public class AB3_Solution6 extends AB3_Exercise06 {
             int mod = 2;
             for (int x = 0; x < 7; x++) {
                 if (x % mod == 0) {
-                    this.mario.tryDrop(EntityType.COIN);
+                    this.mario.tryDrop(Coin.class);
                     
                 }
                 this.mario.move();
@@ -43,7 +43,7 @@ public class AB3_Solution6 extends AB3_Exercise06 {
             
             for (int x = 0; x < 7; x++) {
                 if (x % mod == 0) {
-                    this.mario.tryDrop(EntityType.COIN);
+                    this.mario.tryDrop(Coin.class);
                     
                 }
                 this.mario.move();

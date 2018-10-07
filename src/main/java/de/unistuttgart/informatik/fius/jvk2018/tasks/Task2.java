@@ -13,8 +13,8 @@ import org.junit.jupiter.api.Assertions;
 
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
-import de.unistuttgart.informatik.fius.icge.simulation.EntityType;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
+import de.unistuttgart.informatik.fius.icge.simulation.Wall.WallState;
 import de.unistuttgart.informatik.fius.icge.territory.Editor;
 import de.unistuttgart.informatik.fius.icge.territory.Territory;
 import de.unistuttgart.informatik.fius.icge.territory.WorldObject;
@@ -29,15 +29,11 @@ abstract public class Task2 extends TaskTemplate {
     public Task2() {
         super(((Supplier<Territory>) () -> {
             Editor ed = Presets.cage(10, 5);
-            ed.add(new WorldObject(EntityType.WALL, 4, 2));
+            ed.add(new WorldObject(new WallState(), 4, 2));
             return ed.result();
         }).get(), "Task2");
         this.mario = new Mario(this.simulation);
         this.mario.spawn(0, 0);
-    }
-
-    public static int taskNumber() {
-        return 20;
     }
     
     @Override
