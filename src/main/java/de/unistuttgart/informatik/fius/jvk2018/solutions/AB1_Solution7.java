@@ -11,12 +11,12 @@ import de.unistuttgart.informatik.fius.jvk2018.tasks.AB1_Task7;
 
 /**
  * Solution class for task 7 of sheet 1
- * @author Dilara
+ * 
  */
 public class AB1_Solution7 extends AB1_Task7 {
     
     public void solve() {
-        
+
  
     }
     

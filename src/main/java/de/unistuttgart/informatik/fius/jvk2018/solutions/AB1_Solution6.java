@@ -12,12 +12,14 @@ import de.unistuttgart.informatik.fius.jvk2018.tasks.AB1_Task6;
 
 /**
  * Solution class for task 6 of sheet 1
- * @author Dilara
+ *
  */
 public class AB1_Solution6 extends AB1_Task6 {
     protected Coin coin;
+    protected Coin newCoin;
+    
+    @Override
     public void solve() {
-        this.coin = new Coin(this.simulation);
-        this.coin.spawn(1, 4);
+
     }
 }

@@ -54,6 +54,7 @@ abstract public class AB1_Task7 extends TaskTemplate {
         this.mario.spawn(0, 0, Direction.SOUTH);
         this.coin = new Coin(this.simulation);
         this.coin.spawn(8, 2);
+
     }
     
     @Override
