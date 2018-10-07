@@ -37,8 +37,7 @@ public class AB3_Solution7 extends AB3_Exercise07 {
                     this.smallestStack = this.mario.getLastCollected();
                     this.lastSmallestPos = i;
                 }
-                System.out.println(this.smallestStack);
-                System.out.println(this.lastSmallestPos);
+
                 this.mario.placeAll();
                 if (i < 9) {
                     this.mario.move();
