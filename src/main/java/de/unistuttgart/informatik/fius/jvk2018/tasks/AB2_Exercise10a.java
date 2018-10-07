@@ -7,6 +7,8 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.tasks;
 
+import org.junit.jupiter.api.Assertions;
+
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
@@ -20,10 +22,6 @@ public abstract class AB2_Exercise10a extends TaskTemplate {
     /**
      * 
      */
-    protected final Wall[] walls = new Wall[9];
-    /**
-     * 
-     */
     protected final Mario mario;
     /**
      *
@@ -31,22 +29,14 @@ public abstract class AB2_Exercise10a extends TaskTemplate {
     public AB2_Exercise10a() {
         super(Presets.cage(10, 10).result(), "AB 2 Exercise 10 (a)");
         this.mario = new Mario(this.simulation);
-        for(int i = 0; i!= 9; ++i){
-            this.walls[i] = new Wall(this.simulation);
-        }
         generateWalls();
     }
     
     private void generateWalls() {
-        for (int i = 0; i != 9; ++i) {
-            int n1 = 0;
-            int n2 = 0;
-            while (n1 == 0 & n2 == 0) {
-                if (n1 == 0 & n2 == 0) {
-                    n1 = this.random();
-                    n2 = this.random();
-                    this.walls[i].spawn(n1, n2);
-                }
+        for(int i = 1; i != 9;++i){
+            int b = random();
+            for(int o = 0; o != b;++o){
+            new Wall(this.simulation).spawn(o, i);
             }
         }
     }
@@ -55,7 +45,7 @@ public abstract class AB2_Exercise10a extends TaskTemplate {
      * @return a random value between 1 and 9
      */
     protected int random(){
-            int range = (9 - 0) + 1;     
+            int range = (8 - 0) + 1;     
             return (int)(Math.random() * range) + 0;
     }
     
@@ -66,6 +56,8 @@ public abstract class AB2_Exercise10a extends TaskTemplate {
     public void test() {
         this.solve();
         this.simulation.pause();
+        Assertions.assertEquals(this.mario.lastPosition().column,0);
+        Assertions.assertEquals(this.mario.lastPosition().row,9);
     }
     
 }

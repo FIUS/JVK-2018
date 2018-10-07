@@ -7,10 +7,11 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.tasks;
 
+import org.junit.jupiter.api.Assertions;
+
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
-import de.unistuttgart.informatik.fius.icge.territory.Territory;
 import de.unistuttgart.informatik.fius.icge.territory.WorldObject.Direction;
 
 /**
@@ -19,12 +20,15 @@ import de.unistuttgart.informatik.fius.icge.territory.WorldObject.Direction;
  */
 public abstract class AB2_Exercise11 extends TaskTemplate {
     private Boolean test = true;
+    /**
+     * 
+     */
     protected final Mario mario;
     /**
      */
     public AB2_Exercise11() {
         super(Presets.cage(1, 1).result(), "AB 2 Exercise 11 (a-d)");
-        mario = new Mario(this.simulation);
+        this.mario = new Mario(this.simulation);
     }
 
     /**
@@ -32,21 +36,21 @@ public abstract class AB2_Exercise11 extends TaskTemplate {
      */
     @Override
     public void solve() {
-       mario.spawn(0, 0);
+       this.mario.spawn(0, 0);
        lookNorth();
-       if(!(mario.worldObject().direction== Direction.NORTH)) {
+       if(!(this.mario.worldObject().direction== Direction.NORTH)) {
            this.test = false;
        }
        lookEast();
-       if(!(mario.worldObject().direction== Direction.EAST)) {
+       if(!(this.mario.worldObject().direction== Direction.EAST)) {
            this.test = false;
        }
        lookSouth();
-       if(!(mario.worldObject().direction== Direction.NORTH)) {
+       if(!(this.mario.worldObject().direction== Direction.NORTH)) {
            this.test = false;
        }
        lookWest();
-       if(!(mario.worldObject().direction== Direction.WEST)) {
+       if(!(this.mario.worldObject().direction== Direction.WEST)) {
            this.test = false;
        }
     }
@@ -78,9 +82,7 @@ public abstract class AB2_Exercise11 extends TaskTemplate {
     public void test() {
         this.solve();
         this.simulation.pause();
-        if(this.test) {
-           //everything is just fine 
-        }
+        Assertions.assertEquals(this.test,true);
     }
     
 }

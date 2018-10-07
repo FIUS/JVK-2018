@@ -11,25 +11,30 @@ import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
 import de.unistuttgart.informatik.fius.icge.simulation.Coin;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
-import de.unistuttgart.informatik.fius.icge.territory.Territory;
 
 /**
  * Task for the 12th exercise of the second worksheet
  * @author Sebastian Paule
  */
 public abstract class AB2_Exercise12 extends TaskTemplate {
+    /**
+     * 
+     */
     protected final Mario mario;
+    /**
+     * 
+     */
     protected final Coin[] coin = new Coin[random(5,15)];
     /**
      */
     public AB2_Exercise12() {
         super(Presets.cage(10, 10).result(), "AB 2 Exercise 12");
-        mario = new Mario(this.simulation);
-        for(Coin c : coin) {
+        this.mario = new Mario(this.simulation);
+        for(Coin c : this.coin) {
             c = new Coin(this.simulation);
             c.spawn(random(0, 10), random(0,10));
         }
-        mario.spawn(0, 0);
+        this.mario.spawn(0, 0);
     }
 
     /**
@@ -41,6 +46,11 @@ public abstract class AB2_Exercise12 extends TaskTemplate {
         
     }
     
+    /**
+     * @param max max value
+     * @param min min value
+     * @return a random value betwween min and max
+     */
     protected int random(int max, int min){
         int range = (max - min) + 1;     
         return (int)(Math.random() * range) + min;
@@ -53,7 +63,7 @@ public abstract class AB2_Exercise12 extends TaskTemplate {
     public void test() {
         this.solve();
         this.simulation.pause();
-        
+        //kein test
     }
     
 }

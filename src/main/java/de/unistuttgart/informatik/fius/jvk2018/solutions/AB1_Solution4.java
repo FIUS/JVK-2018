@@ -11,18 +11,22 @@ import de.unistuttgart.informatik.fius.jvk2018.tasks.AB1_Task4;
 
 /**
  * Solution class for Task 4 of sheet 1
+ * 
  * @author Dilara
  */
 public class AB1_Solution4 extends AB1_Task4 {
-
+    
     public void solve() {
-        this.mario.move();
-        this.mario.move();
-        this.mario.move();
-        this.mario.turnLeft();
-        this.mario.move();
-        this.mario.move();
-       
+         this.mario.move();
+         this.mario.move();
+         this.mario.move();
+         this.mario.turnLeft();
+         this.mario.move();
+         this.mario.move();
+         this.mario.turnLeft();
+         this.mario.turnLeft();
+         this.mario.turnLeft();
+         this.mario.move();
     }
     
 }

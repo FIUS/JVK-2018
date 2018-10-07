@@ -16,6 +16,44 @@ import de.unistuttgart.informatik.fius.jvk2018.tasks.AB1_Task7;
 public class AB1_Solution7 extends AB1_Task7 {
     
     public void solve() {
+        this.mario.move();
+        this.mario.turnLeft();
+        this.mario.move();
+        this.mario.move();
+        this.mario.turnLeft();
+        this.mario.turnLeft();
+        this.mario.turnLeft();
+        this.mario.move();
+        this.mario.turnLeft();
+        this.mario.move();
+        this.mario.move();
+        this.mario.turnLeft();
+        this.mario.move();
+        this.mario.turnLeft();
+        this.mario.turnLeft();
+        this.mario.turnLeft();
+        this.mario.move();
+        this.mario.move();
+        this.mario.turnLeft();
+        this.mario.move();
+        this.mario.turnLeft();
+        this.mario.turnLeft();
+        this.mario.turnLeft();
+        this.mario.move();
+        this.mario.move();
+        this.mario.move();
+        this.mario.turnLeft();
+        this.mario.turnLeft();
+        this.mario.turnLeft();
+        this.mario.move();
+        this.mario.move();
+        this.mario.turnLeft();
+        this.mario.turnLeft();
+        this.mario.turnLeft();
+        this.mario.move();
+        this.mario.collect();
+        
+        
         
     }
     

@@ -74,6 +74,7 @@ public abstract class AB3_Exercise07 extends TaskTemplate {
         }
         */
         
+        this.simulation.pause();
     }
     
 }
