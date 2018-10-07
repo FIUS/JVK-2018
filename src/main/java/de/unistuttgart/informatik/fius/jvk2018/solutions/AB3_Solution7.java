@@ -28,21 +28,23 @@ public class AB3_Solution7 extends AB3_Exercise07 {
         this.mario.turnLeft();
         this.mario.move();
         
-        this.mario.turnLeft();
-        this.mario.turnLeft();
-        this.mario.turnLeft();
+        this.mario.turnRight();
         for (int coins = 0; coins < 10; coins++) {
+            this.smallestStack = Integer.MAX_VALUE;
             for (int i = 0; i < 10; i++) {
                 this.mario.collectAll();
-                if (this.mario.getLastCollected() <= this.smallestStack) {
+                if (this.mario.getLastCollected() <= this.smallestStack && this.mario.getLastCollected() != 0) {
                     this.smallestStack = this.mario.getLastCollected();
                     this.lastSmallestPos = i;
                 }
+                System.out.println(smallestStack);
+                System.out.println(lastSmallestPos);
                 this.mario.placeAll();
-                this.mario.move();
+                if (i < 9) {
+                    this.mario.move();
+                }
             }
             
-
             this.mario.turnLeft();
             this.mario.turnLeft();
             
@@ -55,9 +57,7 @@ public class AB3_Solution7 extends AB3_Exercise07 {
             this.mario.turnLeft();
             this.mario.move();
             
-            this.mario.turnLeft();
-            this.mario.turnLeft();
-            this.mario.turnLeft();
+            this.mario.turnRight();
             
             for (int i = this.mario.worldObject().column; i > 0; i--) {
                 this.mario.move();
@@ -78,14 +78,10 @@ public class AB3_Solution7 extends AB3_Exercise07 {
             for (int i = this.mario.worldObject().column; i > 0; i--) {
                 this.mario.move();
             }
-            this.mario.turnLeft();
-            this.mario.turnLeft();
-            this.mario.turnLeft();
+            this.mario.turnRight();
             this.mario.move();
-            this.mario.turnLeft();
-            this.mario.turnLeft();
-            this.mario.turnLeft();
-            this.lastSmallestPos++;
+            this.mario.turnRight();
+            this.posBottomRow++;
         }
     }
     

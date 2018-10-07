@@ -32,7 +32,7 @@ public abstract class AB3_Exercise07 extends TaskTemplate {
         super(Presets.cage(10, 3).result(), "Selection sort");
         Random rdm = new Random();
         for (int i = 0; i < 10; i++) {
-            int coins = rdm.nextInt(10);
+            int coins = rdm.nextInt(5);
             coins++;
             for (int j = 0; j < coins; j++) {
                 new Coin(this.simulation).spawn(i, 0);

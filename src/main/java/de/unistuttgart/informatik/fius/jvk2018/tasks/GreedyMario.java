@@ -52,18 +52,30 @@ public class GreedyMario extends Mario {
     }
     
     /**
-     * 
+     * Places all Coins mario collected
      */
     public void placeAll() {
         while (this.tryDrop());
     }
     
+    /**
+     * Drops a coins if possible
+     * @return True if a coin was dropped if not false 
+     */
     private boolean tryDrop() {
         if (this.canDrop(EntityType.COIN)) {
             this.drop(EntityType.COIN);
             return true;
         }
         return false;
-        
+    }
+    
+    /**
+     * Turns mario right
+     */
+    public void turnRight() {
+        this.turnLeft();
+        this.turnLeft();
+        this.turnLeft();
     }
 }
