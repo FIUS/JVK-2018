@@ -7,11 +7,16 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.tasks;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.ArrayList;
 import java.util.Random;
 
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
 import de.unistuttgart.informatik.fius.icge.simulation.Coin;
+import de.unistuttgart.informatik.fius.icge.simulation.Entity;
+import de.unistuttgart.informatik.fius.icge.simulation.EntityType;
 
 /**
  * Exercise AB3_7
@@ -49,6 +54,25 @@ public abstract class AB3_Exercise07 extends TaskTemplate {
     @Override
     public void test() {
         this.solve();
+       /*
+        int lastField = 0;
+        int newField = 0;
+        for (int i = 0; i < 10; i++) {
+            lastField = newField;
+            newField = 0;
+            ArrayList<Entity> e = this.simulation.entitiesWith(i, 2);
+            for (Entity ent : e) {
+                if (ent.type() == EntityType.COIN) {
+                    newField++;
+                }
+            }
+            int check = 0;
+            if (newField >= lastField) {
+                check = 1;
+            }
+            assertEquals(1, check, "The coins are not sorted!");
+        }
+        */
         
     }
     
