@@ -7,6 +7,8 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.tasks;
 
+import org.junit.jupiter.api.Assertions;
+
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
@@ -31,8 +33,8 @@ abstract public class AB1_Task3 extends TaskTemplate {
     @Override
     public void test() {
         this.solve();
+        Assertions.assertFalse(this.mario.canMove());
         this.simulation.pause();
-        // TODO elaborate test method
+       
     }
-    
 }

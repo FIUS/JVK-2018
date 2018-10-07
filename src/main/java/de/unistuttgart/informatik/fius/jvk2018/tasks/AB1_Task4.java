@@ -9,6 +9,8 @@ package de.unistuttgart.informatik.fius.jvk2018.tasks;
 
 import java.util.function.Supplier;
 
+import org.junit.jupiter.api.Assertions;
+
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
 import de.unistuttgart.informatik.fius.icge.simulation.Coin;
@@ -45,7 +47,9 @@ abstract public class AB1_Task4 extends TaskTemplate {
     @Override
     public void test() {
         this.solve();
+        Assertions.assertFalse(this.mario.canMove());
         this.simulation.pause();
-        
+        Assertions.assertEquals(7, this.mario.firstPosition().column, "Wrong position");
+        Assertions.assertEquals(4, this.mario.lastPosition().row, "Wrong position");
     }
 }
