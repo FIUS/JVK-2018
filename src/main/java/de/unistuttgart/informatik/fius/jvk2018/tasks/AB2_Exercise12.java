@@ -7,6 +7,8 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.tasks;
 
+import java.util.Random;
+
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
 import de.unistuttgart.informatik.fius.icge.simulation.Coin;
@@ -27,6 +29,8 @@ public abstract class AB2_Exercise12 extends TaskTemplate {
      */
     protected final Coin[] coin = new Coin[random(5, 15)];
     
+    private Random rdm = new Random();
+    
     /**
      */
     public AB2_Exercise12() {
@@ -36,7 +40,7 @@ public abstract class AB2_Exercise12 extends TaskTemplate {
         for (int i = 0; i < coin.length; i++) {
             
             this.coin[i] = new Coin(this.simulation);
-            this.coin[i].spawn(random(0, 9), random(0, 9));
+            this.coin[i].spawn(rdm.nextInt(10), rdm.nextInt(10));
             
         }
         this.mario.spawn(0, 0);
@@ -58,7 +62,7 @@ public abstract class AB2_Exercise12 extends TaskTemplate {
      *            min value
      * @return a random value betwween min and max
      */
-    protected int random(int max, int min) {
+    protected int random(int min, int max) {
         int range = (max - min) + 1;
         return (int) (Math.random() * range) + min;
     }
