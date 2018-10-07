@@ -50,6 +50,7 @@ public abstract class AB3_Exercise07 extends TaskTemplate {
     public void test() {
         this.solve();
         
+        this.simulation.pause();
     }
     
 }
