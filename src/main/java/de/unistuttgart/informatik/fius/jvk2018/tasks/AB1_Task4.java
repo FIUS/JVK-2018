@@ -29,7 +29,6 @@ abstract public class AB1_Task4 extends TaskTemplate {
     protected final Coin coi;
     protected final Coin coin;
     
-    
     public AB1_Task4() {
         super(((Supplier<Territory>) () -> {
             Editor ed = Presets.cage(10, 5);
@@ -47,9 +46,11 @@ abstract public class AB1_Task4 extends TaskTemplate {
     @Override
     public void test() {
         this.solve();
-        Assertions.assertFalse(this.mario.canMove());
         this.simulation.pause();
-        Assertions.assertEquals(7, this.mario.lastPosition().column, "Wrong position");
-        Assertions.assertEquals(4, this.mario.lastPosition().row, "Wrong position");
+        Assertions.assertEquals(0, this.coi.getColumn(), "Wrong position of the coin.");
+        Assertions.assertEquals(1, this.coin.getRow(), "Wrong position of the coin.");
+        
+        Assertions.assertEquals(0, this.coin.getColumn(), "Wrong position of the coin.");
+        Assertions.assertEquals(1, this.coin.getRow(), "Wrong position of the coin.");
     }
 }
