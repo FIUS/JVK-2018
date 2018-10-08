@@ -12,13 +12,14 @@ import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise11;
 /**
  * Base solution for exercise 11 of worksheet 2
  * @author Sebastian Paule
+ * @author Weilinger
  */
 public class AB2_Solution11 extends AB2_Exercise11 {
 
     /*
     WICHTIG!!!
-    Um die Blichrichtung von Mario zu bekommen verwende den code: this.mario.worldObject().direction
-    Das Attribut direktion kann folgende Zustände annehmen:
+    Um die Blickrichtung von Mario zu bekommen verwende den code: this.mario.worldObject().direction
+    Das Attribut direktion kann folgende Zustaende annehmen:
         Direction.NORTH
         Direction.SOUTH
         Direction.EAST
