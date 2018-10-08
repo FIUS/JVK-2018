@@ -21,7 +21,7 @@ public class AB2_Solution03 extends AB2_Exercise03{
     @Override
     protected void stepLeftDown() {
         // TODO work here
-        //Beachte auch den Fall dass es nicht möglich ist sich in diese Richtung zu bewegen
+        //Beachte auch den Fall, dass es nicht möglich ist sich in diese Richtung zu bewegen
         
     }
 
@@ -31,7 +31,7 @@ public class AB2_Solution03 extends AB2_Exercise03{
     @Override
     protected void stepBack() {
         // TODO work here
-        //Beachte auch den Fall dass es nicht möglich ist sich in diese Richtung zu bewegen
+        //Beachte auch den Fall, dass es nicht möglich ist sich in diese Richtung zu bewegen
         
     }
 
@@ -41,7 +41,7 @@ public class AB2_Solution03 extends AB2_Exercise03{
     @Override
     protected void stepRightUp() {
         // TODO work here
-        //Beachte auch den Fall dass es nicht möglich ist sich in diese Richtung zu bewegen
+        //Beachte auch den Fall, dass es nicht möglich ist sich in diese Richtung zu bewegen
         
     }
 }
