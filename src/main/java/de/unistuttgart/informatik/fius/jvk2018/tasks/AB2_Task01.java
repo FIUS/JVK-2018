@@ -24,32 +24,25 @@ import de.unistuttgart.informatik.fius.icge.simulation.Wall;
  * @author Sebastian Paule
  */
 public abstract class AB2_Task01 extends TaskTemplate {
-    /**
-     * 
-     */
+
     protected final Mario mario;
-    /**
-     * 
-     */
     protected final Coin coin1;
-    /**
-     * 
-     */
     protected final Coin coin2;
-    /**
-     * 
-     */
-    protected final Wall wall;
-    
+
     /**
      *
      */
     public AB2_Task01() {
-        super(Presets.cage(5, 5).result(), "Worksheet 2, task 01");
+        super(Presets.cage(5, 3).result(), "Worksheet 2, task 01");
+
         this.mario = new Mario(this.simulation);
+        this.mario.spawn(0, 0);
+
         this.coin1 = new Coin(this.simulation);
+        this.coin1.spawn(2, 0);
+
         this.coin2 = new Coin(this.simulation);
-        this.wall = new Wall(this.simulation);
+        this.coin2.spawn(2, 2);
     }
     
     /**
@@ -57,11 +50,18 @@ public abstract class AB2_Task01 extends TaskTemplate {
      */
     @Override
     public void test() {
+        ArrayList<Entity> atCenter = this.simulation.entitiesWith(ent -> ent.getColumn() == 2 && ent.getRow() == 1);
+        Assertions.assertEquals(1, atCenter.size());
+        Entity ent = atCenter.get(0);
+        Assertions.assertTrue(ent instanceof Wall);
+
         this.solve();
         this.simulation.pause();
-        
-        ArrayList<Entity> temp = this.simulation.entitiesWith(2, 1);
-        Assertions.assertEquals(3, temp.size());
+
+        for (Coin c : new Coin[]{ coin1, coin2 }) {
+            Assertions.assertEquals(0, c.getColumn());
+            Assertions.assertEquals(2, c.getRow());
+        }
     }
     
 }

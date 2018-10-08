@@ -7,6 +7,7 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
+import de.unistuttgart.informatik.fius.icge.simulation.Wall;
 import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Task01;
 
 /**
@@ -14,14 +15,13 @@ import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Task01;
  * @author Sebastian Paule
  */
 public class AB2_Solution01 extends AB2_Task01 {
-    
+
+    public AB2_Solution01() {
+        // TODO work here (a)
+    }
+
     @Override
     public void solve() {
-        // TODO work here (a)
-        this.coin1.spawn(0, 0);
-        this.coin2.spawn(0, 0);
-        this.mario.spawn(0, 0);
-        this.wall.spawn(0,0);
         // TODO work here (b)
     }
     
