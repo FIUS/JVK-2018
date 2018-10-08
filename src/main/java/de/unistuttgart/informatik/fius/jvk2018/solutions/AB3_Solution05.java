@@ -60,7 +60,7 @@ public class AB3_Solution05 extends AB3_Task05 {
             
             this.mario.turnRight();
             
-            for (int i = this.mario.worldObject().column; i > 0; i--) {
+            for (int i = this.mario.getColumn(); i > 0; i--) {
                 this.mario.move();
             }
             
@@ -76,7 +76,7 @@ public class AB3_Solution05 extends AB3_Task05 {
             this.mario.move();
             this.mario.turnLeft();
             
-            for (int i = this.mario.worldObject().column; i > 0; i--) {
+            for (int i = this.mario.getColumn(); i > 0; i--) {
                 this.mario.move();
             }
             this.mario.turnRight();
