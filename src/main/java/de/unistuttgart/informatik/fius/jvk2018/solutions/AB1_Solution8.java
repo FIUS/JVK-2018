@@ -7,19 +7,17 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
-import de.unistuttgart.informatik.fius.icge.simulation.Coin;
-import de.unistuttgart.informatik.fius.jvk2018.tasks.AB1_Task6;
+import de.unistuttgart.informatik.fius.jvk2018.tasks.AB1_Task8;
 
 /**
- * Solution class for task 6 of sheet 1
- *
+ * Solution class for task 7 of sheet 1
+ * 
  */
-public class AB1_Solution6 extends AB1_Task6 {
-    protected Coin coin;
-    protected Coin newCoin;
+public class AB1_Solution8 extends AB1_Task8 {
     
-    @Override
     public void solve() {
 
+ 
     }
+    
 }
