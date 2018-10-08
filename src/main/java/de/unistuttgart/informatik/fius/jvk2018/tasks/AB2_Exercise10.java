@@ -29,6 +29,7 @@ public abstract class AB2_Exercise10 extends TaskTemplate {
     public AB2_Exercise10() {
         super(Presets.cage(10, 10).result(), "AB 2 Exercise 10 (a)");
         this.mario = new Mario(this.simulation);
+        this.mario.spawn(0,0);
         generateWalls();
     }
     
@@ -58,8 +59,8 @@ public abstract class AB2_Exercise10 extends TaskTemplate {
      */
     @Override
     public void test() {
-        Assertions.assertEquals(marioIsCalculating(10,2),5);
-        Assertions.assertEquals(marioIsCalculating(11,2),5);
+        this.solve();
+        this.simulation.pause();
     }
 
     /**
@@ -67,6 +68,28 @@ public abstract class AB2_Exercise10 extends TaskTemplate {
      * @param number2 second number
      * @return n1/n2
      */
-    public abstract int marioIsCalculating(int number1, int number2);
+    public abstract int marioDivides(int number1, int number2);
+
+    /**
+     * @param n1 first number to be used
+     * @param n1 second number
+     * @return n1*n2
+     */
+    public abstract double marioMultiplies(double n1, double n2);
+
+    /**
+     * @param n1 first number to be used
+     * @param n1 second number
+     * @return n1^n2
+     */
+    public abstract int marioCalcsPow(int n1, int n2);
+
+    /**
+     *
+     * @param radius of the circle
+     * @return Area of the circle
+     */
+    public abstract double marioCircleArea(double radius);
+
     
 }
