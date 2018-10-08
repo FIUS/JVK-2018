@@ -14,6 +14,16 @@ import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise11;
  * @author Sebastian Paule
  */
 public class AB2_Solution11 extends AB2_Exercise11 {
+
+    /*
+    WICHTIG!!!
+    Um die Blichrichtung von Mario zu bekommen verwende den code: this.mario.worldObject().direction
+    Das Attribut direktion kann folgende Zustände annehmen:
+        Direction.NORTH
+        Direction.SOUTH
+        Direction.EAST
+        Direction.WEST
+     */
     
     /**
      * @see de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise11#lookWest()
