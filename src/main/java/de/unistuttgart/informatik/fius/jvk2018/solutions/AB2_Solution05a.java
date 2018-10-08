@@ -14,7 +14,11 @@ import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise05a;
  * @author Sebastian Paule
  */
 public class AB2_Solution05a extends AB2_Exercise05a {
-    
+    /*
+    WICHTIG!
+    Hier erleichtern Schleifen dein leben.
+    Falls du lust hast jetzt schon Lust und Mut hast, mit denen zu arbeiten, melde dich einfach:)
+     */
     @Override
     public void solve() {
         // TODO work here
