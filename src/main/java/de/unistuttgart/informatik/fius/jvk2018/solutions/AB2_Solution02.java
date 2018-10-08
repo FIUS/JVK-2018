@@ -17,7 +17,10 @@ import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Task02;
 public class AB2_Solution02 extends AB2_Task02 {
 
     /**
+     * Turns a mario around
      * 
+     * @param mario
+     *            The mario which shall turn around
      */
     @Override
     protected void turnAround(Mario mario) {
@@ -25,7 +28,10 @@ public class AB2_Solution02 extends AB2_Task02 {
     }
 
     /**
+     * Turns a mario to the right
      * 
+     * @param mario
+     *            The mario which shall turn right
      */
     @Override
     protected void turnRight(Mario mario) {
