@@ -7,6 +7,7 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
+import de.unistuttgart.informatik.fius.icge.simulation.Mario;
 import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Task03;
 
 /**
@@ -16,26 +17,37 @@ import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Task03;
 public class AB2_Solution03 extends AB2_Task03 {
 
     /**
+     * Lets a mario step one cell to the left, then one down (relative to his original orientation)
+     * and then lets him look towards his original direction
      * 
+     * @param mario
+     *            The mario which shall move
      */
     @Override
-    protected void stepLeftDown() {
+    protected void stepLeftDown(Mario mario) {
         // TODO work here
     }
 
     /**
+     * Lets a mario step one cell backwards and then lets him look towards his original direction
      * 
+     * @param mario
+     *            The mario which shall move
      */
     @Override
-    protected void stepBack() {
+    protected void stepBack(Mario mario) {
         // TODO work here
     }
 
     /**
+     * Lets a mario step one cell to the right, then one up (relative to his original orientation)
+     * and then lets him look towards his original direction
      * 
+     * @param mario
+     *            The mario which shall move
      */
     @Override
-    protected void stepRightUp() {
+    protected void stepRightUp(Mario mario) {
         // TODO work here
     }
 }

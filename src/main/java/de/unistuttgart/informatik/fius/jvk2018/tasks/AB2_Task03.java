@@ -9,25 +9,28 @@ package de.unistuttgart.informatik.fius.jvk2018.tasks;
 
 import org.junit.jupiter.api.Assertions;
 
-import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
+import de.unistuttgart.informatik.fius.icge.territory.Territory;
+import de.unistuttgart.informatik.fius.icge.territory.WorldObject.Direction;
 
 /**
  *  task for exercise 3 of worksheet 2
  * @author Sebastian Paule
  */
 public abstract class AB2_Task03 extends TaskTemplate {
-    /**
-     * 
-     */
-    protected final Mario mario;
+    private final Mario mario1;
+    private final Mario mario2;
+    private final Mario mario3;
+
     /**
      *
      */
     public AB2_Task03() {
-        super(Presets.cage(5, 5).result(), "Worksheet 2, task 03");
-        this.mario = new Mario(this.simulation);
+        super(new Territory(), "Worksheet 2, task 03");
+        this.mario1 = new Mario(this.simulation);
+        this.mario2 = new Mario(this.simulation);
+        this.mario3 = new Mario(this.simulation);
     }
 
     /**
@@ -35,8 +38,14 @@ public abstract class AB2_Task03 extends TaskTemplate {
      */
     @Override
     public void solve() {
-        // TODO Auto-generated method stub
-        
+        this.mario1.spawn(-2, 0);
+        this.stepRightUp(this.mario1);
+
+        this.mario2.spawn(0, 0);
+        this.stepBack(this.mario2);
+
+        this.mario3.spawn(2, 0);
+        this.stepLeftDown(this.mario3);
     }
 
     /**
@@ -45,31 +54,35 @@ public abstract class AB2_Task03 extends TaskTemplate {
     @Override
     public void test() {
         this.solve();
-        this.mario.spawn(1, 1);
-        stepRightUp();
-        stepBack();
-        stepLeftDown();
         this.simulation.pause();
-        Assertions.assertEquals(this.mario.lastPosition().column,2);
-        Assertions.assertEquals(this.mario.lastPosition().row,1);
-        //I let mario walk with the methods so when they are all right (or when they are all false but compensate each other)
-        //mario should end on the given position 2,1
-        this.simulation.pause();
+
+        for (Mario m : new Mario[]{ this.mario1, this.mario2, this.mario3 }) {
+            Assertions.assertEquals(Direction.EAST, m.worldObject().direction);
+        }
+
+        Assertions.assertEquals(-1, this.mario1.getColumn());
+        Assertions.assertEquals(1, this.mario1.getRow());
+
+        Assertions.assertEquals(-1, this.mario2.getColumn());
+        Assertions.assertEquals(0, this.mario2.getRow());
+
+        Assertions.assertEquals(1, this.mario3.getColumn());
+        Assertions.assertEquals(-1, this.mario3.getRow());
     }
 
     /**
      * 
      */
-    protected abstract void stepRightUp();
+    protected abstract void stepRightUp(Mario mario);
     
     /**
      * 
      */
-    protected abstract void stepLeftDown();
+    protected abstract void stepLeftDown(Mario mario);
     
     /**
      * 
      */
-    protected abstract void stepBack();
+    protected abstract void stepBack(Mario mario);
     
 }
