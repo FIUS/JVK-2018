@@ -10,7 +10,8 @@ package de.unistuttgart.informatik.fius.jvk2018.solutions;
 import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise04;
 
 /**
- * TODO: The base solution for excercise 4 of worksheet 2
+ * The base solution for excercise 4 of worksheet 2
+ * 
  * @author Sebastian Paule
  */
 public class AB2_Solution04 extends AB2_Exercise04 {
@@ -19,14 +20,17 @@ public class AB2_Solution04 extends AB2_Exercise04 {
     protected void vonObenNachUnten() {
         //TODO write code here
     }
+    
     @Override
     protected void vonUntenNachOben() {
         //TODO write code here
     }
+    
     @Override
     protected void vonLinksNachRechts() {
         //TODO write code here
     }
+    
     @Override
     protected void vonRechtsNachLinks() {
         //TODO write code here

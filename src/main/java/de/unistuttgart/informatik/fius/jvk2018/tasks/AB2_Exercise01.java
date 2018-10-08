@@ -20,6 +20,7 @@ import de.unistuttgart.informatik.fius.icge.simulation.Wall;
 
 /**
  * Task for ex. 1 of worksheet 2
+ * 
  * @author Sebastian Paule
  */
 public abstract class AB2_Exercise01 extends TaskTemplate {
@@ -39,6 +40,7 @@ public abstract class AB2_Exercise01 extends TaskTemplate {
      * 
      */
     protected final Wall wall;
+    
     /**
      *
      */
@@ -48,15 +50,6 @@ public abstract class AB2_Exercise01 extends TaskTemplate {
         this.coin1 = new Coin(this.simulation);
         this.coin2 = new Coin(this.simulation);
         this.wall = new Wall(this.simulation);
-       
-    }
-
-    /**
-     * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#solve()
-     */
-    @Override
-    public void solve() {
-        // TODO Auto-generated method stub
         
     }
     
@@ -69,7 +62,7 @@ public abstract class AB2_Exercise01 extends TaskTemplate {
         this.simulation.pause();
         
         ArrayList<Entity> temp = this.simulation.entitiesWith(2, 1);
-        Assertions.assertEquals(3,temp.size());
+        Assertions.assertEquals(3, temp.size());
     }
     
 }
