@@ -46,7 +46,7 @@ public abstract class AB2_Exercise11 extends TaskTemplate {
            this.test = false;
        }
        lookSouth();
-       if(!(this.mario.worldObject().direction== Direction.NORTH)) {
+       if(!(this.mario.worldObject().direction== Direction.SOUTH)) {
            this.test = false;
        }
        lookWest();
