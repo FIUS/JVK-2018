@@ -46,13 +46,15 @@ public abstract class AB2_Task05b extends TaskTemplate {
     public void test() {
        this.solve();
        this.simulation.pause();
-       Assertions.assertEquals(this.simulation.entitiesWith(0, 0),1);
-       Assertions.assertEquals(this.simulation.entitiesWith(0, 1),1);
-       Assertions.assertEquals(this.simulation.entitiesWith(0, 3),1);
-       Assertions.assertEquals(this.simulation.entitiesWith(1, 0),1);
-       Assertions.assertEquals(this.simulation.entitiesWith(1, 5),1);
-       Assertions.assertEquals(this.simulation.entitiesWith(3, 4),1);
-       Assertions.assertEquals(this.simulation.entitiesWith(5, 3),1);
+       // TODO (haslersn): In a later ICGE release, this will be called `entitiesAt()` and will
+       // have the parameter order swapped (column first). See FIUS/ICGE#55.
+       Assertions.assertEquals(1, this.simulation.entitiesWith(0, 0));
+       Assertions.assertEquals(1, this.simulation.entitiesWith(0, 1));
+       Assertions.assertEquals(1, this.simulation.entitiesWith(0, 3));
+       Assertions.assertEquals(1, this.simulation.entitiesWith(1, 0));
+       Assertions.assertEquals(1, this.simulation.entitiesWith(1, 5));
+       Assertions.assertEquals(1, this.simulation.entitiesWith(3, 4));
+       Assertions.assertEquals(1, this.simulation.entitiesWith(5, 3));
        
     }
     
