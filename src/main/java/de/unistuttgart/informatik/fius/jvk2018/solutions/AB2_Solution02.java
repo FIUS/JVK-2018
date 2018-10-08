@@ -7,6 +7,7 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
+import de.unistuttgart.informatik.fius.icge.simulation.Mario;
 import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Task02;
 
 /**
@@ -19,7 +20,7 @@ public class AB2_Solution02 extends AB2_Task02 {
      * 
      */
     @Override
-    protected void turnAround() {
+    protected void turnAround(Mario mario) {
         // TODO work here
     }
 
@@ -27,7 +28,7 @@ public class AB2_Solution02 extends AB2_Task02 {
      * 
      */
     @Override
-    protected void turnRight() {
+    protected void turnRight(Mario mario) {
         // TODO work here
     }
     
