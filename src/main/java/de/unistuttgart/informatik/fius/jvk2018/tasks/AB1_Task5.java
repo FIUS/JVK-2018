@@ -24,12 +24,12 @@ import de.unistuttgart.informatik.fius.icge.territory.WorldObject.Direction;
  * 
  * @author Dilara
  */
-abstract public class AB1_Task4 extends TaskTemplate {
+abstract public class AB1_Task5 extends TaskTemplate {
     protected final Mario mario;
     protected final Coin coi;
     protected final Coin coin;
     
-    public AB1_Task4() {
+    public AB1_Task5() {
         super(((Supplier<Territory>) () -> {
             Editor ed = Presets.cage(10, 5);
             return ed.result();

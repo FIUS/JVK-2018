@@ -7,18 +7,17 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
-import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise05b;
+import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Task05b;
 
 /**
- * Base solution for exercise 5 (b) of worksheet 2
- * @author Sebastian Paule 
+ * Solution class for worksheet 2, task 5b
+ * @author Sebastian Paule
  */
-public class AB2_Solution05b extends AB2_Exercise05b {
+public class AB2_Solution05b extends AB2_Task05b {
     
     @Override
     public void solve() {
         // TODO work here
-        
     }
 
     /**

@@ -18,7 +18,7 @@ import de.unistuttgart.informatik.fius.icge.simulation.Coin;
  * 
  * @author schieljn
  */
-public abstract class AB3_Exercise05 extends TaskTemplate {
+public abstract class AB3_Task05 extends TaskTemplate {
     
     /**
      * Mario to move
@@ -28,8 +28,8 @@ public abstract class AB3_Exercise05 extends TaskTemplate {
     /**
      * Initializes the exercise
      */
-    public AB3_Exercise05() {
-        super(Presets.cage(10, 3).result(), "Selection sort");
+    public AB3_Task05() {
+        super(Presets.cage(10, 3).result(), "Worksheet 3, task 05");
         Random rdm = new Random();
         for (int i = 0; i < 10; i++) {
             int coins = rdm.nextInt(5);

@@ -7,33 +7,33 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
-import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise04;
+import de.unistuttgart.informatik.fius.icge.simulation.Mario;
+import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Task04;
 
 /**
- * The base solution for excercise 4 of worksheet 2
- * 
+ * Solution class for worksheet 2, task 4
  * @author Sebastian Paule
  */
-public class AB2_Solution04 extends AB2_Exercise04 {
+public class AB2_Solution04 extends AB2_Task04 {
     
     @Override
-    protected void vonObenNachUnten() {
-        //TODO write code here
+    protected void vonObenNachUnten(Mario mario) {
+        // TODO work here
     }
     
     @Override
-    protected void vonUntenNachOben() {
-        //TODO write code here
+    protected void vonUntenNachOben(Mario mario) {
+        // TODO work here
     }
     
     @Override
-    protected void vonLinksNachRechts() {
-        //TODO write code here
+    protected void vonLinksNachRechts(Mario mario) {
+        // TODO work here
     }
     
     @Override
-    protected void vonRechtsNachLinks() {
-        //TODO write code here
+    protected void vonRechtsNachLinks(Mario mario) {
+        // TODO work here
     }
     
 }

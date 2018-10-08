@@ -7,15 +7,15 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
-import de.unistuttgart.informatik.fius.jvk2018.tasks.AB3_Exercise05;
+import de.unistuttgart.informatik.fius.jvk2018.tasks.AB3_Task05;
 
 /**
- * The solution for the Exercise AB3_Exercise07
- * 
+ * Solution class for worksheet 3, task 5
  * @author schieljn
  */
-public class AB3_Solution5 extends AB3_Exercise05 {
+public class AB3_Solution05 extends AB3_Task05 {
     
+    // TODO (haslersn): Why are those attributes and not local variables inside `solve()`?
     private int posBottomRow = 0;
     private int smallestStack = 0;
     private int lastSmallestPos = 0;
@@ -25,6 +25,8 @@ public class AB3_Solution5 extends AB3_Exercise05 {
      */
     @Override
     public void solve() {
+        // TODO (haslersn): I guess this solution has to be cleared before packaging
+
         this.mario.turnLeft();
         this.mario.move();
         
@@ -32,13 +34,13 @@ public class AB3_Solution5 extends AB3_Exercise05 {
         for (int coins = 0; coins < 10; coins++) {
             this.smallestStack = Integer.MAX_VALUE;
             for (int i = 0; i < 10; i++) {
-                this.mario.collectAll();
-                if (this.mario.getLastCollected() <= this.smallestStack && this.mario.getLastCollected() != 0) {
-                    this.smallestStack = this.mario.getLastCollected();
+                int collected = this.mario.collectAllCoins();
+                if (collected <= this.smallestStack && collected != 0) {
+                    this.smallestStack = collected;
                     this.lastSmallestPos = i;
                 }
 
-                this.mario.placeAll();
+                this.mario.dropAllCoins();
                 if (i < 9) {
                     this.mario.move();
                 }
@@ -51,7 +53,7 @@ public class AB3_Solution5 extends AB3_Exercise05 {
                 this.mario.move();
             }
             
-            this.mario.collectAll();
+            this.mario.collectAllCoins();
             
             this.mario.turnLeft();
             this.mario.move();
@@ -69,7 +71,7 @@ public class AB3_Solution5 extends AB3_Exercise05 {
             for (int i = 0; i < this.posBottomRow; i++) {
                 this.mario.move();
             }
-            this.mario.placeAll();
+            this.mario.dropAllCoins();
             this.mario.turnLeft();
             this.mario.move();
             this.mario.turnLeft();

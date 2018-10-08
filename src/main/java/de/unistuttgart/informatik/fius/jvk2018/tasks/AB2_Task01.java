@@ -23,7 +23,7 @@ import de.unistuttgart.informatik.fius.icge.simulation.Wall;
  * 
  * @author Sebastian Paule
  */
-public abstract class AB2_Exercise01 extends TaskTemplate {
+public abstract class AB2_Task01 extends TaskTemplate {
     /**
      * 
      */
@@ -44,13 +44,12 @@ public abstract class AB2_Exercise01 extends TaskTemplate {
     /**
      *
      */
-    public AB2_Exercise01() {
-        super(Presets.cage(5, 5).result(), "AB 2 Exercise 01");
+    public AB2_Task01() {
+        super(Presets.cage(5, 5).result(), "Worksheet 2, task 01");
         this.mario = new Mario(this.simulation);
         this.coin1 = new Coin(this.simulation);
         this.coin2 = new Coin(this.simulation);
         this.wall = new Wall(this.simulation);
-        
     }
     
     /**

@@ -7,22 +7,21 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
-import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise05a;
+import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Task05a;
 
 /**
- * Base solution for excercise 5 a of worksheet 2
+ * Solution class for worksheet 2, task 5a
  * @author Sebastian Paule
  */
-public class AB2_Solution05a extends AB2_Exercise05a {
+public class AB2_Solution05a extends AB2_Task05a {
     /*
-    WICHTIG!
-    Hier erleichtern Schleifen dein leben.
-    Falls du lust hast jetzt schon Lust und Mut hast, mit denen zu arbeiten, melde dich einfach:)
+     * WICHTIG!
+     * Hier erleichtern Schleifen dein Leben. Falls du jetzt schon Lust und Mut hast, mit Schleifen
+     * zu arbeiten, melde dich einfach. :-)
      */
     @Override
     public void solve() {
         // TODO work here
-        
     }
     
 }

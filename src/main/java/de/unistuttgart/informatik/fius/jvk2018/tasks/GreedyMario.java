@@ -7,71 +7,46 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.tasks;
 
-import de.unistuttgart.informatik.fius.icge.simulation.Coin;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
 import de.unistuttgart.informatik.fius.icge.simulation.Simulation;
 
 /**
- * Mario who picks all coins at once and saves the amount of picked coins in
- * an attribute
- * 
+ * Subclass of Mario which can also pick op or drop all coins at once.
+ * This class is used in AB3_Task05.
  * @author schieljn
  */
 public class GreedyMario extends Mario {
-    
-    private int lastCollected;
     
     /**
      * Initializes a greedy mario
      * 
      * @param sim
-     *            The simulation of the mario object
+     *            The simulation this entity lives in
      */
     public GreedyMario(Simulation sim) {
         super(sim);
     }
     
     /**
-     * Method to collect all coins on a field
-     */
-    public void collectAll() {
-        int counter = 0;
-        while (this.tryCollect(Coin.class)) {
-            counter++;
-        }
-        this.lastCollected = counter;
-    }
-    
-    /**
-     * Method to get the amount of coins that mario collected the last time the collectAll method
-     * was used.
+     * Collect all coins which are on the same cell
      * 
-     * @return The amount of the last collected coins
+     * @return The amount of coins which have been collected
      */
-    public int getLastCollected() {
-        return this.lastCollected;
+    public int collectAllCoins() {
+        int counter = 0;
+        while (this.tryCollectCoin()) ++counter;
+        return counter;
     }
     
     /**
-     * Places all Coins mario collected
+     * Places all coins mario collected
      */
-    public void placeAll() {
-        while (this.tryDrop())
-            ;
+    public int dropAllCoins() {
+        int counter = 0;
+        while (this.tryDropCoin()) ++counter;
+        return counter;
     }
-    
-    /**
-     * Drops a coins if possible
-     * @return True if a coin was dropped if not false 
-     */
-    private boolean tryDrop() {
-        if (this.canDrop(Coin.class)) {
-            this.drop(Coin.class);
-            return true;
-        }
-        return false;
-    }
-    
+
     /**
      * Turns mario right
      */

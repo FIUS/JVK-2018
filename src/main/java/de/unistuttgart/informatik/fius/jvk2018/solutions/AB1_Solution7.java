@@ -11,8 +11,7 @@ import de.unistuttgart.informatik.fius.icge.simulation.Coin;
 import de.unistuttgart.informatik.fius.jvk2018.tasks.AB1_Task7;
 
 /**
- * Solution class for task 6 of sheet 1
- *
+ * Solution class for worksheet 1, task 7
  */
 public class AB1_Solution7 extends AB1_Task7 {
     private Coin coin;

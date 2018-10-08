@@ -18,36 +18,18 @@ import de.unistuttgart.informatik.fius.icge.simulation.Wall;
  * task for the exercise 9 of worksheet 2
  * @author Sebastian Paule
  */
-public abstract class AB2_Exercise09 extends TaskTemplate {
-    /**
-     * 
-     */
+public abstract class AB2_Task09 extends TaskTemplate {
+
     protected final Mario mario;
-    /**
-     */
     protected final Wall[] walls = new Wall[9];
-    /**
-     * 
-     */
-    public AB2_Exercise09() {
-        super(Presets.cage(5, 5).result(), "AB 2 Exercise 09");
-        this.mario = new Mario(this.simulation);
-    }
 
     /**
-     * this method only exists here so I don't need it in the Solution class
-     * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#solve()
+     * 
      */
-    @Override
-    public void solve() {
-        
-    }
-    
-    /**
-     * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#test()
-     */
-    @Override
-    public void test() {
+    public AB2_Task09() {
+        super(Presets.cage(5, 5).result(), "Worksheet 2, task 09");
+        this.mario = new Mario(this.simulation);
+
         walls[0] = new Wall(this.simulation);
         walls[0].spawn(0, 0);
         walls[1] = new Wall(this.simulation);
@@ -66,66 +48,81 @@ public abstract class AB2_Exercise09 extends TaskTemplate {
         walls[7].spawn(2, 1);
         walls[8] = new Wall(this.simulation);
         walls[8].spawn(2, 2);
-        Assertions.assertEquals(this.scanFront(),true);
-        Assertions.assertEquals(this.scanBack(),true);
-        Assertions.assertEquals(this.scanRight(),true);
-        Assertions.assertEquals(this.scanLeft(),true);
-        Assertions.assertEquals(this.scanUpperRight(),true);
-        Assertions.assertEquals(this.scanUpperLeft(),true);
-        Assertions.assertEquals(this.scanLowerRight(),true);
-        Assertions.assertEquals(this.scanLowerLeft(),true);
-        for(Wall w:walls){
-            w.despawn();
-        }
-        Assertions.assertEquals(this.scanFront(),false);
-        Assertions.assertEquals(this.scanBack(),false);
-        Assertions.assertEquals(this.scanRight(),false);
-        Assertions.assertEquals(this.scanLeft(),false);
-        Assertions.assertEquals(this.scanUpperRight(),false);
-        Assertions.assertEquals(this.scanUpperLeft(),false);
-        Assertions.assertEquals(this.scanLowerRight(),false);
-        Assertions.assertEquals(this.scanLowerLeft(),false);
+    }
+
+    /**
+     * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#solve()
+     */
+    @Override
+    public final void solve() {
+        for (Wall w : walls) w.despawn();
+    }
+
+    /**
+     * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#test()
+     */
+    @Override
+    public void test() {
+        Assertions.assertEquals(this.scanFront(), true);
+        Assertions.assertEquals(this.scanBack(), true);
+        Assertions.assertEquals(this.scanRight(), true);
+        Assertions.assertEquals(this.scanLeft(), true);
+        Assertions.assertEquals(this.scanUpperRight(), true);
+        Assertions.assertEquals(this.scanUpperLeft(), true);
+        Assertions.assertEquals(this.scanLowerRight(), true);
+        Assertions.assertEquals(this.scanLowerLeft(), true);
+
+        this.solve();
         this.simulation.pause();
+
+        Assertions.assertEquals(this.scanFront(), false);
+        Assertions.assertEquals(this.scanBack(), false);
+        Assertions.assertEquals(this.scanRight(), false);
+        Assertions.assertEquals(this.scanLeft(), false);
+        Assertions.assertEquals(this.scanUpperRight(), false);
+        Assertions.assertEquals(this.scanUpperLeft(), false);
+        Assertions.assertEquals(this.scanLowerRight(), false);
+        Assertions.assertEquals(this.scanLowerLeft(), false);
     }
     
     /**
      * @return true if on the scanned field is a collectable
      */
-    protected abstract  Boolean scanFront();
+    protected abstract boolean scanFront();
     
     /**
      * @return true if on the scanned field is a collectable
      */
-    protected abstract  Boolean scanBack();
+    protected abstract boolean scanBack();
     
     /** 
      * @return true if on the scanned field is a collectable
      */
-    protected abstract  Boolean scanRight();
+    protected abstract boolean scanRight();
     
     /**
      * @return true if on the scanned field is a collectable
      */
-    protected abstract  Boolean scanLeft();
+    protected abstract boolean scanLeft();
     
     /**
      * @return true if on the scanned field is a collectable
      */
-    protected abstract  Boolean scanUpperRight();
+    protected abstract boolean scanUpperRight();
     
     /**
      * @return true if on the scanned field is a collectable
      */
-    protected abstract  Boolean scanUpperLeft();
+    protected abstract boolean scanUpperLeft();
     
     /**
      * @return true if on the scanned field is a collectable
      */
-    protected abstract  Boolean scanLowerRight();
+    protected abstract boolean scanLowerRight();
     
     /**
      * @return true if on the scanned field is a collectable
      */
-    protected abstract Boolean scanLowerLeft();
+    protected abstract boolean scanLowerLeft();
     
 }

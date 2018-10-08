@@ -12,35 +12,31 @@ import org.junit.jupiter.api.Assertions;
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
+import de.unistuttgart.informatik.fius.icge.territory.WorldObject.Direction;
 
 /**
- * task of exercise 7 from worksheet 2
+ *  task for exercise 2 of worksheet 2
  * @author Sebastian Paule
  */
-public abstract class AB2_Exercise07 extends TaskTemplate {
+public abstract class AB2_Task02 extends TaskTemplate {
     /**
      * 
      */
-    protected final Mario mario1;
-    /**
-     * 
-     */
-    protected final Mario mario2;
+    protected final Mario mario;
     /**
      *
      */
-    public AB2_Exercise07() {
-        super(Presets.cage(6, 3).result(), "AB 2 Exercise 07");
-        this.mario1 = new Mario(this.simulation);
-        this.mario2 = new Mario(this.simulation);
+    public AB2_Task02() {
+        super(Presets.cage(5, 5).result(), "Worksheet 2, task 02");
+        this.mario = new Mario(this.simulation);
     }
-
+    
     /**
+     * this method only exists here so I don't need it in the Solution class
      * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#solve()
      */
     @Override
     public void solve() {
-        // TODO Auto-generated method stub
         
     }
     
@@ -50,12 +46,22 @@ public abstract class AB2_Exercise07 extends TaskTemplate {
     @Override
     public void test() {
         this.solve();
+        this.mario.spawn(0, 0);//he looks at east
+        this.turnAround();
+        Assertions.assertEquals(this.mario.worldObject().direction, Direction.WEST);//he should look at west
+        this.turnRight();
+        Assertions.assertEquals(this.mario.worldObject().direction, Direction.NORTH);//finally he should look at north
         this.simulation.pause();
-        
-        Assertions.assertEquals(this.mario1.lastPosition().column,1);
-        Assertions.assertEquals(this.mario1.lastPosition().row,0);
-        Assertions.assertEquals(this.mario2.lastPosition().column,2);
-        Assertions.assertEquals(this.mario2.lastPosition().row,1);
     }
+
+    /**
+     * 
+     */
+    protected abstract void turnAround();
+
+    /**
+     * 
+     */
+    protected abstract void turnRight();
     
 }

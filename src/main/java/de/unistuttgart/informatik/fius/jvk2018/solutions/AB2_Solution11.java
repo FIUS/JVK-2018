@@ -7,59 +7,55 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
-import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise11;
+import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Task11;
 
 /**
- * Base solution for exercise 11 of worksheet 2
+ * Solution class for worksheet 2, task 11
  * @author Sebastian Paule
  * @author Weilinger
  */
-public class AB2_Solution11 extends AB2_Exercise11 {
+public class AB2_Solution11 extends AB2_Task11 {
 
     /*
-    WICHTIG!!!
-    Um die Blickrichtung von Mario zu bekommen verwende den code: this.mario.worldObject().direction
-    Das Attribut direktion kann folgende Zustaende annehmen:
-        Direction.NORTH
-        Direction.SOUTH
-        Direction.EAST
-        Direction.WEST
+     * WICHTIG!!!
+     * Um die Blickrichtung von Mario zu bekommen verwende den code: this.mario.worldObject().direction
+     * Das Attribut direction kann folgende Zustaende annehmen:
+     *     Direction.NORTH
+     *     Direction.SOUTH
+     *     Direction.EAST
+     *     Direction.WEST
      */
     
     /**
-     * @see de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise11#lookWest()
+     * @see de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Task11#lookWest()
      */
     @Override
     protected void lookWest() {
         // TODO work here
-        
     }
     
     /**
-     * @see de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise11#lookSouth()
+     * @see de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Task11#lookSouth()
      */
     @Override
     protected void lookSouth() {
         // TODO work here
-        
     }
     
     /**
-     * @see de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise11#lookEast()
+     * @see de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Task11#lookEast()
      */
     @Override
     protected void lookEast() {
         // TODO work here
-        
     }
     
     /**
-     * @see de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise11#lookNorth()
+     * @see de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Task11#lookNorth()
      */
     @Override
     protected void lookNorth() {
         // TODO work here
-        
     }
     
 }

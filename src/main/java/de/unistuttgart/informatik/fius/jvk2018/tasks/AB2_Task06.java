@@ -14,21 +14,27 @@ import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
 
 /**
- * TODO: task for the exercise 5 (b) of worksheet 2
+ * base solution for exercise 6 of worksheet 2
  * @author Sebastian Paule
  */
-public abstract class AB2_Exercise05b extends TaskTemplate {
+public abstract class AB2_Task06 extends TaskTemplate {
     /**
      * 
      */
-    protected final Mario mario;
+    protected final Mario mario1;
+    /**
+     * 
+     */
+    protected final Mario mario2;
     /**
      *
      */
-    public AB2_Exercise05b() {
-        super(Presets.cage(6, 6).result(), "AB 2 Exercise 05 (b)");
-        this.mario = new Mario(this.simulation);
+    public AB2_Task06() {
+        super(Presets.cage(12, 2).result(), "Worksheet 2, task 06");
+        this.mario1 = new Mario(this.simulation);
+        this.mario2 = new Mario(this.simulation);
     }
+    
 
     /**
      * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#solve()
@@ -46,13 +52,17 @@ public abstract class AB2_Exercise05b extends TaskTemplate {
     public void test() {
        this.solve();
        this.simulation.pause();
-       Assertions.assertEquals(this.simulation.entitiesWith(0, 0),1);
-       Assertions.assertEquals(this.simulation.entitiesWith(0, 1),1);
-       Assertions.assertEquals(this.simulation.entitiesWith(0, 3),1);
-       Assertions.assertEquals(this.simulation.entitiesWith(1, 0),1);
-       Assertions.assertEquals(this.simulation.entitiesWith(1, 5),1);
-       Assertions.assertEquals(this.simulation.entitiesWith(3, 4),1);
-       Assertions.assertEquals(this.simulation.entitiesWith(5, 3),1);
+
+       Assertions.assertEquals(this.mario1.lastPosition().column,0);
+       Assertions.assertEquals(this.mario1.lastPosition().row,0);
+       Assertions.assertEquals(this.mario2.lastPosition().column,1);
+       Assertions.assertEquals(this.mario2.lastPosition().row,1);
+       
+       
+       this.mario1.spawn(11, 0);
+       this.mario2.spawn(11, 1);
+       
+       
        
     }
     

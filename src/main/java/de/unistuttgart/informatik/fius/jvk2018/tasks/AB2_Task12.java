@@ -19,7 +19,7 @@ import de.unistuttgart.informatik.fius.icge.simulation.Mario;
  * 
  * @author Sebastian Paule
  */
-public abstract class AB2_Exercise12 extends TaskTemplate {
+public abstract class AB2_Task12 extends TaskTemplate {
     /**
      * 
      */
@@ -33,8 +33,8 @@ public abstract class AB2_Exercise12 extends TaskTemplate {
     
     /**
      */
-    public AB2_Exercise12() {
-        super(Presets.cage(10, 10).result(), "AB 2 Exercise 12");
+    public AB2_Task12() {
+        super(Presets.cage(10, 10).result(), "Worksheet 2, task 12");
         this.mario = new Mario(this.simulation);
         
         for (int i = 0; i < coin.length; i++) {

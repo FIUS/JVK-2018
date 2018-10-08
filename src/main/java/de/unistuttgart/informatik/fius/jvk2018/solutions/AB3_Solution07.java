@@ -1,16 +1,19 @@
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
-import de.unistuttgart.informatik.fius.icge.simulation.Mario;
-import de.unistuttgart.informatik.fius.icge.territory.Territory;
-import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise07;
-import de.unistuttgart.informatik.fius.jvk2018.tasks.AB3_Exercise7;
+import java.util.Random;
 
-public class AB3_Solution7 extends AB3_Exercise7 {
+import de.unistuttgart.informatik.fius.icge.simulation.Mario;
+import de.unistuttgart.informatik.fius.jvk2018.tasks.AB3_Task07;
+
+/**
+ * Solution class for worksheet 3, task 7
+ */
+public class AB3_Solution07 extends AB3_Task07 {
 
 
     @Override
     public void solve() {
-        Mario luigi = new Mario(this.simulation);
+        Mario luigi = new Mario(this.simulation); // TODO: Use a Luigi object once the Luigi class is added to ICGE
         luigi.spawn(0, 1);
         int marioCount = 0;
         int luigiCount = 0;
@@ -39,6 +42,6 @@ public class AB3_Solution7 extends AB3_Exercise7 {
      * @return random integer value from 1 to 6
      */
     public int dice() {
-        return (int) (6.0 * Math.random()) + 1;
+        return 1 + new Random().nextInt(6);
     }
 }

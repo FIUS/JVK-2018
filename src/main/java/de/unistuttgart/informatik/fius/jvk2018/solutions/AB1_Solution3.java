@@ -10,8 +10,7 @@ package de.unistuttgart.informatik.fius.jvk2018.solutions;
 import de.unistuttgart.informatik.fius.jvk2018.tasks.AB1_Task3;
 
 /**
- * Solution class for Task 3 of sheet 1
- *
+ * Solution class for worksheet 1, task 3
  */
 public class AB1_Solution3 extends AB1_Task3 {
     

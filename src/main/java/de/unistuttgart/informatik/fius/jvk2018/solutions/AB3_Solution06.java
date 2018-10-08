@@ -8,14 +8,13 @@
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
 import de.unistuttgart.informatik.fius.icge.simulation.Coin;
-import de.unistuttgart.informatik.fius.jvk2018.tasks.AB3_Exercise06;
+import de.unistuttgart.informatik.fius.jvk2018.tasks.AB3_Task06;
 
 /**
- * The solution for the Exercise AB3_Exercise07
- * 
+ * Solution class for worksheet 3, task 6
  * @author schieljn
  */
-public class AB3_Solution6 extends AB3_Exercise06 {
+public class AB3_Solution06 extends AB3_Task06 {
     
     /**
      * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#solve()

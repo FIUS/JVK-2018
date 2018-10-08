@@ -17,7 +17,7 @@ import de.unistuttgart.informatik.fius.icge.simulation.Mario;
  * 
  * @author schieljn
  */
-public abstract class AB3_Exercise06 extends TaskTemplate {
+public abstract class AB3_Task06 extends TaskTemplate {
     
     /**
      * Mario to move
@@ -27,8 +27,8 @@ public abstract class AB3_Exercise06 extends TaskTemplate {
     /**
      * Initializes the exercise
      */
-    public AB3_Exercise06() {
-        super(Presets.cage(8, 8).result(), "Chess");
+    public AB3_Task06() {
+        super(Presets.cage(8, 8).result(), "Worksheet 2, task 06");
         
         this.mario = new Mario(this.simulation);
         this.mario.spawn(0, 0);

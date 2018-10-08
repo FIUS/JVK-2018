@@ -7,84 +7,76 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
-import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise09;
+import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Task09;
 
 /**
- * Base solution for the exercise 9 of the second worksheet
+ * Solution class for worksheet 2, task 9
  * @author Sebastian Paule
  */
-public class AB2_Solution09 extends AB2_Exercise09{
+public class AB2_Solution09 extends AB2_Task09 {
 
     /**
      * @return true if on the scanned field is a collectable
      */
-    protected Boolean scanFront() {
-        return null;
-      //TODO work here
-        
+    protected boolean scanFront() {
+        // TODO work here
+        return false;
     }
     
     /**
      * @return true if on the scanned field is a collectable
      */
-    protected Boolean scanBack() {
-        return null;
-      //TODO work here
-        
+    protected boolean scanBack() {
+        // TODO work here
+        return false;
     }
     
     /**
      * @return true if on the scanned field is a collectable
      */
-    protected Boolean scanRight() {
-        return null;
-      //TODO work here
-        
+    protected boolean scanRight() {
+        // TODO work here
+        return false;
     }
     
     /**
      * @return true if on the scanned field is a collectable
      */
-    protected Boolean scanLeft() {
-        return null;
-      //TODO work here
-        
+    protected boolean scanLeft() {
+        // TODO work here
+        return false;
     }
     
     /**
      * @return true if on the scanned field is a collectable
      */
-    protected Boolean scanUpperRight() {
-        return null;
-      //TODO work here
-        
+    protected boolean scanUpperRight() {
+        // TODO work here
+        return false;
     }
     
     /**
      * @return true if on the scanned field is a collectable
      */
-    protected Boolean scanUpperLeft() {
-        return null;
-      //TODO work here
-        
+    protected boolean scanUpperLeft() {
+        // TODO work here
+        return false;
     }
     
     /**
      * @return true if on the scanned field is a collectable
      */
-    protected Boolean scanLowerRight() {
-        return null;
-        //TODO work here
-        
+    protected boolean scanLowerRight() {
+        // TODO work here
+        return false;
     }
     
     /**
      * @return true if on the scanned field is a collectable
      */
-    protected Boolean scanLowerLeft() {
-        return null;
-      //TODO work here
-        
+    protected boolean scanLowerLeft() {
+        // TODO work here
+        return false;
     }
     
 }

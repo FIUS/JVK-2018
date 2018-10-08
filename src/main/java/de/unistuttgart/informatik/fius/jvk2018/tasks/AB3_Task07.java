@@ -19,12 +19,11 @@ import org.junit.jupiter.api.TestTemplate;
  * Er soll ausgeben dass er gewonnen hat.
  * @author Weilinger
  */
-public abstract class AB3_Exercise7 extends TaskTemplate {
+public abstract class AB3_Task07 extends TaskTemplate {
     protected final Mario mario;
 
-
-    public AB3_Exercise7() {
-        super(Presets.cage(15, 2).result(), "Race");
+    public AB3_Task07() {
+        super(Presets.cage(15, 2).result(), "Worksheet 2, task 07");
         this.mario = new Mario(this.simulation);
         this.mario.spawn(0, 0);
 

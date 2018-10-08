@@ -7,6 +7,8 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.tasks;
 
+import java.util.Random;
+
 import org.junit.jupiter.api.Assertions;
 
 import de.unistuttgart.informatik.fius.icge.course.Presets;
@@ -18,42 +20,29 @@ import de.unistuttgart.informatik.fius.icge.simulation.Wall;
  * Task for exercise 10 a of the second worksheet
  * @author Sebastian Paule
  */
-public abstract class AB2_Exercise10 extends TaskTemplate {
-    /**
-     * 
-     */
+public abstract class AB2_Task10 extends TaskTemplate {
     protected final Mario mario;
+
     /**
      *
      */
-    public AB2_Exercise10() {
-        super(Presets.cage(10, 10).result(), "AB 2 Exercise 10 (a)");
+    public AB2_Task10() {
+        super(Presets.cage(10, 10).result(), "Worksheet 2, task 10 (a)");
         this.mario = new Mario(this.simulation);
         this.mario.spawn(0,0);
         generateWalls();
     }
     
     private void generateWalls() {
+        Random r = new Random();
         for(int i = 1; i != 9;++i){
-            int b = random();
-            for(int o = 0; o != b;++o){
-            new Wall(this.simulation).spawn(o, i);
+            int b = r.nextInt(9);
+            for (int o = 0; o < b; ++o){
+                new Wall(this.simulation).spawn(o, i);
             }
         }
     }
-    
-    /**
-     * @return a random value between 1 and 9
-     */
-    protected int random(){
-            int range = (8 - 0) + 1;     
-            return (int)(Math.random() * range) + 0;
-    }
-    
-    public void solve(){
-        
-    }
-    
+
     /**
      * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#test()
      */

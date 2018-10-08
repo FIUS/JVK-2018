@@ -14,13 +14,13 @@ import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
  * task for exercise 6 of worksheet 2
  * @author Sebastian Paule
  */
-public abstract class AB2_Exercise05c extends TaskTemplate {
+public abstract class AB2_Task05c extends TaskTemplate {
     
     /**
      *
      */
-    public AB2_Exercise05c() {
-        super(Presets.cage(6, 6).result(), "AB 2 Exercise 05 (c)");
+    public AB2_Task05c() {
+        super(Presets.cage(6, 6).result(), "Worksheet 2, task 05 (c)");
         // TODO Auto-generated constructor stub
     }
 

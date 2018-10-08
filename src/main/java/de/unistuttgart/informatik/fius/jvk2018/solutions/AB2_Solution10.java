@@ -7,20 +7,18 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
-import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Exercise10;
+import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Task10;
 
 /**
- * Base solution for the exercise 10 (a) of worksheet 2
- * 
+ * Solution class for worksheet 2, task 10
  * @author Sebastian Paule
  * @author Weilinger
  */
-public class AB2_Solution10 extends AB2_Exercise10 {
+public class AB2_Solution10 extends AB2_Task10 {
 
     /**
      * Teste hier deine Methoden indem du Werte einfügst und sie im log mit
-     * "this.mario.print(methodenName());"
-     * ausgibst
+     * `this.mario.print(methodenName());` ausgibst
      */
     @Override
     public void solve() {
@@ -34,21 +32,21 @@ public class AB2_Solution10 extends AB2_Exercise10 {
 
     @Override
     public double marioMultiplies(double n1, double n2) {
-        //TODO
+        // TODO work here
         return 0;
     }
 
     @Override
     public int marioCalcsPow(int n1, int n2) {
-        //TODO
-        //Tipp: Schau dir die Math Klasse an
+        // TODO work here
+        // Tipp: Schau dir die Klasse `Math` an
         return 0;
     }
 
     @Override
     public double marioCircleArea(double radius) {
-        //TODO
-        //selber tipp
+        // TODO work here
+        // Selber topp
         return 0;
     }
 

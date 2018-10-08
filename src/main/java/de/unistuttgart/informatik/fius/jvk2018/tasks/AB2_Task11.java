@@ -18,7 +18,7 @@ import de.unistuttgart.informatik.fius.icge.territory.WorldObject.Direction;
  * Task for the exercise 11 from worksheet 2
  * @author Sebastian Paule
  */
-public abstract class AB2_Exercise11 extends TaskTemplate {
+public abstract class AB2_Task11 extends TaskTemplate {
     private Boolean test = true;
     /**
      * 
@@ -26,8 +26,8 @@ public abstract class AB2_Exercise11 extends TaskTemplate {
     protected final Mario mario;
     /**
      */
-    public AB2_Exercise11() {
-        super(Presets.cage(1, 1).result(), "AB 2 Exercise 11 (a-d)");
+    public AB2_Task11() {
+        super(Presets.cage(1, 1).result(), "Worksheet 2, task 11 (a-d)");
         this.mario = new Mario(this.simulation);
     }
 

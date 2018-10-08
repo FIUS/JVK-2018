@@ -12,13 +12,12 @@ import org.junit.jupiter.api.Assertions;
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
-import de.unistuttgart.informatik.fius.icge.territory.WorldObject.Direction;
 
 /**
- *  task for exercise 2 of worksheet 2
+ *  task for exercise 3 of worksheet 2
  * @author Sebastian Paule
  */
-public abstract class AB2_Exercise02 extends TaskTemplate {
+public abstract class AB2_Task03 extends TaskTemplate {
     /**
      * 
      */
@@ -26,42 +25,51 @@ public abstract class AB2_Exercise02 extends TaskTemplate {
     /**
      *
      */
-    public AB2_Exercise02() {
-        super(Presets.cage(5, 5).result(), "AB 2 Exercise 02");
+    public AB2_Task03() {
+        super(Presets.cage(5, 5).result(), "Worksheet 2, task 03");
         this.mario = new Mario(this.simulation);
     }
-    
+
     /**
-     * this method only exists here so I don't need it in the Solution class
      * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#solve()
      */
     @Override
     public void solve() {
+        // TODO Auto-generated method stub
         
     }
-    
+
     /**
      * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#test()
      */
     @Override
     public void test() {
         this.solve();
-        this.mario.spawn(0, 0);//he looks at east
-        this.turnAround();
-        Assertions.assertEquals(this.mario.worldObject().direction, Direction.WEST);//he should look at west
-        this.turnRight();
-        Assertions.assertEquals(this.mario.worldObject().direction, Direction.NORTH);//finally he should look at north
+        this.mario.spawn(1, 1);
+        stepRightUp();
+        stepBack();
+        stepLeftDown();
+        this.simulation.pause();
+        Assertions.assertEquals(this.mario.lastPosition().column,2);
+        Assertions.assertEquals(this.mario.lastPosition().row,1);
+        //I let mario walk with the methods so when they are all right (or when they are all false but compensate each other)
+        //mario should end on the given position 2,1
         this.simulation.pause();
     }
 
     /**
      * 
      */
-    protected abstract void turnAround();
-
+    protected abstract void stepRightUp();
+    
     /**
      * 
      */
-    protected abstract void turnRight();
+    protected abstract void stepLeftDown();
+    
+    /**
+     * 
+     */
+    protected abstract void stepBack();
     
 }
