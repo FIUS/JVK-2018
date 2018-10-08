@@ -21,7 +21,6 @@ public class AB2_Solution02 extends AB2_Task02 {
     @Override
     protected void turnAround() {
         // TODO work here
-        
     }
 
     /**
@@ -30,7 +29,6 @@ public class AB2_Solution02 extends AB2_Task02 {
     @Override
     protected void turnRight() {
         // TODO work here
-        
     }
     
 }
