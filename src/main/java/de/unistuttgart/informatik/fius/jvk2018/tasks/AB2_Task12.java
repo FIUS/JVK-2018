@@ -22,10 +22,7 @@ import de.unistuttgart.informatik.fius.icge.simulation.Mario;
 public abstract class AB2_Task12 extends TaskTemplate {
 
     protected final Mario mario;
-    /**
-     * 
-     */
-    protected final Coin[] coin = new Coin[random(5, 15)];
+    protected final Coin[] coins;
     
     private Random rdm = new Random();
     
@@ -36,26 +33,13 @@ public abstract class AB2_Task12 extends TaskTemplate {
         super(Presets.cage(10, 10).result(), "Worksheet 2, task 12");
 
         this.mario = new Mario(this.simulation);
-        
-        for (int i = 0; i < this.coin.length; i++) {
-            
-            this.coin[i] = new Coin(this.simulation);
-            this.coin[i].spawn(this.rdm.nextInt(10), this.rdm.nextInt(10));
-            
-        }
         this.mario.spawn(0, 0);
-    }
 
-    /**
-     * @param max
-     *            max value
-     * @param min
-     *            min value
-     * @return a random value betwween min and max
-     */
-    protected int random(int min, int max) {
-        int range = (max - min) + 1;
-        return (int) (Math.random() * range) + min;
+        this.coins = new Coin[rdm.nextInt(11) + 5];
+        for (int i = 0; i < this.coins.length; i++) {
+            this.coins[i] = new Coin(this.simulation);
+            this.coins[i].spawn(this.rdm.nextInt(10), this.rdm.nextInt(10));
+        }
     }
     
     /**
