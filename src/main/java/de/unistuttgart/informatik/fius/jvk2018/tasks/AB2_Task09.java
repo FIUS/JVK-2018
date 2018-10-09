@@ -11,6 +11,8 @@ import org.junit.jupiter.api.Assertions;
 
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
 import de.unistuttgart.informatik.fius.icge.simulation.Coin;
+import de.unistuttgart.informatik.fius.icge.simulation.CollectableEntity;
+import de.unistuttgart.informatik.fius.icge.simulation.Entity;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
 import de.unistuttgart.informatik.fius.icge.territory.Territory;
 
@@ -77,7 +79,39 @@ public abstract class AB2_Task09 extends TaskTemplate {
         this.mario.turnLeft();
         Assertions.assertTrue(this.scanFront(this.mario));
         
-        // TODO (haslersn): more checks ...
+        // diagonal scans
+        this.mario.turnLeft();
+        Assertions.assertFalse(this.scanUpperRight(this.mario));
+        Assertions.assertFalse(this.scanUpperLeft(this.mario));
+        Assertions.assertFalse(this.scanLowerRight(this.mario));
+        Assertions.assertFalse(this.scanLowerLeft(this.mario));
+        new Coin(this.simulation).spawn(1, 1);
+        Assertions.assertFalse(this.scanUpperRight(this.mario));
+        Assertions.assertFalse(this.scanUpperLeft(this.mario));
+        Assertions.assertTrue(this.scanLowerRight(this.mario));
+        Assertions.assertFalse(this.scanLowerLeft(this.mario));
+        new Coin(this.simulation).spawn(-1, 1);
+        Assertions.assertFalse(this.scanUpperRight(this.mario));
+        Assertions.assertFalse(this.scanUpperLeft(this.mario));
+        Assertions.assertTrue(this.scanLowerRight(this.mario));
+        Assertions.assertTrue(this.scanLowerLeft(this.mario));
+        new Coin(this.simulation).spawn(1, -1);
+        Assertions.assertTrue(this.scanUpperRight(this.mario));
+        Assertions.assertFalse(this.scanUpperLeft(this.mario));
+        Assertions.assertTrue(this.scanLowerRight(this.mario));
+        Assertions.assertFalse(this.scanLowerLeft(this.mario));
+        new Coin(this.simulation).spawn(-1, -1);
+        Assertions.assertTrue(this.scanUpperRight(this.mario));
+        Assertions.assertTrue(this.scanUpperLeft(this.mario));
+        Assertions.assertTrue(this.scanLowerRight(this.mario));
+        Assertions.assertTrue(this.scanLowerLeft(this.mario));
+        
+        // scanAround
+        for (Entity c : this.simulation.entitiesWith(ent -> ent instanceof CollectableEntity)) {
+            Assertions.assertTrue(this.scanAround(this.mario));
+            ((CollectableEntity) c).despawn();
+        }
+        Assertions.assertFalse(this.scanAround(this.mario));
     }
     
     /**
