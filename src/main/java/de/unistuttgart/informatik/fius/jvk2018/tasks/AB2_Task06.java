@@ -35,16 +35,6 @@ public abstract class AB2_Task06 extends TaskTemplate {
         this.mario2 = new Mario(this.simulation);
     }
     
-
-    /**
-     * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#solve()
-     */
-    @Override
-    public void solve() {
-        // TODO Auto-generated method stub
-        
-    }
-    
     /**
      * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#test()
      */

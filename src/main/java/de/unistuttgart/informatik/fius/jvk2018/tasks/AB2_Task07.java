@@ -36,15 +36,6 @@ public abstract class AB2_Task07 extends TaskTemplate {
     }
 
     /**
-     * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#solve()
-     */
-    @Override
-    public void solve() {
-        // TODO Auto-generated method stub
-        
-    }
-    
-    /**
      * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#test()
      */
     @Override

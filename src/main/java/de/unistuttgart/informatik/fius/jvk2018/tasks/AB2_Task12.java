@@ -45,16 +45,7 @@ public abstract class AB2_Task12 extends TaskTemplate {
         }
         this.mario.spawn(0, 0);
     }
-    
-    /**
-     * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#solve()
-     */
-    @Override
-    public void solve() {
-        // TODO Auto-generated method stub
-        
-    }
-    
+
     /**
      * @param max
      *            max value
