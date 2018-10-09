@@ -72,12 +72,12 @@ public abstract class AB2_Task09 extends TaskTemplate {
         cNorth.despawn();
         Assertions.assertFalse(this.scanBack(this.mario));
         
-        // scanFront
-        Assertions.assertFalse(this.scanFront(this.mario));
-        Coin cSouth = new Coin(this.simulation);
-        Assertions.assertTrue(this.scanFront(this.mario));
+        // scanLeft
+        Assertions.assertTrue(this.scanLeft(this.mario));
+        cEast.despawn();
+        Assertions.assertFalse(this.scanLeft(this.mario));
         this.mario.turnLeft();
-        Assertions.assertTrue(this.scanFront(this.mario));
+        Assertions.assertFalse(this.scanLeft(this.mario));
         
         // diagonal scans
         this.mario.turnLeft();
@@ -99,7 +99,7 @@ public abstract class AB2_Task09 extends TaskTemplate {
         Assertions.assertTrue(this.scanUpperRight(this.mario));
         Assertions.assertFalse(this.scanUpperLeft(this.mario));
         Assertions.assertTrue(this.scanLowerRight(this.mario));
-        Assertions.assertFalse(this.scanLowerLeft(this.mario));
+        Assertions.assertTrue(this.scanLowerLeft(this.mario));
         new Coin(this.simulation).spawn(-1, -1);
         Assertions.assertTrue(this.scanUpperRight(this.mario));
         Assertions.assertTrue(this.scanUpperLeft(this.mario));
