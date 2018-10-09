@@ -15,12 +15,13 @@ import de.unistuttgart.informatik.fius.icge.simulation.Mario;
 
 /**
  * task for excercise 5 a of worksheet 2
+ * 
  * @author Sebastian Paule
  */
 public abstract class AB2_Task05a extends TaskTemplate {
-
+    
     protected final Mario mario;
-
+    
     /**
      *
      */
@@ -28,7 +29,7 @@ public abstract class AB2_Task05a extends TaskTemplate {
         super(Presets.cage(6, 6).result(), "Worksheet 2, task 5 (a)");
         this.mario = new Mario(this.simulation, 36);
     }
-
+    
     /**
      * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#test()
      */
@@ -38,7 +39,7 @@ public abstract class AB2_Task05a extends TaskTemplate {
         this.simulation.pause();
         for (int i = 0; i != 5; ++i) {
             for (int o = 0; o != 5; ++o) {
-                Assertions.assertEquals(this.simulation.collectablesWith(i, o).size(), 1);
+                Assertions.assertEquals(this.simulation.collectablesAt(o, i).size(), 1);
             }
         }
     }
