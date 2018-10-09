@@ -55,9 +55,7 @@ public abstract class AB3_Task06 extends TaskTemplate {
         for (int i = 0; i < 10; i++) {
             lastField = newField;
             newField = 0;
-        // TODO (haslersn): In a later ICGE release, this will be called `entitiesAt()` and will
-        // have the parameter order swapped (column first). See FIUS/ICGE#55.
-            ArrayList<Entity> e = this.simulation.entitiesWith(i, 2);
+            ArrayList<Entity> e = this.simulation.entitiesWith(2, i);
             for (Entity ent : e) {
                 if (ent.type() == EntityType.COIN) {
                     newField++;

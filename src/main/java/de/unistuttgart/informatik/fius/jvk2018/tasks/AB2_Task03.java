@@ -57,7 +57,7 @@ public abstract class AB2_Task03 extends TaskTemplate {
         this.simulation.pause();
 
         for (Mario m : new Mario[]{ this.mario1, this.mario2, this.mario3 }) {
-            Assertions.assertEquals(Direction.EAST, m.worldObject().direction);
+            Assertions.assertEquals(Direction.EAST, m.getDirection());
         }
 
         Assertions.assertEquals(-1, this.mario1.getColumn());
