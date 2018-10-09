@@ -12,10 +12,11 @@ import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Task09;
 
 /**
  * Solution class for worksheet 2, task 9
+ * 
  * @author Sebastian Paule
  */
 public class AB2_Solution09 extends AB2_Task09 {
-
+    
     /**
      * @return true iff an instance of `CollectableEntity` is in front of mario
      *
@@ -26,9 +27,9 @@ public class AB2_Solution09 extends AB2_Task09 {
         // TODO work here
         return false;
     }
-
+    
     /**
-     * @return true iff an instance of `CollectableEntity` is in front of mario
+     * @return true iff an instance of `CollectableEntity` is behind mario
      *
      * @param mario
      *            The mario to scan relative to
@@ -37,9 +38,9 @@ public class AB2_Solution09 extends AB2_Task09 {
         // TODO work here
         return false;
     }
-
+    
     /**
-     * @return true iff an instance of `CollectableEntity` is in front of mario
+     * @return true iff an instance of `CollectableEntity` is at the right of mario
      *
      * @param mario
      *            The mario to scan relative to
@@ -48,9 +49,9 @@ public class AB2_Solution09 extends AB2_Task09 {
         // TODO work here
         return false;
     }
-
+    
     /**
-     * @return true iff an instance of `CollectableEntity` is in front of mario
+     * @return true iff an instance of `CollectableEntity` is at the left of mario
      *
      * @param mario
      *            The mario to scan relative to
@@ -59,9 +60,10 @@ public class AB2_Solution09 extends AB2_Task09 {
         // TODO work here
         return false;
     }
-
+    
     /**
-     * @return true iff an instance of `CollectableEntity` is in front of mario
+     * @return true iff an instance of `CollectableEntity` is one cell in front and one to the
+     *         right of mario
      *
      * @param mario
      *            The mario to scan relative to
@@ -70,9 +72,10 @@ public class AB2_Solution09 extends AB2_Task09 {
         // TODO work here
         return false;
     }
-
+    
     /**
-     * @return true iff an instance of `CollectableEntity` is in front of mario
+     * @return true iff an instance of `CollectableEntity` is one cell in front and one to the
+     *         left of mario
      *
      * @param mario
      *            The mario to scan relative to
@@ -81,9 +84,10 @@ public class AB2_Solution09 extends AB2_Task09 {
         // TODO work here
         return false;
     }
-
+    
     /**
-     * @return true iff an instance of `CollectableEntity` is in front of mario
+     * @return true iff an instance of `CollectableEntity` is one cell behind and one to the right
+     *         of mario
      *
      * @param mario
      *            The mario to scan relative to
@@ -92,9 +96,10 @@ public class AB2_Solution09 extends AB2_Task09 {
         // TODO work here
         return false;
     }
-
+    
     /**
-     * @return true iff an instance of `CollectableEntity` is in front of mario
+     * @return true iff an instance of `CollectableEntity` is one cell behind and one to the left
+     *         of mario
      *
      * @param mario
      *            The mario to scan relative to
@@ -103,7 +108,7 @@ public class AB2_Solution09 extends AB2_Task09 {
         // TODO work here
         return false;
     }
-
+    
     /**
      * @return true iff an instance of `CollectableEntity` is in front of mario
      *
@@ -114,5 +119,5 @@ public class AB2_Solution09 extends AB2_Task09 {
         // TODO work here
         return false;
     }
-
+    
 }
