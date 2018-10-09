@@ -49,7 +49,6 @@ public abstract class AB2_Task10 extends TaskTemplate {
     @Override
     public void test() {
         this.solve();
-        this.simulation.pause();
     }
 
     /**
