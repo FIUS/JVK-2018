@@ -46,7 +46,6 @@ abstract public class AB3_Task05 extends TaskTemplate {
     @Override
     public void test() {
         this.solve();
-        assertTrue(mario._inventory.size()==0);
         
     }
 }
