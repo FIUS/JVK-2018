@@ -63,25 +63,25 @@ public abstract class AB2_Task09 extends TaskTemplate {
      */
     @Override
     public void test() {
-        Assertions.assertEquals(this.scanFront(), true);
-        Assertions.assertEquals(this.scanBack(), true);
-        Assertions.assertEquals(this.scanRight(), true);
-        Assertions.assertEquals(this.scanLeft(), true);
-        Assertions.assertEquals(this.scanUpperRight(), true);
-        Assertions.assertEquals(this.scanUpperLeft(), true);
-        Assertions.assertEquals(this.scanLowerRight(), true);
-        Assertions.assertEquals(this.scanLowerLeft(), true);
+        Assertions.assertEquals(true, this.scanFront());
+        Assertions.assertEquals(true, this.scanBack());
+        Assertions.assertEquals(true, this.scanRight());
+        Assertions.assertEquals(true, this.scanLeft());
+        Assertions.assertEquals(true, this.scanUpperRight());
+        Assertions.assertEquals(true, this.scanUpperLeft());
+        Assertions.assertEquals(true, this.scanLowerRight());
+        Assertions.assertEquals(true, this.scanLowerLeft());
 
         this.solve();
 
-        Assertions.assertEquals(this.scanFront(), false);
-        Assertions.assertEquals(this.scanBack(), false);
-        Assertions.assertEquals(this.scanRight(), false);
-        Assertions.assertEquals(this.scanLeft(), false);
-        Assertions.assertEquals(this.scanUpperRight(), false);
-        Assertions.assertEquals(this.scanUpperLeft(), false);
-        Assertions.assertEquals(this.scanLowerRight(), false);
-        Assertions.assertEquals(this.scanLowerLeft(), false);
+        Assertions.assertEquals(false, this.scanFront());
+        Assertions.assertEquals(false, this.scanBack());
+        Assertions.assertEquals(false, this.scanRight());
+        Assertions.assertEquals(false, this.scanLeft());
+        Assertions.assertEquals(false, this.scanUpperRight());
+        Assertions.assertEquals(false, this.scanUpperLeft());
+        Assertions.assertEquals(false, this.scanLowerRight());
+        Assertions.assertEquals(false, this.scanLowerLeft());
     }
     
     /**

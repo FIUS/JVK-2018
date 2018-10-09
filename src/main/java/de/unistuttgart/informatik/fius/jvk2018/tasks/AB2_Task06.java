@@ -43,17 +43,14 @@ public abstract class AB2_Task06 extends TaskTemplate {
        this.solve();
        this.simulation.pause();
 
-       Assertions.assertEquals(this.mario1.lastPosition().column,0);
-       Assertions.assertEquals(this.mario1.lastPosition().row,0);
-       Assertions.assertEquals(this.mario2.lastPosition().column,1);
-       Assertions.assertEquals(this.mario2.lastPosition().row,1);
-       
+       Assertions.assertEquals(0, this.mario1.lastPosition().column);
+       Assertions.assertEquals(0, this.mario1.lastPosition().row);
+
+       Assertions.assertEquals(1, this.mario2.lastPosition().column);
+       Assertions.assertEquals(1, this.mario2.lastPosition().row);
        
        this.mario1.spawn(11, 0);
        this.mario2.spawn(11, 1);
-       
-       
-       
     }
     
 }
