@@ -36,8 +36,8 @@ public abstract class AB2_Task11 extends TaskTemplate {
      * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#solve()
      */
     @Override
-    public void solve() {
-       this.mario.spawn(0, 0);
+    public final void solve() {
+        // intentionally empty
     }
     
     /**

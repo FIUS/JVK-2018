@@ -37,7 +37,7 @@ public abstract class AB2_Task03 extends TaskTemplate {
      * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#solve()
      */
     @Override
-    public void solve() {
+    public final void solve() {
         this.mario1.spawn(-2, 0);
         this.stepRightUp(this.mario1);
 
