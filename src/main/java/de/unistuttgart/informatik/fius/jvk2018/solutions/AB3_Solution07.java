@@ -1,47 +1,58 @@
+/*
+ * This source file is part of the FIUS JVK 2018 project.
+ * For more information see github.com/neumantm/ICGE
+ * 
+ * Copyright (c) 2018 the JVK 2018 project authors.
+ */
+
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
-import java.util.Random;
-
-import de.unistuttgart.informatik.fius.icge.simulation.Mario;
+import de.unistuttgart.informatik.fius.icge.simulation.Coin;
 import de.unistuttgart.informatik.fius.jvk2018.tasks.AB3_Task07;
 
 /**
- * Solution class for worksheet 3, task 7
+ * Solution class for worksheet 3, task 6
+ * @author schieljn
  */
 public class AB3_Solution07 extends AB3_Task07 {
-
-
+    
+    /**
+     * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#solve()
+     */
     @Override
     public void solve() {
-        Mario luigi = new Mario(this.simulation); // TODO: Use a Luigi object once the Luigi class is added to ICGE
-        luigi.spawn(0, 1);
-        int marioCount = 0;
-        int luigiCount = 0;
-        while (this.mario.canMove() && luigi.canMove()) {
-            marioCount += dice();
-            luigiCount += dice();
-            if (marioCount >= 18) {
+        while (this.mario.tryCollect())
+            ;
+        for (int rows = 0; rows < 4; rows++) {
+            int mod = 2;
+            for (int x = 0; x < 7; x++) {
+                if (x % mod == 0) {
+                    this.mario.tryDrop(Coin.class);
+                    
+                }
                 this.mario.move();
-                marioCount = 0;
             }
-            if (luigiCount >= 18) {
-                luigi.move();
-                luigiCount = 0;
+            this.mario.turnLeft();
+            this.mario.turnLeft();
+            this.mario.turnLeft();
+            this.mario.move();
+            this.mario.turnLeft();
+            this.mario.turnLeft();
+            this.mario.turnLeft();
+            
+            for (int x = 0; x < 7; x++) {
+                if (x % mod == 0) {
+                    this.mario.tryDrop(Coin.class);
+                    
+                }
+                this.mario.move();
+            }
+            if (rows < 3) {
+                this.mario.turnLeft();
+                this.mario.move();
+                this.mario.turnLeft();
             }
         }
-        if (this.mario.canMove()) {
-            luigi.print("LUIGI HAT GEWONNEN");
-        } else {
-            this.mario.print("MARIO HAT GEWONNEN");
-        }
     }
-
-    /**
-     * standard dice should be implemented here
-     *
-     * @return random integer value from 1 to 6
-     */
-    public int dice() {
-        return 1 + new Random().nextInt(6);
-    }
+    
 }

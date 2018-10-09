@@ -1,77 +1,52 @@
 /*
- * This source file is part of the FIUS JVK 2018 project.
+ * This source file is part of the FIUS ICGE project.
  * For more information see github.com/neumantm/ICGE
- * 
- * Copyright (c) 2018 the JVK 2018 project authors.
+ *
+ * Copyright (c) 2018 the ICGE project authors.
  */
 
 package de.unistuttgart.informatik.fius.jvk2018.tasks;
 
-import java.util.Random;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import java.awt.TexturePaint;
+
+import org.junit.jupiter.api.Assertions;
 
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
-import de.unistuttgart.informatik.fius.icge.simulation.Coin;
+import de.unistuttgart.informatik.fius.icge.simulation.Mario;
+import de.unistuttgart.informatik.fius.icge.simulation.MovableEntity.MoveEvent;
+import de.unistuttgart.informatik.fius.icge.territory.Editor;
+import de.unistuttgart.informatik.fius.icge.territory.Territory;
 
 /**
- * Exercise AB3_7
- * 
- * @author schieljn
+ * This provides the base class for Solution1.
  */
-public abstract class AB3_Task05 extends TaskTemplate {
+abstract public class AB3_Task05 extends TaskTemplate {
     
+    protected final Mario mario = new Mario(this.simulation);
     /**
-     * Mario to move
+     * The width of the field
      */
-    public final GreedyMario mario;
-    
+    protected static int fieldWidth = 6;
     /**
-     * Initializes the exercise
+     * The height of the field
      */
+    protected static int fieldHeight = 6;
     public AB3_Task05() {
-        super(Presets.cage(10, 3).result(), "Worksheet 3, task 05");
-        Random rdm = new Random();
-        for (int i = 0; i < 10; i++) {
-            int coins = rdm.nextInt(5);
-            coins++;
-            for (int j = 0; j < coins; j++) {
-                new Coin(this.simulation).spawn(i, 0);
-            }
-        }
-        this.mario = new GreedyMario(this.simulation);
-        this.mario.spawn(0, 1);
-        
+        super(Presets.cage(fieldWidth, fieldHeight).result(), "Task1");
+        this.mario.spawn(0, 0);
     }
     
-    /**
-     * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#test()
-     */
+    public static int taskNumber() {
+        return 35;
+    }
+    
     @Override
     public void test() {
         this.solve();
-        /*
-        int lastField = 0;
-        int newField = 0;
-        for (int i = 0; i < 10; i++) {
-            lastField = newField;
-            newField = 0;
-        // TODO (haslersn): In a later ICGE release, this will be called `entitiesAt()` and will
-        // have the parameter order swapped (column first). See FIUS/ICGE#55.
-            ArrayList<Entity> e = this.simulation.entitiesWith(i, 2);
-            for (Entity ent : e) {
-                if (ent.type() == EntityType.COIN) {
-                    newField++;
-                }
-            }
-            int check = 0;
-            if (newField >= lastField) {
-                check = 1;
-            }
-            assertEquals(1, check, "The coins are not sorted!");
-        }
-        */
+        assertTrue(mario._inventory.size()==0);
         
-        this.simulation.pause();
     }
-    
 }

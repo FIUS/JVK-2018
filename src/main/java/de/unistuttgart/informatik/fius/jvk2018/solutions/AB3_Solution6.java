@@ -7,15 +7,15 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
-import de.unistuttgart.informatik.fius.jvk2018.tasks.AB3_Task06;
+import de.unistuttgart.informatik.fius.jvk2018.tasks.AB3_Exercise06;
 
 /**
- * Solution class for worksheet 3, task 5
+ * The solution for the Exercise AB3_Exercise07
+ * 
  * @author schieljn
  */
-public class AB3_Solution06 extends AB3_Task06 {
+public class AB3_Solution6 extends AB3_Exercise06 {
     
-    // TODO (haslersn): Why are those attributes and not local variables inside `solve()`?
     private int posBottomRow = 0;
     private int smallestStack = 0;
     private int lastSmallestPos = 0;
@@ -25,27 +25,24 @@ public class AB3_Solution06 extends AB3_Task06 {
      */
     @Override
     public void solve() {
-        // TODO (haslersn): I guess this solution has to be cleared before packaging
-
         this.mario.turnLeft();
         this.mario.move();
         
-        this.mario.turnRight();
+        this.mario.turnLeft();
+        this.mario.turnLeft();
+        this.mario.turnLeft();
         for (int coins = 0; coins < 10; coins++) {
-            this.smallestStack = Integer.MAX_VALUE;
             for (int i = 0; i < 10; i++) {
-                int collected = this.mario.collectAllCoins();
-                if (collected <= this.smallestStack && collected != 0) {
-                    this.smallestStack = collected;
+                this.mario.collectAll();
+                if (this.mario.getLastCollected() <= this.smallestStack) {
+                    this.smallestStack = this.mario.getLastCollected();
                     this.lastSmallestPos = i;
                 }
-
-                this.mario.dropAllCoins();
-                if (i < 9) {
-                    this.mario.move();
-                }
+                this.mario.placeAll();
+                this.mario.move();
             }
             
+
             this.mario.turnLeft();
             this.mario.turnLeft();
             
@@ -53,14 +50,16 @@ public class AB3_Solution06 extends AB3_Task06 {
                 this.mario.move();
             }
             
-            this.mario.collectAllCoins();
+            this.mario.collectAll();
             
             this.mario.turnLeft();
             this.mario.move();
             
-            this.mario.turnRight();
+            this.mario.turnLeft();
+            this.mario.turnLeft();
+            this.mario.turnLeft();
             
-            for (int i = this.mario.getColumn(); i > 0; i--) {
+            for (int i = this.mario.worldObject().column; i > 0; i--) {
                 this.mario.move();
             }
             
@@ -71,18 +70,22 @@ public class AB3_Solution06 extends AB3_Task06 {
             for (int i = 0; i < this.posBottomRow; i++) {
                 this.mario.move();
             }
-            this.mario.dropAllCoins();
+            this.mario.placeAll();
             this.mario.turnLeft();
             this.mario.move();
             this.mario.turnLeft();
             
-            for (int i = this.mario.getColumn(); i > 0; i--) {
+            for (int i = this.mario.worldObject().column; i > 0; i--) {
                 this.mario.move();
             }
-            this.mario.turnRight();
+            this.mario.turnLeft();
+            this.mario.turnLeft();
+            this.mario.turnLeft();
             this.mario.move();
-            this.mario.turnRight();
-            this.posBottomRow++;
+            this.mario.turnLeft();
+            this.mario.turnLeft();
+            this.mario.turnLeft();
+            this.lastSmallestPos++;
         }
     }
     

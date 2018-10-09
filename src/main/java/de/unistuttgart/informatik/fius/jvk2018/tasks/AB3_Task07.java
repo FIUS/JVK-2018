@@ -1,37 +1,50 @@
-package de.unistuttgart.informatik.fius.jvk2018.tasks;
+/*
+ * This source file is part of the FIUS JVK 2018 project.
+ * For more information see github.com/neumantm/ICGE
+ * 
+ * Copyright (c) 2018 the JVK 2018 project authors.
+ */
 
-import java.util.function.Supplier;
+package de.unistuttgart.informatik.fius.jvk2018.tasks;
 
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
+import de.unistuttgart.informatik.fius.icge.simulation.Coin;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
-import de.unistuttgart.informatik.fius.icge.simulation.Wall.WallState;
-import de.unistuttgart.informatik.fius.icge.territory.Editor;
-import de.unistuttgart.informatik.fius.icge.territory.Territory;
-import de.unistuttgart.informatik.fius.icge.territory.WorldObject;
-import org.junit.jupiter.api.TestTemplate;
 
 /**
- * Mario und Luigi veranstalten ein Wettrennen.
- * Sie würfeln nacheinander und dürfen erst einen Schritt nach vorne machen, wenn die summe der Augenzahlen 18 oder groesser ist.
- * Wenn einer einen Schritt gemacht hat wird die Summe der Augenzahlen für sie zurückgesetzt.
- * Der erste der die Linke Seite erreicht hat gewonnen.
- * Er soll ausgeben dass er gewonnen hat.
- * @author Weilinger
+ * Exercise AB3_7
+ * 
+ * @author schieljn
  */
 public abstract class AB3_Task07 extends TaskTemplate {
-    protected final Mario mario;
-
+    
+    /**
+     * Mario to move
+     */
+    public final Mario mario;
+    
+    /**
+     * Initializes the exercise
+     */
     public AB3_Task07() {
-        super(Presets.cage(15, 2).result(), "Worksheet 2, task 07");
+        super(Presets.cage(8, 8).result(), "Worksheet 2, task 06");
+        
         this.mario = new Mario(this.simulation);
         this.mario.spawn(0, 0);
-
+        for (int i = 0; i < 32; i++) {
+            new Coin(this.simulation).spawn(0, 0);
+        }
+        
     }
-
+    
+    /**
+     * @see de.unistuttgart.informatik.fius.icge.course.TaskTemplate#test()
+     */
     @Override
     public void test() {
         this.solve();
-        this.simulation.pause();
+        
     }
+    
 }

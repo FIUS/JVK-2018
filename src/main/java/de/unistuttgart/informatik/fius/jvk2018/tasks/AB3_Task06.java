@@ -7,10 +7,11 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.tasks;
 
+import java.util.Random;
+
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
 import de.unistuttgart.informatik.fius.icge.simulation.Coin;
-import de.unistuttgart.informatik.fius.icge.simulation.Mario;
 
 /**
  * Exercise AB3_7
@@ -22,19 +23,23 @@ public abstract class AB3_Task06 extends TaskTemplate {
     /**
      * Mario to move
      */
-    public final Mario mario;
+    public final GreedyMario mario;
     
     /**
      * Initializes the exercise
      */
     public AB3_Task06() {
-        super(Presets.cage(8, 8).result(), "Worksheet 2, task 06");
-        
-        this.mario = new Mario(this.simulation);
-        this.mario.spawn(0, 0);
-        for (int i = 0; i < 32; i++) {
-            new Coin(this.simulation).spawn(0, 0);
+        super(Presets.cage(10, 3).result(), "Worksheet 3, task 05");
+        Random rdm = new Random();
+        for (int i = 0; i < 10; i++) {
+            int coins = rdm.nextInt(5);
+            coins++;
+            for (int j = 0; j < coins; j++) {
+                new Coin(this.simulation).spawn(i, 0);
+            }
         }
+        this.mario = new GreedyMario(this.simulation);
+        this.mario.spawn(0, 1);
         
     }
     
@@ -44,7 +49,29 @@ public abstract class AB3_Task06 extends TaskTemplate {
     @Override
     public void test() {
         this.solve();
+        /*
+        int lastField = 0;
+        int newField = 0;
+        for (int i = 0; i < 10; i++) {
+            lastField = newField;
+            newField = 0;
+        // TODO (haslersn): In a later ICGE release, this will be called `entitiesAt()` and will
+        // have the parameter order swapped (column first). See FIUS/ICGE#55.
+            ArrayList<Entity> e = this.simulation.entitiesWith(i, 2);
+            for (Entity ent : e) {
+                if (ent.type() == EntityType.COIN) {
+                    newField++;
+                }
+            }
+            int check = 0;
+            if (newField >= lastField) {
+                check = 1;
+            }
+            assertEquals(1, check, "The coins are not sorted!");
+        }
+        */
         
+        this.simulation.pause();
     }
     
 }
