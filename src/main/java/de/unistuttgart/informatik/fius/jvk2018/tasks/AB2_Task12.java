@@ -20,9 +20,7 @@ import de.unistuttgart.informatik.fius.icge.simulation.Mario;
  * @author Sebastian Paule
  */
 public abstract class AB2_Task12 extends TaskTemplate {
-    /**
-     * 
-     */
+
     protected final Mario mario;
     /**
      * 
@@ -32,9 +30,11 @@ public abstract class AB2_Task12 extends TaskTemplate {
     private Random rdm = new Random();
     
     /**
+     *
      */
     public AB2_Task12() {
         super(Presets.cage(10, 10).result(), "Worksheet 2, task 12");
+
         this.mario = new Mario(this.simulation);
         
         for (int i = 0; i < this.coin.length; i++) {

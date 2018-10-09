@@ -18,14 +18,10 @@ import de.unistuttgart.informatik.fius.icge.simulation.Mario;
  * @author Sebastian Paule
  */
 public abstract class AB2_Task07 extends TaskTemplate {
-    /**
-     * 
-     */
+
     protected final Mario mario1;
-    /**
-     * 
-     */
     protected final Mario mario2;
+
     /**
      *
      */

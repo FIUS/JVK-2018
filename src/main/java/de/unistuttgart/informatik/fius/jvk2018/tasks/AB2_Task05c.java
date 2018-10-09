@@ -35,7 +35,7 @@ public abstract class AB2_Task05c extends TaskTemplate {
     public void test() {
         this.solve();
         this.simulation.pause();
-      //no test because everyone draws a smiley in his own way
+        // no test because everyone draws a smiley in his own way
     }
     
 }

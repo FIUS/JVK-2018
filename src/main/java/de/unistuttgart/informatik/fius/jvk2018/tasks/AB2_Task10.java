@@ -35,9 +35,9 @@ public abstract class AB2_Task10 extends TaskTemplate {
     
     private void generateWalls() {
         Random r = new Random();
-        for(int i = 1; i != 9;++i){
+        for(int i = 1; i != 9;++i) {
             int b = r.nextInt(9);
-            for (int o = 0; o < b; ++o){
+            for (int o = 0; o < b; ++o) {
                 new Wall(this.simulation).spawn(o, i);
             }
         }
