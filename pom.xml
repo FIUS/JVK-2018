@@ -11,7 +11,7 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<icge.version>0.7.0</icge.version>
+		<icge.version>0.7.1</icge.version>
 	</properties>
 	<repositories>
 		<repository>

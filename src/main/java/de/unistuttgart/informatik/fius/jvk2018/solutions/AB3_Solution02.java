@@ -7,17 +7,12 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
-import java.awt.List;
-import java.util.ArrayList;
-import java.util.Random;
-
-import de.unistuttgart.informatik.fius.icge.simulation.*;
-import de.unistuttgart.informatik.fius.jvk2018.tasks.AB3_Task05;
+import de.unistuttgart.informatik.fius.jvk2018.tasks.AB3_Task02;
 
 /**
  * @author ruffdd
  */
-public class AB3_Solution05 extends AB3_Task05 {
+public class AB3_Solution02 extends AB3_Task02 {
     
     
     @Override

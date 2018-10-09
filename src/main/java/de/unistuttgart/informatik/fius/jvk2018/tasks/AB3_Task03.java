@@ -23,19 +23,12 @@ import de.unistuttgart.informatik.fius.icge.territory.Territory;
 /**
  * This provides the base class for Solution1.
  */
-abstract public class AB3_Task05 extends TaskTemplate {
+abstract public class AB3_Task03 extends TaskTemplate {
     
     protected final Mario mario = new Mario(this.simulation);
-    /**
-     * The width of the field
-     */
-    protected static int fieldWidth = 6;
-    /**
-     * The height of the field
-     */
-    protected static int fieldHeight = 6;
-    public AB3_Task05() {
-        super(Presets.cage(fieldWidth, fieldHeight).result(), "AB3_Excerice05");
+   
+    public AB3_Task03() {
+        super(Presets.cage(10,1).result(), "AB3_Excerice03");
         this.mario.spawn(0, 0);
     }
     
