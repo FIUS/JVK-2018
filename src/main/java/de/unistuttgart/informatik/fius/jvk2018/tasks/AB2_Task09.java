@@ -17,6 +17,7 @@ import de.unistuttgart.informatik.fius.icge.simulation.Wall;
 /**
  * task for the exercise 9 of worksheet 2
  * @author Sebastian Paule
+ * @author haslersn
  */
 public abstract class AB2_Task09 extends TaskTemplate {
 
@@ -63,25 +64,25 @@ public abstract class AB2_Task09 extends TaskTemplate {
      */
     @Override
     public void test() {
-        Assertions.assertEquals(true, this.scanFront());
-        Assertions.assertEquals(true, this.scanBack());
-        Assertions.assertEquals(true, this.scanRight());
-        Assertions.assertEquals(true, this.scanLeft());
-        Assertions.assertEquals(true, this.scanUpperRight());
-        Assertions.assertEquals(true, this.scanUpperLeft());
-        Assertions.assertEquals(true, this.scanLowerRight());
-        Assertions.assertEquals(true, this.scanLowerLeft());
+        Assertions.assertTrue(this.scanFront());
+        Assertions.assertTrue(this.scanBack());
+        Assertions.assertTrue(this.scanRight());
+        Assertions.assertTrue(this.scanLeft());
+        Assertions.assertTrue(this.scanUpperRight());
+        Assertions.assertTrue(this.scanUpperLeft());
+        Assertions.assertTrue(this.scanLowerRight());
+        Assertions.assertTrue(this.scanLowerLeft());
 
         this.solve();
 
-        Assertions.assertEquals(false, this.scanFront());
-        Assertions.assertEquals(false, this.scanBack());
-        Assertions.assertEquals(false, this.scanRight());
-        Assertions.assertEquals(false, this.scanLeft());
-        Assertions.assertEquals(false, this.scanUpperRight());
-        Assertions.assertEquals(false, this.scanUpperLeft());
-        Assertions.assertEquals(false, this.scanLowerRight());
-        Assertions.assertEquals(false, this.scanLowerLeft());
+        Assertions.assertFalse(this.scanFront());
+        Assertions.assertFalse(this.scanBack());
+        Assertions.assertFalse(this.scanRight());
+        Assertions.assertFalse(this.scanLeft());
+        Assertions.assertFalse(this.scanUpperRight());
+        Assertions.assertFalse(this.scanUpperLeft());
+        Assertions.assertFalse(this.scanLowerRight());
+        Assertions.assertFalse(this.scanLowerLeft());
     }
     
     /**
