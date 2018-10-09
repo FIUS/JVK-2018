@@ -7,6 +7,7 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.solutions;
 
+import de.unistuttgart.informatik.fius.icge.simulation.Mario;
 import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Task09;
 
 /**
@@ -16,67 +17,102 @@ import de.unistuttgart.informatik.fius.jvk2018.tasks.AB2_Task09;
 public class AB2_Solution09 extends AB2_Task09 {
 
     /**
-     * @return true if on the scanned field is a collectable
+     * @return true iff an instance of `CollectableEntity` is in front of mario
+     *
+     * @param mario
+     *            The mario to scan relative to
      */
-    protected boolean scanFront() {
+    protected boolean scanFront(Mario mario) {
         // TODO work here
         return false;
     }
-    
+
     /**
-     * @return true if on the scanned field is a collectable
+     * @return true iff an instance of `CollectableEntity` is in front of mario
+     *
+     * @param mario
+     *            The mario to scan relative to
      */
-    protected boolean scanBack() {
+    protected boolean scanBack(Mario mario) {
         // TODO work here
         return false;
     }
-    
+
     /**
-     * @return true if on the scanned field is a collectable
+     * @return true iff an instance of `CollectableEntity` is in front of mario
+     *
+     * @param mario
+     *            The mario to scan relative to
      */
-    protected boolean scanRight() {
+    protected boolean scanRight(Mario mario) {
         // TODO work here
         return false;
     }
-    
+
     /**
-     * @return true if on the scanned field is a collectable
+     * @return true iff an instance of `CollectableEntity` is in front of mario
+     *
+     * @param mario
+     *            The mario to scan relative to
      */
-    protected boolean scanLeft() {
+    protected boolean scanLeft(Mario mario) {
         // TODO work here
         return false;
     }
-    
+
     /**
-     * @return true if on the scanned field is a collectable
+     * @return true iff an instance of `CollectableEntity` is in front of mario
+     *
+     * @param mario
+     *            The mario to scan relative to
      */
-    protected boolean scanUpperRight() {
+    protected boolean scanUpperRight(Mario mario) {
         // TODO work here
         return false;
     }
-    
+
     /**
-     * @return true if on the scanned field is a collectable
+     * @return true iff an instance of `CollectableEntity` is in front of mario
+     *
+     * @param mario
+     *            The mario to scan relative to
      */
-    protected boolean scanUpperLeft() {
+    protected boolean scanUpperLeft(Mario mario) {
         // TODO work here
         return false;
     }
-    
+
     /**
-     * @return true if on the scanned field is a collectable
+     * @return true iff an instance of `CollectableEntity` is in front of mario
+     *
+     * @param mario
+     *            The mario to scan relative to
      */
-    protected boolean scanLowerRight() {
+    protected boolean scanLowerRight(Mario mario) {
         // TODO work here
         return false;
     }
-    
+
     /**
-     * @return true if on the scanned field is a collectable
+     * @return true iff an instance of `CollectableEntity` is in front of mario
+     *
+     * @param mario
+     *            The mario to scan relative to
      */
-    protected boolean scanLowerLeft() {
+    protected boolean scanLowerLeft(Mario mario) {
         // TODO work here
         return false;
     }
-    
+
+    /**
+     * @return true iff an instance of `CollectableEntity` is in front of mario
+     *
+     * @param mario
+     *            The mario to scan relative to
+     */
+    protected boolean scanAround(Mario mario) {
+        // TODO work here
+        return false;
+    }
+
 }

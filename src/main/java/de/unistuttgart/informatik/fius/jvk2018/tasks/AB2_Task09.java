@@ -7,12 +7,15 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.tasks;
 
+import java.util.ArrayList;
+
 import org.junit.jupiter.api.Assertions;
 
-import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
+import de.unistuttgart.informatik.fius.icge.simulation.Coin;
+import de.unistuttgart.informatik.fius.icge.simulation.CollectableEntity;
 import de.unistuttgart.informatik.fius.icge.simulation.Mario;
-import de.unistuttgart.informatik.fius.icge.simulation.Wall;
+import de.unistuttgart.informatik.fius.icge.territory.Territory;
 
 /**
  * task for the exercise 9 of worksheet 2
@@ -22,33 +25,15 @@ import de.unistuttgart.informatik.fius.icge.simulation.Wall;
 public abstract class AB2_Task09 extends TaskTemplate {
 
     protected final Mario mario;
-    protected final Wall[] walls = new Wall[9];
 
     /**
      * 
      */
     public AB2_Task09() {
-        super(Presets.cage(5, 5).result(), "Worksheet 2, task 09");
-        this.mario = new Mario(this.simulation);
+        super(new Territory(), "Worksheet 2, task 09");
 
-        walls[0] = new Wall(this.simulation);
-        walls[0].spawn(0, 0);
-        walls[1] = new Wall(this.simulation);
-        walls[1].spawn(0, 1);
-        walls[2] = new Wall(this.simulation);
-        walls[2].spawn(0, 2);
-        walls[3] = new Wall(this.simulation);
-        walls[3].spawn(1, 0);
-        walls[4] = new Wall(this.simulation);
-        walls[4].spawn(1, 1);
-        walls[5] = new Wall(this.simulation);
-        walls[5].spawn(1, 2);
-        walls[6] = new Wall(this.simulation);
-        walls[6].spawn(2, 0);
-        walls[7] = new Wall(this.simulation);
-        walls[7].spawn(2, 1);
-        walls[8] = new Wall(this.simulation);
-        walls[8].spawn(2, 2);
+        this.mario = new Mario(this.simulation);
+        this.mario.spawn(0, 0);
     }
 
     /**
@@ -56,7 +41,7 @@ public abstract class AB2_Task09 extends TaskTemplate {
      */
     @Override
     public final void solve() {
-        for (Wall w : walls) w.despawn();
+        // intentionally empty
     }
 
     /**
@@ -64,65 +49,109 @@ public abstract class AB2_Task09 extends TaskTemplate {
      */
     @Override
     public void test() {
-        Assertions.assertTrue(this.scanFront());
-        Assertions.assertTrue(this.scanBack());
-        Assertions.assertTrue(this.scanRight());
-        Assertions.assertTrue(this.scanLeft());
-        Assertions.assertTrue(this.scanUpperRight());
-        Assertions.assertTrue(this.scanUpperLeft());
-        Assertions.assertTrue(this.scanLowerRight());
-        Assertions.assertTrue(this.scanLowerLeft());
+        // scanFront
+        Assertions.assertFalse(this.scanFront(this.mario));
+        Coin cEast = new Coin(this.simulation);
+        cEast.spawn(1, 0);
+        Assertions.assertTrue(this.scanFront(this.mario));
+        this.mario.turnLeft();
+        Assertions.assertFalse(this.scanFront(this.mario));
 
-        this.solve();
+        // scanRight
+        Assertions.assertTrue(this.scanRight(this.mario));
+        this.mario.turnLeft();
+        Assertions.assertFalse(this.scanRight(this.mario));
+        Coin cNorth = new Coin(this.simulation);
+        cNorth.spawn(0, -1);
+        Assertions.assertTrue(this.scanRight(this.mario));
 
-        Assertions.assertFalse(this.scanFront());
-        Assertions.assertFalse(this.scanBack());
-        Assertions.assertFalse(this.scanRight());
-        Assertions.assertFalse(this.scanLeft());
-        Assertions.assertFalse(this.scanUpperRight());
-        Assertions.assertFalse(this.scanUpperLeft());
-        Assertions.assertFalse(this.scanLowerRight());
-        Assertions.assertFalse(this.scanLowerLeft());
+        // scanBack
+        Assertions.assertTrue(this.scanBack(this.mario));
+        this.mario.turnLeft();
+        Assertions.assertTrue(this.scanBack(this.mario));
+        cNorth.despawn();
+        Assertions.assertFalse(this.scanBack(this.mario));
+
+        // scanFront
+        Assertions.assertFalse(this.scanFront(this.mario));
+        Coin cSouth = new Coin(this.simulation);
+        Assertions.assertTrue(this.scanFront(this.mario));
+        this.mario.turnLeft();
+        Assertions.assertTrue(this.scanFront(this.mario));
+
+        // TODO (haslersn): more checks ...
     }
-    
+
     /**
-     * @return true if on the scanned field is a collectable
+     * @return true iff an instance of `CollectableEntity` is in front of mario
+     *
+     * @param mario
+     *            The mario to scan relative to
      */
-    protected abstract boolean scanFront();
-    
+    protected abstract boolean scanFront(Mario mario);
+
     /**
-     * @return true if on the scanned field is a collectable
+     * @return true iff an instance of `CollectableEntity` is in front of mario
+     *
+     * @param mario
+     *            The mario to scan relative to
      */
-    protected abstract boolean scanBack();
-    
-    /** 
-     * @return true if on the scanned field is a collectable
-     */
-    protected abstract boolean scanRight();
-    
+    protected abstract boolean scanBack(Mario mario);
+
     /**
-     * @return true if on the scanned field is a collectable
+     * @return true iff an instance of `CollectableEntity` is in front of mario
+     *
+     * @param mario
+     *            The mario to scan relative to
      */
-    protected abstract boolean scanLeft();
-    
+    protected abstract boolean scanRight(Mario mario);
+
     /**
-     * @return true if on the scanned field is a collectable
+     * @return true iff an instance of `CollectableEntity` is in front of mario
+     *
+     * @param mario
+     *            The mario to scan relative to
      */
-    protected abstract boolean scanUpperRight();
-    
+    protected abstract boolean scanLeft(Mario mario);
+
     /**
-     * @return true if on the scanned field is a collectable
+     * @return true iff an instance of `CollectableEntity` is in front of mario
+     *
+     * @param mario
+     *            The mario to scan relative to
      */
-    protected abstract boolean scanUpperLeft();
-    
+    protected abstract boolean scanUpperRight(Mario mario);
+
     /**
-     * @return true if on the scanned field is a collectable
+     * @return true iff an instance of `CollectableEntity` is in front of mario
+     *
+     * @param mario
+     *            The mario to scan relative to
      */
-    protected abstract boolean scanLowerRight();
-    
+    protected abstract boolean scanUpperLeft(Mario mario);
+
     /**
-     * @return true if on the scanned field is a collectable
+     * @return true iff an instance of `CollectableEntity` is in front of mario
+     *
+     * @param mario
+     *            The mario to scan relative to
      */
-    protected abstract boolean scanLowerLeft();
-    
+    protected abstract boolean scanLowerRight(Mario mario);
+
+    /**
+     * @return true iff an instance of `CollectableEntity` is in front of mario
+     *
+     * @param mario
+     *            The mario to scan relative to
+     */
+    protected abstract boolean scanLowerLeft(Mario mario);
+
+    /**
+     * @return true iff an instance of `CollectableEntity` is in front of mario
+     *
+     * @param mario
+     *            The mario to scan relative to
+     */
+    protected abstract boolean scanAround(Mario mario);
+
 }
