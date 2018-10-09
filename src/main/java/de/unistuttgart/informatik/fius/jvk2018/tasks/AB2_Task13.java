@@ -16,8 +16,6 @@ import de.unistuttgart.informatik.fius.jvk2018.solutions.MyMario;
 
 /**
  * Task for the 12th exercise of the second worksheet
- * 
- * @author Sebastian Paule
  */
 public abstract class AB2_Task13 extends TaskTemplate {
 
