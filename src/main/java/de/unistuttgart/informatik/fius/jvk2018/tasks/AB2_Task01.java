@@ -58,7 +58,7 @@ public abstract class AB2_Task01 extends TaskTemplate {
         this.solve();
         this.simulation.pause();
 
-        for (Coin c : new Coin[]{ coin1, coin2 }) {
+        for (Coin c : new Coin[]{ this.coin1, this.coin2 }) {
             Assertions.assertEquals(0, c.getColumn());
             Assertions.assertEquals(2, c.getRow());
         }

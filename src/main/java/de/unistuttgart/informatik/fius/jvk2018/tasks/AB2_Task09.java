@@ -73,7 +73,6 @@ public abstract class AB2_Task09 extends TaskTemplate {
         Assertions.assertEquals(this.scanLowerLeft(), true);
 
         this.solve();
-        this.simulation.pause();
 
         Assertions.assertEquals(this.scanFront(), false);
         Assertions.assertEquals(this.scanBack(), false);

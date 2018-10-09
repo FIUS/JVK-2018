@@ -9,6 +9,7 @@ package de.unistuttgart.informatik.fius.jvk2018.tasks;
 
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
+import de.unistuttgart.informatik.fius.icge.simulation.Mario;
 
 /**
  * task for exercise 6 of worksheet 2
@@ -16,11 +17,14 @@ import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
  */
 public abstract class AB2_Task05c extends TaskTemplate {
     
+    protected Mario mario;
+    
     /**
      *
      */
     public AB2_Task05c() {
         super(Presets.cage(6, 6).result(), "Worksheet 2, task 05 (c)");
+        this.mario = new Mario(this.simulation, 36);
         // TODO Auto-generated constructor stub
     }
 

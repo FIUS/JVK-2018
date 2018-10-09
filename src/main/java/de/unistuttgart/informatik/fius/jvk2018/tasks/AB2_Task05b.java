@@ -27,7 +27,7 @@ public abstract class AB2_Task05b extends TaskTemplate {
      */
     public AB2_Task05b() {
         super(Presets.cage(6, 6).result(), "Worksheet 2, task 05 (b)");
-        this.mario = new Mario(this.simulation);
+        this.mario = new Mario(this.simulation, 36);
     }
 
     /**

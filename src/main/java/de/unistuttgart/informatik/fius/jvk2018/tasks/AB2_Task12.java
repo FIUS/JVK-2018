@@ -37,10 +37,10 @@ public abstract class AB2_Task12 extends TaskTemplate {
         super(Presets.cage(10, 10).result(), "Worksheet 2, task 12");
         this.mario = new Mario(this.simulation);
         
-        for (int i = 0; i < coin.length; i++) {
+        for (int i = 0; i < this.coin.length; i++) {
             
             this.coin[i] = new Coin(this.simulation);
-            this.coin[i].spawn(rdm.nextInt(10), rdm.nextInt(10));
+            this.coin[i].spawn(this.rdm.nextInt(10), this.rdm.nextInt(10));
             
         }
         this.mario.spawn(0, 0);

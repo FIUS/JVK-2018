@@ -7,6 +7,8 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.tasks;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Assertions;
 
 import de.unistuttgart.informatik.fius.icge.course.Presets;
@@ -19,7 +21,6 @@ import de.unistuttgart.informatik.fius.icge.territory.WorldObject.Direction;
  * @author Sebastian Paule
  */
 public abstract class AB2_Task11 extends TaskTemplate {
-    private Boolean test = true;
     /**
      * 
      */
@@ -37,22 +38,6 @@ public abstract class AB2_Task11 extends TaskTemplate {
     @Override
     public void solve() {
        this.mario.spawn(0, 0);
-       lookNorth();
-       if(!(this.mario.worldObject().direction== Direction.NORTH)) {
-           this.test = false;
-       }
-       lookEast();
-       if(!(this.mario.worldObject().direction== Direction.EAST)) {
-           this.test = false;
-       }
-       lookSouth();
-       if(!(this.mario.worldObject().direction== Direction.SOUTH)) {
-           this.test = false;
-       }
-       lookWest();
-       if(!(this.mario.worldObject().direction== Direction.WEST)) {
-           this.test = false;
-       }
     }
     
     /**
@@ -81,8 +66,14 @@ public abstract class AB2_Task11 extends TaskTemplate {
     @Override
     public void test() {
         this.solve();
-        this.simulation.pause();
-        Assertions.assertEquals(this.test,true);
+        lookNorth();
+        assertEquals(Direction.NORTH, this.mario.worldObject().direction, "Mario is not facing North after calling lookNorth()");
+        lookEast();
+        assertEquals(Direction.EAST, this.mario.worldObject().direction, "Mario is not facing East after calling lookEast()");
+        lookSouth();
+        assertEquals(Direction.SOUTH, this.mario.worldObject().direction, "Mario is not facing South after calling lookSouth()");
+        lookWest();
+        assertEquals(Direction.WEST, this.mario.worldObject().direction, "Mario is not facing West after calling lookWest()");
     }
     
 }
