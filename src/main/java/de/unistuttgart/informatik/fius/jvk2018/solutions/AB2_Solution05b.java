@@ -21,10 +21,10 @@ public class AB2_Solution05b extends AB2_Task05b {
     }
 
     /**
-     *Besonders schnelle duerfen hier eine Methode implementieren, die die n-te Fibonacci Zahl berechnet.
+     * Besonders schnelle duerfen hier eine Methode implementieren, die die n-te Fibonacci Zahl berechnet.
      * Melde dich und wir kommen gerne für etwas Hilfe vorbei :)
      */
-    public int fibonacci(){
+    public int fibonacci(int n) {
         return 0;
     }
 }
