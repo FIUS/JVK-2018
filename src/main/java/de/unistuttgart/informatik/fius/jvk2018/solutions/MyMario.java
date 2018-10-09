@@ -22,7 +22,7 @@ public class MyMario extends Mario {
      * Turn mario 180°
      */
     public void turnBack() {
-        // try to uncomment th two codelines in this method. What changes?
+        // Try to uncomment the two codelines in this method. What changes?
         // this.setDelay(10);
         this.turnLeft();
         this.turnLeft();
