@@ -149,7 +149,8 @@ public abstract class AB2_Task09 extends TaskTemplate {
     protected abstract boolean scanLowerLeft(Mario mario);
     
     /**
-     * @return true iff an instance of `CollectableEntity` is in front of mario
+     * @return true iff an instance of `CollectableEntity` is anywhere in the 3x3 field around
+     *         mario
      *
      * @param mario
      *            The mario to scan relative to
