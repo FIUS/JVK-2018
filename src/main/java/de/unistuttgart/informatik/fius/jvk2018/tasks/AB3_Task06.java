@@ -20,7 +20,6 @@ import de.unistuttgart.informatik.fius.icge.simulation.Coin;
  */
 public abstract class AB3_Task06 extends TaskTemplate {
     
-    
     /**
      * Initializes the exercise
      */
@@ -43,7 +42,6 @@ public abstract class AB3_Task06 extends TaskTemplate {
     @Override
     public void test() {
         this.solve();
-        
         
         this.simulation.pause();
     }
