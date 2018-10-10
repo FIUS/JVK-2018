@@ -7,10 +7,8 @@
 
 package de.unistuttgart.informatik.fius.jvk2018.tasks;
 
-import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
-import de.unistuttgart.informatik.fius.icge.simulation.Mario;
-import de.unistuttgart.informatik.fius.icge.simulation.Simulation;
+import de.unistuttgart.informatik.fius.icge.territory.Territory;
 import de.unistuttgart.informatik.fius.jvk2018.solutions.MyMario;
 
 /**
@@ -19,9 +17,9 @@ import de.unistuttgart.informatik.fius.jvk2018.solutions.MyMario;
 abstract public class AB3_Task01 extends TaskTemplate {
     
     protected final MyMario mario = new MyMario(this.simulation);
-   
+    
     public AB3_Task01() {
-        super(Presets.cage(10,1).result(), "AB3_Excerice03");
+        super(new Territory(), "AB3_Excerice03");
         this.mario.spawn(0, 0);
     }
     
@@ -32,6 +30,5 @@ abstract public class AB3_Task01 extends TaskTemplate {
     @Override
     public void test() {
         this.solve();
-        
     }
 }

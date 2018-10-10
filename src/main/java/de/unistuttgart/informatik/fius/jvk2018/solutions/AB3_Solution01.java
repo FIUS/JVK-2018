@@ -11,12 +11,21 @@ import de.unistuttgart.informatik.fius.jvk2018.tasks.AB3_Task01;
 
 /**
  * @author ruffdd
+ * @author haslersn
  */
 public class AB3_Solution01 extends AB3_Task01 {
     
     @Override
     public void solve() {
+        // Die Aufgabe 1 ist in `MyMario.java` zu bearbeiten.
+        // Hier ist nichts zu tun, aber du kannst diese Methode verwenden, um deine Loesung zu testen.
+        // Zum Beispiel so:
         
+        MyMario mario = new MyMario(this.simulation);
+        mario.spawn(0, 0);
+        mario.moveAndCount();
+        mario.moveAndCount();
+        mario.moveAndCount();
+        mario.printLn(mario.getMoveCount());
     }
 }
-
