@@ -20,16 +20,12 @@ import de.unistuttgart.informatik.fius.icge.simulation.Coin;
  */
 public abstract class AB3_Task06 extends TaskTemplate {
     
-    /**
-     * Mario to move
-     */
-    public final GreedyMario mario;
     
     /**
      * Initializes the exercise
      */
     public AB3_Task06() {
-        super(Presets.cage(10, 3).result(), "Worksheet 3, task 05");
+        super(Presets.cage(10, 3).result(), "Worksheet 3, task 06");
         Random rdm = new Random();
         for (int i = 0; i < 10; i++) {
             int coins = rdm.nextInt(5);
@@ -38,8 +34,6 @@ public abstract class AB3_Task06 extends TaskTemplate {
                 new Coin(this.simulation).spawn(i, 0);
             }
         }
-        this.mario = new GreedyMario(this.simulation);
-        this.mario.spawn(0, 1);
         
     }
     
@@ -49,25 +43,7 @@ public abstract class AB3_Task06 extends TaskTemplate {
     @Override
     public void test() {
         this.solve();
-        /*
-        int lastField = 0;
-        int newField = 0;
-        for (int i = 0; i < 10; i++) {
-            lastField = newField;
-            newField = 0;
-            ArrayList<Entity> e = this.simulation.entitiesWith(2, i);
-            for (Entity ent : e) {
-                if (ent.type() == EntityType.COIN) {
-                    newField++;
-                }
-            }
-            int check = 0;
-            if (newField >= lastField) {
-                check = 1;
-            }
-            assertEquals(1, check, "The coins are not sorted!");
-        }
-        */
+        
         
         this.simulation.pause();
     }

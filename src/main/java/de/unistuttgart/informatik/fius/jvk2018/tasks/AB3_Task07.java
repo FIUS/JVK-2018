@@ -28,7 +28,7 @@ public abstract class AB3_Task07 extends TaskTemplate {
      * Initializes the exercise
      */
     public AB3_Task07() {
-        super(Presets.cage(8, 8).result(), "Worksheet 2, task 06");
+        super(Presets.cage(8, 8).result(), "Worksheet 2, task 07");
         
         this.mario = new Mario(this.simulation);
         this.mario.spawn(0, 0);
