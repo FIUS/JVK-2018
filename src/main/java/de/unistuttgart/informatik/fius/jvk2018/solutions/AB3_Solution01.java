@@ -26,6 +26,6 @@ public class AB3_Solution01 extends AB3_Task01 {
         mario.moveAndCount();
         mario.moveAndCount();
         mario.moveAndCount();
-        mario.printLn(mario.getMoveCount());
+        mario.println(mario.getMoveCount());
     }
 }
