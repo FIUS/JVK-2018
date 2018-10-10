@@ -2,7 +2,6 @@ package de.unistuttgart.informatik.fius.jvk2018.tasks;
 
 import de.unistuttgart.informatik.fius.icge.course.Presets;
 import de.unistuttgart.informatik.fius.icge.course.TaskTemplate;
-import de.unistuttgart.informatik.fius.icge.simulation.Mario;
 
 /**
  * Mario und Luigi veranstalten ein Wettrennen.
@@ -15,13 +14,8 @@ import de.unistuttgart.informatik.fius.icge.simulation.Mario;
  * @author Weilinger
  */
 public abstract class AB3_Task08 extends TaskTemplate {
-    protected final Mario mario;
-    
     public AB3_Task08() {
         super(Presets.cage(15, 2).result(), "Worksheet 2, task 07");
-        this.mario = new Mario(this.simulation);
-        this.mario.spawn(0, 0);
-        
     }
     
     @Override
