@@ -28,4 +28,12 @@ public class MyMario extends Mario {
         this.turnLeft();
         // this.resetDelay();
     }
+    
+    int coinPerStep() {
+        return 0; //TODO:Implement
+    }
+    
+    int stepPerCoin() {
+        return 0; //TODO:Implement
+    }
 }
